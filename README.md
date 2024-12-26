@@ -1,4 +1,11 @@
 Este proyecto permite la transcripción automática de audio en tiempo real utilizando tecnologías de reconocimiento de voz. Es ideal para aplicaciones como subtitulado automático, reuniones, educación y accesibilidad. El sistema captura audio del micrófono, lo procesa en tiempo real y muestra la transcripción en la interfaz de usuario.
+
+Además, este proyecto se integra con Tor para mantener la privacidad y anonimato de los usuarios al realizar solicitudes a través de la red Tor.
+
+Este proyecto es una herramienta útil para mejorar la accesibilidad y la eficiencia en diversas aplicaciones; basado en mi lectura de Temas de educación Paidós/MEC; La investigación que en él se describe no trata del lenguaje en la clase como tal, por lo que no se le puede llamar investigación lingüística. Tampoco trata del carácter y funcionamiento del sistema de enseñanza, como podría ser el caso del trabajo de investigación sociológica. El código representa el trabajo de investigación psicológica.
+
+Lo que se pretende investigar aquí son los modos en que el conocimiento se representa, se recibe, se comparte, se controla, se discute, se comprende o se comprende mal en el contexto de la educación. Nos interesa saber cómo se aprende, cómo se enseña, cómo se evalúa y cómo se evalúa el aprendizaje.
+
 🚀 Características
 
     Transcripción en tiempo real: Captura el audio y lo convierte a texto de manera inmediata.
@@ -18,39 +25,49 @@ Este proyecto permite la transcripción automática de audio en tiempo real util
     PyAudio: Captura de audio desde el micrófono.
     HTML5 & JavaScript: Interfaz web para visualización en tiempo real.
 
-📦 Instalación
+## 🛠️ Tech Stack
 
-    Clona el repositorio:
+- Python 3.x
+- Flask (Backend)
+- WebSockets
+- SpeechRecognition
+- PyAudio
+- HTML5 & JavaScript
 
-git clone 
-cd 
+## 📦 Installation
 
-Instala las dependencias:
+1. Clone the repository:
+
+git clone <repository-url>
+cd <project-directory>
+
+
+2. Instala las dependencias:
 
 pip install -r requirements.txt
 
-Ejecuta la aplicación:
+3. Ejecuta la aplicación:
 
 python app.py
 
-Accede a la aplicación desde tu navegador:
+4. Accede a la aplicación desde tu navegador:
 
-    http://localhost:5000
+      http://localhost:5000
 
 🗣️ Transcripción en tiempo real
 
 La transcripción en tiempo real permite convertir audio hablado en texto al instante. El proceso sigue estos pasos:
 
-    Captura de audio: La aplicación utiliza PyAudio para capturar el audio del micrófono.
-    Procesamiento del audio: El audio se envía al backend para su procesamiento.
-    Reconocimiento de voz: Utiliza la biblioteca SpeechRecognition para convertir el audio en texto.
-    Mostrar transcripción: El texto transcrito se muestra en la interfaz web en tiempo real.
+      Captura de audio: La aplicación utiliza PyAudio para capturar el audio del micrófono.
+      Procesamiento del audio: El audio se envía al backend para su procesamiento.
+      Reconocimiento de voz: Utiliza la biblioteca SpeechRecognition para convertir el audio en texto.
+      Mostrar transcripción: El texto transcrito se muestra en la interfaz web en tiempo real.
 
 📋 Ejemplo de uso
 
-    Ejecuta la aplicación y permite el acceso al micrófono en tu navegador.
-    Habla cerca del micrófono y observa cómo el texto aparece en tiempo real.
-    Puedes pausar o detener la transcripción en cualquier momento.
+      Ejecuta la aplicación y permite el acceso al micrófono en tu navegador.
+      Habla cerca del micrófono y observa cómo el texto aparece en tiempo real.
+      Puedes pausar o detener la transcripción en cualquier momento.
 
 
 
