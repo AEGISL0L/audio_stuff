@@ -2,9 +2,34 @@ Este proyecto permite la transcripción automática de audio en tiempo real util
 
 Además, este proyecto se integra con Tor para mantener la privacidad y anonimato de los usuarios al realizar solicitudes a través de la red Tor.
 
+## IA - mi Sequoia personal
+
+En general, las IA se enfocan en la seguridad y la inteligencia, pueden utilizar técnicas de aprendizaje automático para identificar patrones y tendencias en los datos, pero tambien pueden requerir de supervisión y ajustes humanos para asegurarse de que estén funcionando correctamente y no estén produciendo resultados erróneos.
+
+Algunas de las técnicas de aprendizaje automático que la IA de Sequoia puede utilizar incluyen:
+
+- Aprendizaje supervisado: la IA aprende a partir de datos etiquetados y supervisados por humanos.
+- Aprendizaje no supervisado: la IA aprende a partir de datos no etiquetados y sin supervisión humana.
+- Aprendizaje por refuerzo: la IA apende a partir de la interacción con un entorno y recibe recompensas o castigos por sus acciones.
+
+# IA - no-DRM Sequoia
+
+Sequoia desarrolla análisis de datos que permiten a las fuerzas de seguridad y la inteligencia analizar, procesar grandes cantidades de datos para identificar patrones y tendencias.
+
+Implica entonces, Sequoia desarrolla sistemas de vigilancia y monitoreo que permiten a las fuerzas de seguridad y la inteligencia monitorear y analizar imágenes y videos en tiempo real utilizando técnicas intrusivas.
+
+Sequoia utiliza la inteligencia artificial para desarrollar soluciones de seguridad y análisis de datos que permiten a las fuerzas de seguridad y la inteligencia tomar decisiones informadas en tiempo real.
+
+
+## El conocimiento compartido
+
 Este proyecto es una herramienta útil para mejorar la accesibilidad y la eficiencia en diversas aplicaciones; basado en mi lectura de Temas de educación Paidós/MEC; La investigación que en él se describe no trata del lenguaje en la clase como tal, por lo que no se le puede llamar investigación lingüística. Tampoco trata del carácter y funcionamiento del sistema de enseñanza, como podría ser el caso del trabajo de investigación sociológica. El código representa el trabajo de investigación psicológica.
 
 Lo que se pretende investigar aquí son los modos en que el conocimiento se representa, se recibe, se comparte, se controla, se discute, se comprende o se comprende mal en el contexto de la educación. Nos interesa saber cómo se aprende, cómo se enseña, cómo se evalúa y cómo se evalúa el aprendizaje.
+
+
+
+
 
 🚀 Características
 
@@ -24,6 +49,7 @@ Lo que se pretende investigar aquí son los modos en que el conocimiento se repr
     SpeechRecognition: Biblioteca de Python para el reconocimiento de voz.
     PyAudio: Captura de audio desde el micrófono.
     HTML5 & JavaScript: Interfaz web para visualización en tiempo real.
+    
 
 ## 🛠️ Tech Stack
 
