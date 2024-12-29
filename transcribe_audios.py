@@ -218,4 +218,57 @@ Se entiende que el maestro está en situación de evaluar cualquier respuesta de
 el siguiente movimiento del maestro se considerará como evaluativo. De modo que, si lo que hace el maestro es plantear de nuevo 
 la misma pregunta, ello implica que, sea cual sea la respuesta recibida, se ha considerado incorrecta y puede implicar lo mismo;
 la pregunta anterior sigue << sobre la mesa >>. Si el maestro hecha por el alumno, el lógica la interpretación opuesta: la pregunta
-no consta en la agenda
+no consta en la agenda. Dicho de otro modo, el maestro está en situación de controlar el discurso, de definir de qué cosas hay que hablar,
+y puede actuar como árbrito de la validez de los conocimientos. """
+
+""" Saltamos al capitulo 7 desde página 62; resumen:
+
+Tradicionalmente, en el aula el maestro hace las preguntas y los alumnos responden. Esto parece contradictorio, ya que el maestro supuestamente lo sabe todo y los alumnos deben aprender.
+Según estudios citados, en la mayoría de los intercambios en clase, los maestros hacen más preguntas después de que los alumnos respondan, o responden a las preguntas de los alumnos con otras preguntas. Esto sugiere que las preguntas se usan más para comprobar la atención y el aprendizaje de los alumnos, que para estimular el pensamiento y la discusión.
+Otros campos como entrevistas, terapia y discusiones de grupo evitan hacer muchas preguntas directas, ya que se considera que inhiben la expresión de las personas. Sin embargo, en educación se mantiene la creencia de que las preguntas estimulan el pensamiento.
+Las preguntas de los maestros parecen servir más para controlar los temas de discusión, dirigir el pensamiento y acción de los alumnos, y establecer los límites de lo que se considera conocimiento compartido, que para obtener información.
+Cuando el maestro hace una pregunta cuya respuesta se supone que él conoce, la respuesta del alumno queda sujeta a la evaluación del maestro, lo que afecta el status de dicha respuesta.
+"""
+
+
+def process_classroom_tasks(transcription: str) -> Dict:
+    """Analyzes classroom discourse patterns in transcriptions"""
+    tasks = {
+        'teacher_questions': 0,
+        'student_responses': 0, 
+        'follow_up_questions': 0,
+        'student_initiated_questions': 0
+    }
+    
+    # Split transcription into dialogue segments
+    segments = transcription.split(" / ")
+    
+    for segment in segments:
+        if "?" in segment:
+            if "[teacher]" in segment.lower():
+                tasks['teacher_questions'] += 1
+            elif "[student]" in segment.lower():
+                tasks['student_initiated_questions'] += 1
+        
+        if "[student]" in segment.lower() and not "?" in segment:
+            tasks['student_responses'] += 1
+            
+        if "[teacher]" in segment.lower() and "?" in segment and tasks['student_responses'] > 0:
+            tasks['follow_up_questions'] += 1
+            
+    return tasks
+
+def generate_discourse_report(tasks: Dict) -> str:
+    """Generates a report analyzing classroom interaction patterns"""
+    report = [
+        "Classroom Discourse Analysis",
+        "-" * 30,
+        f"Teacher Questions: {tasks['teacher_questions']}", 
+        f"Student Responses: {tasks['student_responses']}",
+        f"Follow-up Questions: {tasks['follow_up_questions']}",
+        f"Student-Initiated Questions: {tasks['student_initiated_questions']}",
+        f"Question-Response Ratio: {tasks['teacher_questions']/max(tasks['student_responses'], 1):.2f}"
+    ]
+    return "\n".join(report)
+
+
