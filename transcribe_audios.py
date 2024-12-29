@@ -272,3 +272,96 @@ def generate_discourse_report(tasks: Dict) -> str:
     return "\n".join(report)
 
 
+""" 7. COMUNICACIÓN Y CONTROL """
+
+""" En el capítulo anterior (6) observávamos algunos de los modos en que las comprensiones
+rituales o de procedimiento, más que la de principios, pueden verse
+fomentadas por ciertos tipos de comunicación en clase. Nuestro examen
+de estas comunicaciones estaba organizado teniendo en cuenta los principios
+de experimentación científica que se barajaban en las lecciones
+más que los procesos de comunicación identificables. Vamos a examinar
+ahora el mismo tipo de fenómenos, pero esta vez nos centraremos en los tipos de comunicaciones
+involucradas. Estudiaremos como ciertos tipos de comunicación pueden 
+fomentar u obstaculizas el desarrollo del conocimiento compartido en clase.
+Aunque nuestro foco de atención pasa del contenido del conocimiento a los
+procesos del pensamiento, por lo que dicen y hablan las personas más
+que por su capacidad para la discusión racional. Del mismo modo, no nos 
+ocupamos de los esquemas de comunicación o estructuras de discurso en sí 
+mismas: del abanico y los tipos de señales no verbales, por ejemplo, o de la estructuración
+de los IRF en el habla en el aula (que ya hemos mencionado en el capítulo 2).
+
+Nuestro objetivo principal es el modo en que maestros y alumnos establecen comprensiones
+compartidas del contenido del currículum, por lo que nuestro examen de diversos tipos de comunicación
+en clase está orientado hacia el modo en que se expresan la información, los argumentos, las ideas
+o los análisis.
+
+Así, cuando hablábamos en el capítulo 6 de algunas contradicciones espontáneas ofrecidas por 
+los alumnos, se trataba de ocasiones en que los alumnos ofrecían sus propias ideas o explicaciones
+más que simplemente de ocasiones en que los alumnos ofrecín sus propias ideas o explicaciones más que simplemente
+de ocasiones en que los alumnos se tomaban un turno de habla sin haber sido invitados a ello.
+
+La misma preocupación por el contenido del conocimiento compartido limitará lo que vamos a investigar aquí.
+
+"""
+
+"""
+Nuestra exposición en el capítulo 4 de las reglas básicas de la comprensión conjunta apuntaban a la importancia de la forma
+y el contenido del discurso hablado y escrito, al señalas las ocasiones adecuadas para que tuviesen lugar cierto tipo de
+comprensiones. Las reglas básicas de la práctica en la enseñanza y de la comprensión mutua se apoyan generalmente 
+en la capacidad de los participantes para reconocer que algunos tipos de comunicación - el uso de ciertas palabras o 
+tipos de preguntas en contextos reconocidos - indican la adecuación de unas estrategias cognitivas concretas relacionadas entre sí.
+
+El reconocimiento de preguntas desvinculadas, problemas matemáticos pseudonarrativos, preguntas a prueba incluidas en la secuencia
+IRF, etc., depende principalmente d elo familiarizado que se esté con el modo en que funciona el discurso educacional en cuanto
+a encarnar, cuestionar y probable conocimiento educacional. 
+
+"""
+
+
+
+
+class CommunicationAnalyzer:
+    """Analyzes communication patterns in classroom transcriptions focusing on knowledge sharing and control"""
+    
+    def __init__(self):
+        self.patterns = {
+            'knowledge_sharing': [],
+            'control_mechanisms': [],
+            'student_initiatives': [],
+            'teacher_responses': []
+        }
+    
+    def analyze_discourse(self, transcription: str) -> Dict:
+        """
+        Analyzes classroom discourse focusing on:
+        - Information sharing patterns
+        - Control mechanisms in communication
+        - Student-initiated discussions
+        - Teacher response strategies
+        """
+        metrics = {
+            'knowledge_exchanges': 0,
+            'control_instances': 0,
+            'student_contributions': 0,
+            'shared_understanding_markers': 0
+        }
+        
+        # Analysis implementation here
+        return metrics
+    
+    def generate_communication_report(self, metrics: Dict) -> str:
+        """
+        Generates a detailed report on classroom communication patterns
+        focusing on knowledge sharing effectiveness and control dynamics
+        """
+        report_sections = [
+            "Classroom Communication Analysis",
+            "=" * 30,
+            f"Knowledge Exchange Events: {metrics['knowledge_exchanges']}",
+            f"Control Mechanisms Used: {metrics['control_instances']}",
+            f"Student Contributions: {metrics['student_contributions']}",
+            f"Shared Understanding Indicators: {metrics['shared_understanding_markers']}"
+        ]
+        
+        return "\n".join(report_sections)
+
