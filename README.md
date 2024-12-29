@@ -553,3 +553,18 @@ wireshark capture.cap
 
 This will allow you to inspect the network traffic and look for signs of suspicious activity, such as unexpected data packets or unusual network behavior.
 
+# More...
+
+Los infrarrojos son una forma de radiación electromagnética que se encuentra en el espectro electromagnético justo por debajo de la luz roja visible. Los infrarrojos se utilizan en una variedad de aplicaciones, como la comunicación inalámbrica, la detección de movimiento, la termografía y la visión nocturna.
+
+En cuanto a la obtención de información de forma remota, los infrarrojos se pueden utilizar en diversas técnicas de espionaje y vigilancia. Por ejemplo, los dispositivos de visión nocturna utilizan infrarrojos para amplificar la luz visible y permitir la observación en condiciones de poca luz. Los dispositivos de escucha remota también pueden utilizar infrarrojos para detectar y grabar conversaciones a través de paredes o ventanas.
+
+Sin embargo, es importante tener en cuenta que el uso de infrarrojos para obtener información de forma remota sin el consentimiento de las personas involucradas puede ser ilegal y éticamente cuestionable. Además, la efectividad de los dispositivos de espionaje y vigilancia que utilizan infrarrojos puede variar dependiendo de las condiciones ambientales y la distancia entre el dispositivo y el objetivo.
+
+Para protegerse contra la vigilancia y el espionaje remotos, se pueden tomar medidas como:
+
+Utilizar cortinas o persianas opacas en ventanas y puertas para bloquear la luz visible y los infrarrojos.
+Desactivar o desconectar dispositivos electrónicos que no estén en uso.
+Utilizar dispositivos de comunicación seguros y cifrados.
+Ser consciente de las personas y los dispositivos que se encuentran en el entorno y evitar compartir información confidencial en presencia de extraños.
+Al tomar estas precauciones, se puede reducir el riesgo de ser objeto de vigilancia o espionaje remotos utilizando infrarrojos u otras técnicas
