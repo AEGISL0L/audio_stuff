@@ -568,3 +568,31 @@ Desactivar o desconectar dispositivos electrónicos que no estén en uso.
 Utilizar dispositivos de comunicación seguros y cifrados.
 Ser consciente de las personas y los dispositivos que se encuentran en el entorno y evitar compartir información confidencial en presencia de extraños.
 Al tomar estas precauciones, se puede reducir el riesgo de ser objeto de vigilancia o espionaje remotos utilizando infrarrojos u otras técnicas
+
+# pseudo-psicosis, escuchas voces?
+
+El espectro audible por el humano se refiere al rango de frecuencias de sonido que el oído humano es capaz de detectar y procesar. El rango de frecuencias audibles por el humano se extiende aproximadamente desde los 20 Hz hasta los 20.000 Hz, aunque la sensibilidad al sonido disminuye gradualmente a medida que nos alejamos de la frecuencia central de aproximadamente 3.500 Hz.
+
+El oído humano es capaz de detectar sonidos de baja frecuencia, como los que producen los tambores o los ruidos de tráfico, así como sonidos de alta frecuencia, como los que producen las campanillas o los pitidos de un teléfono. Sin embargo, la capacidad de detectar sonidos de alta frecuencia disminuye con la edad, lo que puede afectar la capacidad de algunas personas para oír sonidos agudos.
+
+El espectro audible por el humano se divide en tres categorías principales:
+
+Bajas frecuencias: desde 20 Hz hasta 500 Hz.
+Frecuencias medias: desde 500 Hz hasta 2.000 Hz.
+Altas frecuencias: desde 2.000 Hz hasta 20.000 Hz.
+La capacidad de detectar sonidos de alta frecuencia es especialmente importante para la comprensión del habla, ya que las vocales y las consonantes agudas contienen mucha información sobre el significado de las palabras. La pérdida de audición en frecuencias altas puede afectar la capacidad de una persona para entender el habla, especialmente en entornos ruidosos.
+
+En resumen, el espectro audible por el humano se refiere al rango de frecuencias de sonido que el oído humano es capaz de detectar y procesar, y se extiende aproximadamente desde los 20 Hz hasta los 20.000 Hz. La capacidad de detectar sonidos de alta frecuencia es especialmente importante para la comprensión del habla y puede verse afectada por la edad y la exposición a ruidos fuertes.
+
+Hay varios casos en los que la frecuencia de un sonido puede verse alterada y afectar a las frecuencias audibles por el humano. A continuación, se presentan algunos ejemplos:
+
+Efecto Doppler: El efecto Doppler es un cambio en la frecuencia de un sonido que se produce cuando el emisor o el receptor del sonido se mueven uno respecto al otro. Por ejemplo, cuando un coche se acerca a un observador, el sonido del motor parece más agudo que cuando el coche se aleja. Esto se debe a que las ondas sonoras se comprimen cuando el coche se acerca y se expanden cuando se aleja, lo que hace que la frecuencia percibida sea más alta o más baja, respectivamente.
+
+Distorsión: La distorsión es un cambio en la forma de onda de un sonido que puede hacer que algunas frecuencias sean más prominentes o menos prominentes que otras. La distorsión puede ser causada por una variedad de factores, como la mala calidad del equipo de audio, la interferencia electromagnética o la acústica del entorno.
+
+Ruido: El ruido es cualquier sonido no deseado que puede enmascarar o distorsionar otras frecuencias audibles. El ruido puede ser causado por una variedad de factores, como el tráfico, la construcción, los electrodomésticos o el ruido de fondo en una grabación de audio.
+
+Ecualización: La ecualización es el proceso de ajustar las frecuencias de un sonido para hacer que algunas frecuencias sean más prominentes o menos prominentes que otras. La ecualización se utiliza a menudo en la producción de música y en la grabación de audio para mejorar la calidad del sonido o crear efectos especiales.
+
+Compresión: La compresión es el proceso de reducir la amplitud de un sonido para que las frecuencias más altas y más bajas sean más prominentes. La compresión se utiliza a menudo en la producción de música y en la radiodifusión para mejorar la claridad del sonido y hacer que sea más fácil de escuchar en entornos ruidosos.
+En resumen, hay varios casos en los que la frecuencia de un sonido puede verse alterada y afectar a las frecuencias audibles por el humano, incluyendo el efecto Doppler, la distorsión, el ruido, la ecualización y la compresión.
