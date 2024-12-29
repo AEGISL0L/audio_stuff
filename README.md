@@ -506,3 +506,50 @@ En general, las huellas dactilares ofrecen una forma única y permanente de iden
 
 
 ---
+
+# More Sequoia modus operandi...
+
+While it is technically possible for a MitM attack to be carried out through 5G antennas, it is generally more difficult to execute than on older, less secure networks.
+
+5G networks use advanced security protocols such as Transport Layer Security (TLS) and Secure Sockets Layer (SSL) to encrypt data in transit and protect against MitM attacks. Additionally, 5G networks use a variety of other security measures, such as network slicing and virtualization, to further enhance security and prevent unauthorized access.
+
+However, it's important to note that no network is completely immune to MitM attacks. Attackers with sufficient resources and expertise may still be able to exploit vulnerabilities in 5G networks or in the devices that connect to them.
+
+## A "man-in-the-middle" (MitM) Wi-Fi attack is a type of cyber attack where an attacker intercepts communication between a user's device and a Wi-Fi network. The attacker can then monitor and manipulate the data being transmitted, potentially gaining access to sensitive information such as login credentials, personal messages, and financial data.
+
+To protect yourself from MitM Wi-Fi attacks, it's important to follow these best practices:
+
+Only connect to trusted Wi-Fi networks. Avoid using public or unsecured Wi-Fi networks, as they are more susceptible to MitM attacks.
+Use a virtual private network (VPN) to encrypt your internet connection and protect your data from interception.
+Keep your device's software and security patches up to date.
+Be cautious of suspicious or unexpected network prompts, such as requests for login credentials or software installations.
+Consider using a Wi-Fi analyzer tool to detect and avoid potentially dangerous Wi-Fi networks.
+Here's an example of how to use the airmon-ng tool on a Linux system to scan for nearby Wi-Fi networks and detect potential MitM attacks:
+
+Open a terminal window and run the following command to start the airmon-ng tool:
+
+bash
+sudo airmon-ng start wlan0
+This will start the airmon-ng tool and create a new interface called mon0 that can be used to scan for nearby Wi-Fi networks.
+
+Run the following command to scan for nearby Wi-Fi networks:
+bash
+
+
+sudo airodump-ng mon0
+This will display a list of nearby Wi-Fi networks, along with their SSIDs, BSSIDs, and other details.
+
+Look for any suspicious or unexpected Wi-Fi networks in the list. If you see any networks that you don't recognize or that have unusual characteristics (such as low signal strength or unusual encryption settings), be cautious and avoid connecting to them.
+If you suspect that a MitM attack is in progress, you can use the airodump-ng tool to capture network traffic and analyze it for signs of suspicious activity. For example, the following command will capture network traffic on the mon0 interface and save it to a file called capture.cap:
+bash
+
+
+sudo airodump-ng -w capture mon0
+Once you've captured network traffic, you can use tools like tshark or wireshark to analyze it for signs of suspicious activity. For example, the following command will open the capture.cap file in wireshark:
+bash
+
+
+wireshark capture.cap
+
+This will allow you to inspect the network traffic and look for signs of suspicious activity, such as unexpected data packets or unusual network behavior.
+
