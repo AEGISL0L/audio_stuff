@@ -1,0 +1,7 @@
+input_directory: "/run/media/juav/VOICE/RECORD"
+output_directory: "/run/media/juav/VOICE/TRANSCRIBED"
+language: "es-ES"
+chunk_size: 60
+max_workers: 4
+cache_enabled: true
+min_confidence: 0.8
