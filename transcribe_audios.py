@@ -211,3 +211,11 @@ sus conocimeintos, comprobando si prestan atención, definiendo su agenda en cua
 armamento discursivo de que disponen los maestros para controlar temas de discusión, dirigir el pensamiento y acción de los 
 alumnos y establecer los límites de la atención compartida, de la actividad conjunta y del conocimiento común ( veáanse Edwards
 y Furlong, 1978; Hammersley, 1977; Mehan, 1979; MacLure y French, 1980). """
+
+""" Como sea que la mayoría de las preguntas del maestro son preguntas cuyo conocimiento en la respuesta por parte del maestro suponen todos,
+el status de cualquier resupuesta que dé un alumno se ve también afectado por el carácter del intercambio.
+Se entiende que el maestro está en situación de evaluar cualquier respuesta de este tipo (la parte de feedback del IRF) por lo que
+el siguiente movimiento del maestro se considerará como evaluativo. De modo que, si lo que hace el maestro es plantear de nuevo 
+la misma pregunta, ello implica que, sea cual sea la respuesta recibida, se ha considerado incorrecta y puede implicar lo mismo;
+la pregunta anterior sigue << sobre la mesa >>. Si el maestro hecha por el alumno, el lógica la interpretación opuesta: la pregunta
+no consta en la agenda
