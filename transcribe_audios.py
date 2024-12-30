@@ -312,17 +312,12 @@ en la capacidad de los participantes para reconocer que algunos tipos de comunic
 tipos de preguntas en contextos reconocidos - indican la adecuación de unas estrategias cognitivas concretas relacionadas entre sí.
 
 El reconocimiento de preguntas desvinculadas, problemas matemáticos pseudonarrativos, preguntas a prueba incluidas en la secuencia
-IRF, etc., depende principalmente d elo familiarizado que se esté con el modo en que funciona el discurso educacional en cuanto
+IRF, etc., depende principalmente de lo familiarizado que se esté con el modo en que funciona el discurso educacional en cuanto
 a encarnar, cuestionar y probable conocimiento educacional. 
 
 """
 
-
-
-
 class CommunicationAnalyzer:
-    """Analyzes communication patterns in classroom transcriptions focusing on knowledge sharing and control"""
-    
     def __init__(self):
         self.patterns = {
             'knowledge_sharing': [],
@@ -330,38 +325,202 @@ class CommunicationAnalyzer:
             'student_initiatives': [],
             'teacher_responses': []
         }
-    
-    def analyze_discourse(self, transcription: str) -> Dict:
-        """
-        Analyzes classroom discourse focusing on:
-        - Information sharing patterns
-        - Control mechanisms in communication
-        - Student-initiated discussions
-        - Teacher response strategies
-        """
-        metrics = {
+        self.metrics = {
             'knowledge_exchanges': 0,
             'control_instances': 0,
             'student_contributions': 0,
             'shared_understanding_markers': 0
         }
+    
+    def analyze_discourse(self, transcription: str) -> Dict:
+        segments = transcription.split('\n')
         
-        # Analysis implementation here
-        return metrics
+        for segment in segments:
+            if '[teacher]' in segment.lower():
+                if '?' in segment:
+                    self.metrics['control_instances'] += 1
+                if any(term in segment.lower() for term in ['explain', 'understand', 'mean']):
+                    self.metrics['knowledge_exchanges'] += 1
+                    
+            if '[student]' in segment.lower():
+                self.metrics['student_contributions'] += 1
+                if any(term in segment.lower() for term in ['i think', 'because', 'therefore']):
+                    self.metrics['shared_understanding_markers'] += 1
+                    
+            self.patterns['knowledge_sharing'].append(segment)
+            
+        return self.metrics
     
     def generate_communication_report(self, metrics: Dict) -> str:
-        """
-        Generates a detailed report on classroom communication patterns
-        focusing on knowledge sharing effectiveness and control dynamics
-        """
         report_sections = [
             "Classroom Communication Analysis",
             "=" * 30,
             f"Knowledge Exchange Events: {metrics['knowledge_exchanges']}",
             f"Control Mechanisms Used: {metrics['control_instances']}",
             f"Student Contributions: {metrics['student_contributions']}",
-            f"Shared Understanding Indicators: {metrics['shared_understanding_markers']}"
+            f"Shared Understanding Indicators: {metrics['shared_understanding_markers']}",
+            "-" * 30,
+            "Pattern Analysis:",
+            f"Knowledge Exchange Ratio: {metrics['knowledge_exchanges']/max(metrics['control_instances'], 1):.2f}",
+            f"Student Engagement Level: {metrics['student_contributions']/max(len(self.patterns['knowledge_sharing']), 1):.2f}"
         ]
         
         return "\n".join(report_sections)
 
+""" Como sea que nuestros datos son básicamente transcripciones del diálogo en clase, inevitablemente estaremos buscando
+estos procesos en la comunicación hablada dentro de la clase. Nuestro objetivo en este capítulo es examinar cómo tipos
+concretos de discurso en clase transmiten un conocimiento educacional.
+"""
+
+"""
+Nuestra primera impresión de las lecciones era que se trataba de tipos de pedagogía relativamente informal, progresiva y
+centrada y centrada en el alumno, como el que defiende el informe Plowden (veáse capítulo 3).
+Como consecuencia imprevista de un examen más de cerca de los datos, nos ocupamos aquí en gran medida de los procesos
+de control, es decir, de los modos en que la maestra mantenía una definición estricta de lo que llegaban a ser versiones conjuntas de acontecimientos
+y comprensiones conjuntas del contenido del currículum.
+"""
+
+"""
+Como hemos visto, el proceso problemático. Resulta que hay una serie de propiedades y limitaciónes bajo las cuales funciona el proceso
+de enseñanza, que no siempre son armónicas y que hacen que el proceso sea problemático. Entre éstas están:
+
+1. el supuesto por parte del maestro de que el fracaso educacional en el caso de individuos concretos puede atribuirse a factores
+individuales, y principalmente a la capacidad innata;
+
+2. un modo de ver la educación que supone la existencia de un proceso de aprendizaje inductivo, basado en la experiencia a través de la 
+actividad práctica y que se actualiza por sí mismo;
+
+3. la función socializadora de la educación, en la que el maestro ejerce una gran medida de control sobre lo que se hace, dice y comprende;
+
+4. la separación de la educación formal de los contextos de la experiencia y del aprendizajje cotidianos extraescolares;
+
+5. la base, en gran medida implícita, de gran perte de la actividad y del discurso en clase.
+"""
+
+"""
+Las nociones de <<andamiaje>> (Bruner) y de <<zona de desarrollo próximo>>
+(Vygotsky) resultan apropiadas para la descripción de la educación en clase,
+pero se ven a menudo comprometidas por el carácter un tanto inconsciente de las 
+propiedades mencionadas. Aunque los maestrods llevan a cabo una gran cantidad
+de enseñanza especializada, instando y ayudando a los alumnos a desarrollar su comprensión
+de los temas de estudio, sus propias concepciones de lo que hacen pueden estar reñidas
+con este proceso. El éxito y el fracaso se conciben en gran medida en términos
+de las propiedades inherentes de los alumnos más que como un resultado del proceso
+comunicativo de la educación en sí, y de las comprensiones por parte de los alumnos
+se consideran esencialmente como en sus propias experiencias.
+
+El hecho de que haya que enseñar un programa de estudios concreto, o al meno, que haya
+que cubrir una serie planificada de los conceptios y actividades, lleva al tipo del
+<< dilema del maestro >> del que  hablábamos al término del capítulo anterior: 
+cómo hacer que los alumnos aprendan por sí mismos lo que se ha planificado por 
+anticipado para ellos.
+
+Mantenemos que estos dilemas y compromisos pueden tener un efecto destructivo sobra la
+efectividad de la educación ya que dan al traste con el objetivo esencial del proceso
+vygotskyano: es decir, el proceso queda a menudo incompleto, sin un traspaso final 
+de conocimiento y control de los alumnos.
+
+Los alumnos se ven con frecuencia inmersos en rituales y procedimientos sin haber
+captado el objetivo general de lo que han hecho, inlcuidos los principios y conceptos
+generales que las actividades de una lección en particular estaban destinadas a inculcarles.
+
+Al buscar la manera de organizar nuestra forma de tratar estos procesos de comunicación
+hemos escogido lo que representan el eje del habla en el aula, la medida de control por parte del maestro
+sobre el discurso y, a través de éste, sobre el contenido del conocimiento.
+La siguiente list de comunicaciones en clase se ofrece como una escala del control dle maestro
+sobre el carácter, contenido y codificación del conocimiento, en la que la medida de control
+aumenta según vamos bajando en el orden de la lista.
+
+No es una lista exhaustiva, y el carácter cualitativo de su contenido excluye toda noción 
+precisa de jerarquía u orden. Es, sin embargo útil en la medida en que nos ayuda a en el 
+establecimiento de comprensiones compartidas. Mantenemos que se debe esencialmente a los 
+profundos fenómenos de control del maestro sobre la expresión del conocimiento el que la comprensión
+de las cosas por parte de los alumnos sea con frecuencia de procedimiento más que de principios:
+decir y hacer lo que parece preciso en lugar de elaborar una comprensión de principios de cómo
+y por qué son apropiadas o correctas ciertas acciones, expresiones o procedimientos.
+La siguiente lista de aspectos del discurso en clase está hecha teniendo en cuenta el rol del maestro en los mismos.
+
+Obtención de contribuciones de los alumnos. 
+Indicadores de la importancia, por ejemplo, enunciación especial, frases tipo fórmulas, omisión de las contribuciones de los alumnos.
+Indicadores de conocimiento conjunto, por ejemplo, habla simultánea, plurales <<superiores>>, formas repetidas de discurso.
+Obtención de contribuciones de los alumnos mediante claves.
+Interpretaciones parafrásicas de contribuciones de los alumnos.
+Recapitulaciones iterativas.
+Conocimiento implícito y conocimiento presupuesto.
+
+Las siguientes secciones de este capítulo tratarán de cada uno de estos fenómenos, 
+aproximadamente en el orden que se ha dado. Se han omitido de la lista las contribuciones de los alumnos
+<<no sonsacadas>>  (de las que hablaremos más adelante en el contexto de las sonsacadas) y la enseñanza
+directa a modo de lectura por parte de los maestros, en la que se pedía a los alumnos ( o éstos ofrecían)
+poca contribución. En las lecciones sobre el péndulo, este tipo de enseñanza era mínima.
+
+El discurso estaba en su mayor parte baasado en diálogos de tipo IRF, y la enseñanza directa se limitaba
+a explicaciones o definiciones ocasionales e palabras (<< esto se le llama esfera>>, lavantándola para que la vean los alumnos)
+o la narración de historias relevantes en cuanto a la lección (observaciones de Galileo sobre el balanceo de los incensarios de las iglesia, y el motín de Mary Rose).
+
+Aunque estos tipos de enseñanza son interesantes en sí mismos, y, de hecjo, establecen importantes supuestos
+de <<conocimeinto común>>  sobre la experiencia compartida y los tipos de cosas que interesan e informan a los alumnos,
+vamos a concentrarnos aquí en el discurso en clase de tipo más abiertamente interactivo.
+
+"""
+
+"""
+Contribuciones espontáneas y sonsacadas
+
+"""
+
+"""
+Las contribuciones espontáneas ofrecidas por los laumnos eran por definición menos  influidas
+por el control de la maestra. Pero había control. Era la maestra quien había confeccionado la agenda, definido el tema
+de discusión y establecido por anticipado los criterios de relevancia y la adecuación de cualquier contribución
+que pudiesen presentar los alumnos. La maestra mantenía generalmente el control del destino último de tales contribuciones:
+sobre si se actuaba según ellas, se tomaban y se incorporaban al desarrollo de ideas en el discurso posterior de la clase,
+o si eran desalentadas, desaprobadas o ignoradas. Aparte de estas consideraciones, también es muy posible que los pensamientos
+expresados tuvieran en última instancia su origen en otra lección (como remarcábamos al hablar de la <<continueidad>> en el capítulo 5).
+En el capítulo anterior hacíamos un examen de algunas contribuciones espontáneas, y quedaba claro que la maestra mantenía el control sobre el destino de éstas;
+podía desalentar o no hacer caso de cualquier desarrollo de la idea de los mecanismos de compensación que actúan en el movimiento
+del péndulo, definir la variación de la sustancia del cordel como marginal y no concluyente, y proporcionaba en general el marco de actividad
+y discurso dentro del cual tenían lugar todas estas contribuciones de los alumnos.
+
+Empecemos, pues, por hacer una definición de las contribuciones espontáneas de los alumnos.
+Se trataba de ocasiones en que los alumnos, sin invitación explícita por parte de la maestra, ofrecían información, sugerencias o vistas,
+no habían sido enseñadas ni demostradas por la maestra. Incluiríamos, pues, aquí la observación de Jonathan respecto a la acción de las bolas de billar,
+así como la sugerencia de David sobre una relación compensatoria entre velocidad y distancia (secuencias 6.1 y 6.2). Sin embargo, la mayor parte de las
+contribuciones al discurso en clase ofrecidas por los alumnos se veían limitadas de manera directa por las preguntas de los maestros y por los requisitos normales
+en toda respuesta a una pregunta: que sea relevante, apropiada, informativa, etc. (Grice, 1975).
+
+"""
+"""
+La importancia de los IRF en el establecimiento de la comprensión conjunta radica en el modo en que se expresan la complentariedad del conocimiento
+del maestro y del alumno. Como veíamos en capítulo 4, las preguntas de los maestros son de un tipo especial, en el sentido de que no contienen el presupuesto
+habitual de que el hablante no conoce la respuesta a la pregunta.
+
+En el capítulo 5 mostrábamos que funcionan como mecanismos de discurso a través de los cuales el maestro puede mantener un control constante sobre la 
+comprensión de los alumnos, asegurarse de que los diversos conceptos, información o términos de referencia son comprendidos de manera conjunta para 
+de intersubjetividad en desarrollo. Las estructuras IRF tienen también la función de definir y controlar cómo van a ser este conocimiento y esta comprensión.
+Forman parte de una serie de mecanismos de comunicación por los cuales el maestro actúa como una especie de filtro o compuerta a través de la cual debe pasar todo el conocimiento
+parq su inclusión en la lección como contribución válida o útil.
+
+Esto puede verse de manera especial en ejemplos de los que podríamos llamar << obtención restrospectiva >>, en la que el maestro invita al alumno
+a responder cuando éste ya lo ha hecho (SECUENCIA 7.1).
+"""
+"""
+Secuencia 7.1 Obtenciones retrospectivas
+""" 
+"""
+M: ... Bien, problemas hasta aquí,
+cualquier pregunta que queráis hacer,
+cualquier idea.                         Sharon mueve la cabeza.
+                                        Sharon señala a lo alto del pendulo
+Sharon: Creo que yo [ y Karen vamos ¿Que crees]
+  a (&) 
+
+M: 
+  Sharon? 
+
+Sharon: (&) medir por arriba.
+M: Vais a medir por arriba para buscar 
+   el ángulo. ¿Es eso/ Karen? 
+   De acuerdo...                         M se vuelve hacia Karen.
+
+"""
