@@ -1,3 +1,19 @@
+"""Analyzes classroom discourse patterns focusing on question-response dynamics.
+
+This function processes a transcription of classroom interactions and extracts various metrics related to the question-response patterns, knowledge exchanges, and reasoning indicators. The metrics are returned as a dictionary.
+
+Args:
+    transcription (str): The transcription of the classroom interactions.
+
+Returns:
+    Dict: A dictionary containing the following metrics:
+        - teacher_questions (int): The number of questions asked by the teacher.
+        - student_responses (int): The number of responses given by students.
+        - follow_up_questions (int): The number of follow-up questions asked by the teacher.
+        - student_initiated_questions (int): The number of questions initiated by students.
+        - knowledge_exchanges (int): The number of knowledge exchange instances.
+        - reasoning_indicators (int): The number of instances where students used reasoning indicators.
+"""
 import os
 import speech_recognition as sr
 from typing import Optional, Dict
@@ -160,6 +176,157 @@ if __name__ == "__main__":
     main()
 
 
+
+def process_classroom_tasks(transcription: str) -> Dict:
+# Analyzes classroom discourse patterns focusing on question-response dynamics. This function processes a transcription of classroom interactions and extracts various metrics related to the question-response patterns, knowledge exchanges, and reasoning indicators. The metrics are returned as a dictionary.
+        """Analyzes classroom discourse patterns focusing on question-response dynamics"""
+    tasks = {
+        'teacher_questions': 0,
+        'student_responses': 0,
+        'follow_up_questions': 0,
+        'student_initiated_questions': 0,
+        'knowledge_exchanges': 0,
+        'reasoning_indicators': 0
+    }
+    
+    segments = transcription.split(" / ")
+    
+    for segment in segments:
+        # Question pattern analysis
+        if "?" in segment:
+            if "[teacher]" in segment.lower():
+                tasks['teacher_questions'] += 1
+                if any(term in segment.lower() for term in ['explain', 'why', 'how']):
+                    tasks['knowledge_exchanges'] += 1
+            elif "[student]" in segment.lower():
+                tasks['student_initiated_questions'] += 1
+        
+        # Response pattern analysis
+        if "[student]" in segment.lower() and not "?" in segment:
+            tasks['student_responses'] += 1
+            if any(term in segment.lower() for term in ['because', 'therefore', 'i think']):
+                tasks['reasoning_indicators'] += 1
+        
+        # Follow-up analysis
+        if "[teacher]" in segment.lower() and "?" in segment and tasks['student_responses'] > 0:
+            tasks['follow_up_questions'] += 1
+            
+    return tasks
+
+def generate_discourse_report(tasks: Dict) -> str:
+# Generates a comprehensive report on classroom interaction patterns based on the provided task metrics.
+    
+    Args:
+        tasks (Dict): A dictionary containing the following metrics:
+            - teacher_questions (int): The number of questions asked by the teacher.
+            - student_responses (int): The number of responses given by students.
+            - follow_up_questions (int): The number of follow-up questions asked by the teacher.
+            - student_initiated_questions (int): The number of questions initiated by students.
+            - knowledge_exchanges (int): The number of knowledge exchange instances.
+            - reasoning_indicators (int): The number of instances where students used reasoning indicators.
+    
+    Returns:
+        str: A multi-line string containing the generated report.
+        """Generates comprehensive report on classroom interaction patterns"""
+    report = [
+        "Classroom Discourse Analysis",
+        "=" * 30,
+        "\nQuestion-Response Patterns:",
+        f"- Teacher Questions: {tasks['teacher_questions']}",
+        f"- Student Responses: {tasks['student_responses']}",
+        f"- Follow-up Questions: {tasks['follow_up_questions']}",
+        f"- Student-Initiated Questions: {tasks['student_initiated_questions']}",
+        "\nKnowledge Construction:",
+        f"- Knowledge Exchanges: {tasks['knowledge_exchanges']}",
+        f"- Reasoning Indicators: {tasks['reasoning_indicators']}",
+        "\nPattern Analysis:",
+        f"- Question-Response Ratio: {tasks['teacher_questions']/max(tasks['student_responses'], 1):.2f}",
+        f"- Student Reasoning Level: {tasks['reasoning_indicators']/max(tasks['student_responses'], 1):.2f}"
+    ]
+    return "\n".join(report)
+    
+class CommunicationAnalyzer:
+    def __init__(self):
+        self.discourse_patterns = {
+            'teacher_control': {
+                'knowledge_definition': [],
+                'content_direction': [],
+                'feedback_evaluation': []
+            },
+            'student_participation': {
+                'spontaneous_contributions': [],
+                'elicited_responses': [],
+                'reasoning_markers': []
+            },
+            'interaction_structures': {
+                'irf_sequences': [],
+                'knowledge_negotiation': [],
+                'shared_understanding': []
+            }
+        }
+        
+        self.metrics = {
+            'knowledge_exchanges': 0,
+            'control_instances': 0,
+            'student_contributions': 0,
+            'shared_understanding_markers': 0,
+            'irf_sequences': 0
+        }
+
+    def analyze_discourse(self, transcription: str) -> Dict:
+        segments = transcription.split('\n')
+        current_irf = []
+        
+        for segment in segments:
+            # Teacher control patterns
+            if '[teacher]' in segment.lower():
+                if '?' in segment:
+                    self.metrics['control_instances'] += 1
+                if any(term in segment.lower() for term in ['explain', 'understand', 'mean']):
+                    self.metrics['knowledge_exchanges'] += 1
+                    self.discourse_patterns['teacher_control']['knowledge_definition'].append(segment)
+            
+            # Student participation
+            if '[student]' in segment.lower():
+                self.metrics['student_contributions'] += 1
+                if any(term in segment.lower() for term in ['i think', 'because', 'therefore']):
+                    self.metrics['shared_understanding_markers'] += 1
+                    self.discourse_patterns['student_participation']['reasoning_markers'].append(segment)
+            
+            # Track IRF sequences
+            if len(current_irf) < 3:
+                current_irf.append(segment)
+            if len(current_irf) == 3:
+                self.metrics['irf_sequences'] += 1
+                self.discourse_patterns['interaction_structures']['irf_sequences'].append(current_irf)
+                current_irf = []
+
+        return self.metrics
+
+    def generate_discourse_report(self, metrics: Dict) -> str:
+        report_sections = [
+            "Classroom Communication Analysis",
+            "=" * 35,
+            "\nInteraction Patterns:",
+            f"- Knowledge Exchange Events: {metrics['knowledge_exchanges']}",
+            f"- Control Mechanisms Used: {metrics['control_instances']}",
+            f"- IRF Sequences: {metrics['irf_sequences']}",
+            "\nStudent Engagement:",
+            f"- Total Contributions: {metrics['student_contributions']}",
+            f"- Reasoning Indicators: {metrics['shared_understanding_markers']}",
+            "\nPattern Analysis:",
+            f"- Knowledge/Control Ratio: {metrics['knowledge_exchanges']/max(metrics['control_instances'], 1):.2f}",
+            f"- Student Reasoning Level: {metrics['shared_understanding_markers']/max(metrics['student_contributions'], 1):.2f}"
+        ]
+        
+        return "\n".join(report_sections)
+
+
+This code provides an overview of the communication processes observed in classroom discourse, focusing on the teacher's control over the expression and understanding of knowledge. 
+It discusses various aspects of classroom discourse, such as spontaneous and elicited student contributions, the role of IRF (Initiation-Response-Feedback) structures, and the teacher's 
+control over the content and codification of knowledge. The code also introduces the concept of "retrospective elicitation", where the teacher invites a student to respond to a question 
+that the student has already answered.
+
 """ Dar sentido al habla en el aula p. 61"""
 
 """ 1. Es el maestro quien hace las preguntas y los alumnos las responden. """
@@ -231,46 +398,6 @@ Cuando el maestro hace una pregunta cuya respuesta se supone que él conoce, la 
 """
 
 
-def process_classroom_tasks(transcription: str) -> Dict:
-    """Analyzes classroom discourse patterns in transcriptions"""
-    tasks = {
-        'teacher_questions': 0,
-        'student_responses': 0, 
-        'follow_up_questions': 0,
-        'student_initiated_questions': 0
-    }
-    
-    # Split transcription into dialogue segments
-    segments = transcription.split(" / ")
-    
-    for segment in segments:
-        if "?" in segment:
-            if "[teacher]" in segment.lower():
-                tasks['teacher_questions'] += 1
-            elif "[student]" in segment.lower():
-                tasks['student_initiated_questions'] += 1
-        
-        if "[student]" in segment.lower() and not "?" in segment:
-            tasks['student_responses'] += 1
-            
-        if "[teacher]" in segment.lower() and "?" in segment and tasks['student_responses'] > 0:
-            tasks['follow_up_questions'] += 1
-            
-    return tasks
-
-def generate_discourse_report(tasks: Dict) -> str:
-    """Generates a report analyzing classroom interaction patterns"""
-    report = [
-        "Classroom Discourse Analysis",
-        "-" * 30,
-        f"Teacher Questions: {tasks['teacher_questions']}", 
-        f"Student Responses: {tasks['student_responses']}",
-        f"Follow-up Questions: {tasks['follow_up_questions']}",
-        f"Student-Initiated Questions: {tasks['student_initiated_questions']}",
-        f"Question-Response Ratio: {tasks['teacher_questions']/max(tasks['student_responses'], 1):.2f}"
-    ]
-    return "\n".join(report)
-
 
 """ 7. COMUNICACIÓN Y CONTROL """
 
@@ -317,55 +444,7 @@ a encarnar, cuestionar y probable conocimiento educacional.
 
 """
 
-class CommunicationAnalyzer:
-    def __init__(self):
-        self.patterns = {
-            'knowledge_sharing': [],
-            'control_mechanisms': [],
-            'student_initiatives': [],
-            'teacher_responses': []
-        }
-        self.metrics = {
-            'knowledge_exchanges': 0,
-            'control_instances': 0,
-            'student_contributions': 0,
-            'shared_understanding_markers': 0
-        }
-    
-    def analyze_discourse(self, transcription: str) -> Dict:
-        segments = transcription.split('\n')
-        
-        for segment in segments:
-            if '[teacher]' in segment.lower():
-                if '?' in segment:
-                    self.metrics['control_instances'] += 1
-                if any(term in segment.lower() for term in ['explain', 'understand', 'mean']):
-                    self.metrics['knowledge_exchanges'] += 1
-                    
-            if '[student]' in segment.lower():
-                self.metrics['student_contributions'] += 1
-                if any(term in segment.lower() for term in ['i think', 'because', 'therefore']):
-                    self.metrics['shared_understanding_markers'] += 1
-                    
-            self.patterns['knowledge_sharing'].append(segment)
-            
-        return self.metrics
-    
-    def generate_communication_report(self, metrics: Dict) -> str:
-        report_sections = [
-            "Classroom Communication Analysis",
-            "=" * 30,
-            f"Knowledge Exchange Events: {metrics['knowledge_exchanges']}",
-            f"Control Mechanisms Used: {metrics['control_instances']}",
-            f"Student Contributions: {metrics['student_contributions']}",
-            f"Shared Understanding Indicators: {metrics['shared_understanding_markers']}",
-            "-" * 30,
-            "Pattern Analysis:",
-            f"Knowledge Exchange Ratio: {metrics['knowledge_exchanges']/max(metrics['control_instances'], 1):.2f}",
-            f"Student Engagement Level: {metrics['student_contributions']/max(len(self.patterns['knowledge_sharing']), 1):.2f}"
-        ]
-        
-        return "\n".join(report_sections)
+
 
 """ Como sea que nuestros datos son básicamente transcripciones del diálogo en clase, inevitablemente estaremos buscando
 estos procesos en la comunicación hablada dentro de la clase. Nuestro objetivo en este capítulo es examinar cómo tipos
