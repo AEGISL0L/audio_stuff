@@ -327,6 +327,16 @@ It discusses various aspects of classroom discourse, such as spontaneous and eli
 control over the content and codification of knowledge. The code also introduces the concept of "retrospective elicitation", where the teacher invites a student to respond to a question 
 that the student has already answered.
 
+"""
+Provides an analysis of classroom interaction patterns, including teacher control, student responses, and retrospective elicitations.
+
+The ClassroomInteraction class tracks various interaction patterns observed in a classroom transcript, such as:
+- Teacher control patterns, including questions asked by the teacher
+- Student responses, including the student who responded and the content of the response
+- Retrospective elicitations, where the teacher prompts students for responses they had already provided
+
+The analyze_sequence method takes a transcript of classroom dialogue and extracts these interaction patterns, storing them in the corresponding lists within the class.
+"""
 """ Dar sentido al habla en el aula p. 61"""
 
 """ 1. Es el maestro quien hace las preguntas y los alumnos las responden. """
@@ -686,6 +696,12 @@ M: Se gana impulso/
 Jonathan: Acelera
 M: Acelerar al bajar, ¿es eso?
 
+This code excerpt provides examples of the teacher's interaction patterns in the classroom, specifically:
+
+- The teacher solicits responses from students (Sharon and Jonathan) and then repeats and highlights the appropriate responses for the whole class to hear.
+- The teacher uses a retrospective elicitation technique, where she prompts the students to hypothesize about the effect of shortening the pendulum's string on its period of oscillation.
+
+These examples illustrate the teacher's strategies for guiding the classroom discussion and ensuring the students' understanding of the key concepts related to the pendulum experiment.
 Las respuestas de Sharon y Jonathan en las secuencias 7.1 fueron solicitadas por la maestra,
 para que fueran repetidas y destacadas, remarcadas para que todos oyeran las respuestas adecuadas.
 Parte de la secuencia 6.4 es un interesante ejemplo de obtención retrospectiva, en el que la maestra
@@ -703,4 +719,139 @@ contribución de Sharon como válida y adecuada, invitándola explícitamente. E
 Sharon vacilaba y cambiaba de idea. Dos cosas pudieron influir en ella. En primer lugar,
 Jonathan estaba sugiriendo simultáneamente que la esfera iría más de prisa.
 
-En segundo lugar, lo que no es menos importante 151
+En segundo lugar, lo que no es menos importante, pudiera ser que estuviera actuando aquí
+otra regla básica. Es posible que Sharon interpretase que la maestra estaba repitiendo la pregunta
+, haciendo la misma pregunta después de haber obtenido una respuesta, en lugar de estar
+haciendo una invitación retrospectiva. Como observábamos en el capítulo 4,
+esto indica generalmente que la primera respuesta es equivocada, y que se espera una respuesta
+alternativa. Nos encontramos probablemente con un conflicto entre dos reglas básicas de
+discurso alternativas. Mientras la maestra estaba procurando obtener retrospectivamente la s
+respuesta de Sharon, ésta veía sus palabras como una repetición de la pregunta e inmediatamente
+cambiaba de idea.
+
+Hemos visto también en el capítulo 6 el destino de respuestas menos bien acogidas. La maestra
+no hizo caso, o simplemente se limitó a no alentar o desarrollar varios intentos de introducir ideas que no 
+formaban parte del curso de la lección planificada, tales como la noción de efectos compensatorios
+recíprocos de velocidad y ángulo de balanceo, así como la sugerencia de que podría estar bien alterar la variable de la sustancia
+del cordel ( secuencias 6.1, 6.2 y 6.7); del mismo modo, no mostró interés por la insistencia de David y Antony
+en que hbían medido un efecto importante debido al cambio de la sustancia del corden ( secuencia 6.3 ). 
+
+La maestra no sólo comprobó y expuso en aquel momento sus observaciones sobre las comprensiones conjuntas, sino que
+consiguió también tener bien sujetos la introducción y el establecimiento de lo que debía representar un conocimeinto compartido importante.
+Controlaba, tanto de manera prospectiva como retrospectiva, el contenido de lo que se introducía, incluía, validaba y destacaba.
+
+Podía desalentar o no hacer caso de las contribuciones de los alumnos, instarlas o darlas por válidas, destacando algunas, y, en general, controlar su orden, carácter e importancia.
+
+"""
+Caracterizar el conocimiento como algo significativo y conjunto
+
+Aparte del fenómeno constante de invitar a los alumnos a ofrecer sus contribuciones, y a veces de no hacerles caso,
+había mecanismos de discurso tales como la enunciación especial y el uso de frases del tipo fórmula de daban una preeminencia 
+especial al conocimiento expresado. Los cambios de entonación servían a funciones pedagógicas, destacando la información importante y 
+señalando otros comentarios como << apartes >>, o bien como poseedores de otra función. Aparte del uso convencional de mecanismos tales
+como las pausas y la subida en la entonación para señalar las preguntas, los cambios, especialmente en la cantidad y volumen del habla,
+tenían lugar generalmente en los límites de los cambios de importancia pedagógica, más que en los cambios de función coloquial.
+
+Las palabras en cursiva de la secuencia 7.2 son las palabras a que se refieren los comentarios contextuales sobre la entonación.
+La entonación sobre estas palabras les da una importancia especial en relación con el resto de lo que se dice. La elección
+de una enunciación lenta y deliberada, o de palabras más rápidas y en voz más baja, estaba claramente determinada por el contenido
+de lo que se decía y por su función pedagógica. El contenido importante orientado hacia el plan de estudios era destacado con una enunciación 
+cuidadosa y clara, mientras que los << apartes >> sobre la visión de la maestra y el control sobre la continuidad de la comprensión estaban
+marcados por un descenso en el volumen y un repentino aumento en la cantidad de palabras.
+
+También en otro punto se reflejaba la condición pedagógica de lo que se decía en el discurso: en el uso de frases fórmula repetidas.
+Estas actuaban como fórmulas fácilmente recordables a través de las cuales se daba preeminencia a ciertas obsevaciones y conclusiones, que se repetían 
+y establecían como expresiones de comprensión compartida.
+
+Surgían, durante las lecciones, del diálogo entre maestra y alumnos, iniciado a veces por éstos, pero eran, adoptadas y alentadas por la maestra como algo
+correcto y apropiado. La secuencia 7.3 muestraa el desarrollo de un verso rimado. << The shorter the string, the faster the swing >> 
+( cuanto más corto el cordel, más veloz en el vaivén), que acabó sirviendo como eenvoltura mnemotécnica dle principal hallazgo empírico de la lección.
+
+La fórmula de la longitud del cordel fue inventada esencialmente por la maestra a modo de envoltura del principio establecido en el primer caso en dos partes, es decir, 
+la pregunta de la mestra y la repsuesta de Antony. Más tarde, la rima se recordaba y recitaba conjuntamente, como alggo que 
+<< hemos inventado >>. La lectura que la maestra daba a estos hechos era una lectura de aprendizaje inductivo conjunto;
+<< nosotros >> habíamos inventado conjuntamente una fórmula verbal en cuyos términos podía expresarse y recordarse.
+De manera similar. Sharon v Karen acabaron describiendo repetidamente sus resultados, los efectos de variar el ángulo del balanceo, como 
+<< lo mismo exactamente>> o bien << lo mismo en resumidas cuentas >>. Al igual que en la secuencia 7.3., las frases acabaron siendo recitadas al unísono, 
+como fórmulas reconocidas conjuntamente:
+
+Secuencia 7.4 La fórmula de la equivalencia
+
+
+Lección 2 sobre el péndulo: M recapitula sobre los resultados de la lección 1.
+
+En el último segmento de la secuencia 7.4, tomada de la lección 2, la maestra estaba intentando hacer que los alumnos describieran sus gráficos, y en este caso
+quería con toda probabilidad que Sharon lo describiese casi como una línea recta ( éstas fueron de hecho las palabras que se adoptarían más tarde).
+Sin embargo, Sharon recordaba de la lección 1 como describir sus resultados: eran << todos iguales >> . No era sólo la maestra quien llamaba
+la atención acerca de ello, daba claves para su repetición y las definía generalmente como importantes. La sugerencia hecha por Lucy en la secuencia 7.5, según 
+la cual, al variar el peso de la esfera del péndulo, << aunque fuera una tonelada >> no cambiaría nada, fue adopatada, repetida y alentada por la maestra, y luego
+recordaba como una frase-fórmula que servía de envoltura al resultado empírico esencial de los experimentos sobre la variación del peso.
+
+
+Secuencia 7.5 La fórmula << ni siquiera con una tonelada >>
+
+
+
+
+¿Tienen estas frases fórmula una función pedagógica, y , en tal caso, cuál es? Parecen funcionar como envolturas de los hallazgos empíricos importantes
+que han sido comprendidos conjuntamente y que los alumnos han sido llevados a descubrir en el curso de la actividad y el discurso de las lecciones.
+La frase de Lucy, << ni siquiera con una tonelada >> , constituye una genralización poderosa, aunque no exactamente la expresión de un principio general,
+respecto a los efectos que la variación de la masa de la esfera tiene sobre el período de balanceo. La frase << lo mismo exactamente >> representa, del mismo modo, la 
+la equivalencia esencial de los resultados producidos por la variación del ángulo de balanceo. La rima << cuanto más corto el cordel, más veloz es el vaivén >>
+es un principio explícito que capta el único hallazgo positivo.
+Al ser guiados atentamente en el modo de interpretar y dar la importancia adecuada a sus experiencias, se ofrece a los alumnos en el proceso un lenguaje común
+a través del cual puedan expresarse estas comprensiones comunes.
+
+La condición de ciertas comprensiones, lograda en el curso de las lecciones, de << conocimiento compartido >> estaba a menudo marcada abiertamente en el discurso por el
+desarrollo y el uso repetitivo de ese tipo de frases fórmula, junto con otros mecanismos tales como el habla simultánea ( que hemos visto especialmente en las secuencias 7.6 y 7.4)
+, y en el uso por parte de la maestra de << nosotros >> al atribuirse también lo que se había hecho, dicho, y comprendido,
+como cuando se recordaba a Antony y David la fórmula << más veloz es el vaivén >> (secuencia 7.3). Estos no eran casos aislados.
+En la secuencia 6.12, cuando la mestra estaba alentando a los alumnos a ver las pequeñas diferencias como carentes de importancia, el uso de << nosotros >> implicaba una comprensión
+conjunta en la que no había ninguna diferencia entree la intenciones e interpretaciones de la maestra y las de los alumnos: << Bueno, eso se acerca bastante, ¿no? 
+Nueve setenta y tres se acerca bastante a diez. Ahora/ ¿qué hacemos? ¿Lo redondeamos en diez?>> y, en otro caso: << Bueno, lo que creo es que hemos de ponerle centésimas, ¿no?
+Siete dos tres cinco, ¿cómo llamnaremos a esto? >> El cambio de << yo >> al << plural superior >> ( si podemos utilizar este término ) era una expresión abierta del propósito comunicativo
+de la maestra de establecer ciertas observaciones e interpretaciones como conjuntas.
+
+El hablar al unísono era asimismo un claro indicador de conocimiento compartido, en el que la maestra y los alumnos ensayaban su comprensión común a través de un lenguaje común y una
+enunciación simultánea. Es importante dejar clara una distinción entre, por un lado, el habla simultánea en la que las personas hablan al mismo tiempo, quizás interrumpiendo o evitando
+<< ceder el terreno >> a un interruptor, y , por otro lado, el hablar al unísono, donde las personas articulan conjuntamente las mismas palabras o singificados. 
+Observamos en las secuencias de diálogo presentadas en los capítulos 6 y 7 (veánse por ejemplo las secuencias 6.12, 6.14, 7.2, 7.3 y 7.4) que este segundo tipo de habla simultánea tenía lugar
+precisamente en aquellos puntos en que había importantes cuestiones de comprensión conjunta; en los puntos en que la maestra se esforzaba por asegurarse de que prevalecían sus propias Interpretaciones
+de las << mediciones equivalentes >> (secuencias 6.12, 6.14, y 7.4) , y de que el principal hallazgo empírico, la ley << cordel más corto, balanceo más corto>>, era comprendido (7.2 y 7.3). 
+El conocimiento común se basa, pues, en el establecimiento de las comprensiones del maestro como comprensiones conjuntas representadas en un discurso común - en este caso, de una manera muy sencilla y directa-.
+
+Obtención mediante pistas
+
+El proceso de obtencion mediante pistas estaba presente en nuestras transcripciones de datos. Vimos ejemplos del mismo en nuestra anterior discusión del contexto físico y gestual del discurso en clase ( capítulo 5 )
+y en nuestra discusión de cómo la maestra obtenía de los alumnos de las diferentes hipótesis para probarlas en los experimentos sobre el péndulo ( capítulo 6 por ejemplo, secuencia 6.6). Las obtenciones mediante pistas son un discurso de tipo IRF,
+en el que el maestro hace preguntas mientras proporciona simultáneamente postas eficaces paraa la información necesaria. Este fluir simultáneao de información puede conseguirse simplemente por el modo de articular
+la pregunta, pero a menudo se logra mediante algún otro canal de comunicación, como, por ejemplo, la entonación, las pausas, los gestos o las demostraciones físicas.
+Puede hacerse también de manera implícita, apelandi sin mencionarlo al conocimiento compartido. La secuencia 7.6. es un claro ejemplo.
+
+Secuencia 7.6 Obtención mediante pistas: El pulso de Galileo
+
+
+
+La obtención mediante pistas es un proceso importante por dos razones al menos:
+
+1. Demuestra un punto general del método y la teoría: que, si queremos dar el sentido adecuado al proceso de educación en clasem necesitamos registros detallados de gestos y actividad así como transcripciones detalladas del discurso en clase;
+que éstos deben estar ampliamente integrados; y que no hay que cometer el error de intentar explicar los procesos educacionales  sólo en términos de la charla en clase y de las estructuras de discurso.
+
+2. Se trata de un proceso de comunicación de un interés intrínseco sustancial. Las preguntas y respuestas dentro de la clase tienen características peculiares, como hemos observado en el capítulo 4; la maestra, que conoce las respuestas, hace la mayor parte de las preguntas,
+hace preguntas cuyas respuestas ya conoce, y , además , puede hacer preguntas mientras hace al mismo tiempo lo posible por proporcionar las respuestas a través de un canal alternativo.
+Tenemos que buscar una comprensión de la función pedagógica de este hecho.
+
+La mejor interpretación que podemos hacer de la función pedagógica de la obtención mediante pistas es que representa un proceso en el que los alumnos no son ni objeto de una extracción, en el sentido del e-ducare, ni tampoco se les enseña directamente, en el sentido de la << transmisión >> .
+Por el contrario, se les está introduciendo en lo que para ellos se convierte en un discurso compartido con el maestro ( discurso en el sentido más amplio, que incluye los conceptos y la terminología así como el diálogo). Como tal, encaja perfectamente en el tipo de proceso educativo definido por la 
+<< zona de desarrollo próximo >> de Vygotsky, en el que el conocimiento de los alumnos es ayudado y << apuntalado >> por las preguntas, pistas e instancias de la maestra para conseguir profundizaciones de las que los alumnos por sí solos parecían incapaces.
+Es un mecanismo que exige que los alumnos participen activamente en la creación de un conocimiento compartido, en lugar de limitarse a estar sentados y escuchar cómo habla la maestra.
+La obtención mediante pistas es también un proceso que constituye una solución a lo que hemos llamado dilema del maestro - un  necesario compromiso entre dos requisitos de conflicto, que la lección debe alcanzar-. Estos requisitos eran que los alumnos debían ( al menos aparentemente ) generar su propia comprensión
+de las cosas a través de su propio pensamiento y experiencia, y que debían llegar a hacer y comprender actividades y conceptos específicos planificados al inicio: probar tres hipótesis
+específicas, encontrar que sólo una de las variables era efectiva, calcular el promedio de los tiempos de veinte balanceos y hacer matrices y dibujar gráficos con los resultados. Naturalmente, éste es el conflicto observado por Rosalind Driver (1983) en su análisis de las limitaciones de la enseñanza inductiva de las ciencias
+, del que hablábamos en el capítulo 6. La secuncia 7.7 muestra cómo la maestra consiguió que los alumnos aceptaran realizar los veinte balanceos previamente planificados.
+
+Secuencia 7.7 Aceptación de veinte balanceos
+
+
+Lucy, Karen, Jonathan y David parecían en el primer caso estar preparados y dispuestos a aceptar los cinco balanceos como un buen número. A través de una serie de pausas e instancias, acertaron eventualmente con el número requerido - << veinte >> - , justificado por la maestra en base a un concepto indefinido llamado << el margen de error>>.
+Es aquí donde podemos ver claramente el carácter problemático de la obtención mediante pistas. Es difícil no tener la impresión de que los alumnos estaban esencialmente intentando leer todas las señales disponibles en un juego de adivinanzas en el que tenían que averiguar, mediante la habilidad comunicativa 164
