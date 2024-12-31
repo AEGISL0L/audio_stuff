@@ -657,3 +657,50 @@ M: Vais a medir por arriba para buscar el ángulo. ¿Es eso Karen?
 """
 
 patterns = analyzer.analyze_sequence(sample_transcript)
+
+Sesión 2 sobre el pendulo
+
+"""
+M: ... ¿Que es lo que/ hace que el
+   péndulo se balancee hacia abajo/
+   por ejemplo hasta que llega aquí?          Da un golpecito con el lápiz
+M: Jonathan? [La gravedad. Mirad./ ¿Qué es,   indicando <<aquí>> al pie
+Jonathan: La gravedad.                        del péndulo. Jonathan levanta la mano al hablar.
+M: Si./ Bueno, mencionamos la gravedad
+   cuando estábamos haciendo los
+   experimentos pero no hablamos mucho
+   de ella. Cuando la esfera tira hacia
+   abajp, eso es la gravedad. De acuerdo.
+   ¿Qué es lo que hace que vuelva a subir
+   por el otro lado?                          M suelta la esfera
+Antony: El cordel/ hace subir el cordel/      Entonación llana: Antony aún no ha terminado de hablar.
+   al bajar
+M: Aumenta la velocidad al bajar./
+   ¿Sabe alguien la palabra cuando
+   se aumenta la velocidad/ como 
+   cuando se pisa el pedal de un coche?
+Jonathan: Acelerar
+Antony: Impulso
+M: Se gana impulso/
+   ¿Jonathan?
+Jonathan: Acelera
+M: Acelerar al bajar, ¿es eso?
+
+Las respuestas de Sharon y Jonathan en las secuencias 7.1 fueron solicitadas por la maestra,
+para que fueran repetidas y destacadas, remarcadas para que todos oyeran las respuestas adecuadas.
+Parte de la secuencia 6.4 es un interesante ejemplo de obtención retrospectiva, en el que la maestra
+sonsaca hipótesis ejemplo de obtención retrospectiva, en el que la maestra sonsaca hipótesis
+sobre el efecto que el acortar el cordel podía tener sobre el período de balanceo:
+
+Sharon: Iría más despacio
+m: ¿Qué calculas tú/
+Jontahan: Mucho más rápido.
+Sharon: Más despacio./
+   rápido. Creo que iría más rápido.
+
+Sharon ofrecía primero la hipótesis <<iría más despacio>>. La maestra definía luego la
+contribución de Sharon como válida y adecuada, invitándola explícitamente. Entonces,
+Sharon vacilaba y cambiaba de idea. Dos cosas pudieron influir en ella. En primer lugar,
+Jonathan estaba sugiriendo simultáneamente que la esfera iría más de prisa.
+
+En segundo lugar, lo que no es menos importante 151
