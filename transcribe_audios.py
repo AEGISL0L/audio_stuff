@@ -1,3 +1,19 @@
+"""This module handles audio transcription and classroom discourse analysis.
+
+This function processes a transcription of classroom interactions and extracts various metrics related to the question-response patterns, knowledge exchanges, and reasoning indicators. The metrics are returned as a dictionary.
+
+Args:
+    transcription (str): The transcription of the classroom interactions.
+
+Returns:
+    Dict: A dictionary containing the following metrics:
+        - teacher_questions (int): The number of questions asked by the teacher.
+        - student_responses (int): The number of responses given by students.
+        - follow_up_questions (int): The number of follow-up questions asked by the teacher.
+        - student_initiated_questions (int): The number of questions initiated by students.
+        - knowledge_exchanges (int): The number of knowledge exchange instances.
+        - reasoning_indicators (int): The number of instances where students used reasoning indicators.
+"""
 """Analyzes classroom discourse patterns focusing on question-response dynamics.
 
 This function processes a transcription of classroom interactions and extracts various metrics related to the question-response patterns, knowledge exchanges, and reasoning indicators. The metrics are returned as a dictionary.
@@ -14,318 +30,6 @@ Returns:
         - knowledge_exchanges (int): The number of knowledge exchange instances.
         - reasoning_indicators (int): The number of instances where students used reasoning indicators.
 """
-import os
-import speech_recognition as sr
-from typing import Optional, Dict
-from datetime import datetime
-import json
-import yaml
-import logging
-import concurrent.futures
-from dataclasses import dataclass
-from pathlib import Path
-from tqdm import tqdm
-
-@dataclass
-class TranscriptionConfig:
-    input_directory: Path
-    output_directory: Path
-    language: str = "es-ES"
-    chunk_size: int = 60
-    max_workers: int = 4
-    min_confidence: float = 0.8
-    cache_enabled: bool = True
-    supported_formats: tuple = ('.wav', '.mp3', '.flac')
-
-def load_config(config_path: str = 'config.yaml') -> TranscriptionConfig:
-    """Loads configuration from YAML file"""
-    if Path(config_path).exists():
-        with open(config_path) as f:
-            config_data = yaml.safe_load(f)
-        return TranscriptionConfig(**config_data)
-    return TranscriptionConfig()
-
-class TranscriptionCache:
-    """Manages caching of transcriptions"""
-    def __init__(self, cache_dir: Path):
-        self.cache_dir = cache_dir
-        self.cache_dir.mkdir(exist_ok=True)
-        
-    def get(self, audio_file: Path) -> Optional[str]:
-        cache_file = self.cache_dir / f"{audio_file.stem}.cache"
-        if cache_file.exists():
-            return cache_file.read_text(encoding='utf-8')
-        return None
-        
-    def store(self, audio_file: Path, transcription: str) -> None:
-        cache_file = self.cache_dir / f"{audio_file.stem}.cache"
-        cache_file.write_text(transcription, encoding='utf-8')
-
-def format_transcription(text: str) -> str:
-    """Applies transcription formatting conventions"""
-    formatting_rules = {
-        "  ": " / ",  # Short pauses
-        "   ": " // ",  # Long pauses
-        "[inaudible]": "(...)",  # Unclear speech
-        "...": "...",  # Incomplete speech
-        "[": "[",  # Simultaneous speech start
-        "]": "]"  # Simultaneous speech end
-    }
-    
-    formatted_text = text
-    for pattern, replacement in formatting_rules.items():
-        formatted_text = formatted_text.replace(pattern, replacement)
-    return formatted_text
-
-def save_metadata(audio_file_path: str, transcription_stats: Dict) -> None:
-    """Saves transcription metadata to a JSON file"""
-    metadata = {
-        'original_file': os.path.basename(audio_file_path),
-        'transcription_date': datetime.now().isoformat(),
-        'duration_seconds': transcription_stats['duration'],
-        'segments_count': transcription_stats['segments'],
-        'language': 'es-ES'
-    }
-    
-    metadata_path = f"{os.path.splitext(audio_file_path)[0]}_metadata.json"
-    with open(metadata_path, 'w', encoding='utf-8') as f:
-        json.dump(metadata, f, indent=2, ensure_ascii=False)
-
-class TranscriptionProcessor:
-    """Handles the transcription processing pipeline"""
-    def __init__(self, config: TranscriptionConfig):
-        self.config = config
-        self.cache = TranscriptionCache(Path(".transcription_cache"))
-        self.stats = {'processed': 0, 'cached': 0, 'errors': 0}
-        
-    def process_file(self, audio_path: Path) -> None:
-        if self.config.cache_enabled:
-            cached = self.cache.get(audio_path)
-            if cached:
-                self.stats['cached'] += 1
-                return cached
-                
-        try:
-            transcription = transcribe_audio(
-                str(audio_path),
-                self.config.language,
-                self.config.chunk_size
-            )
-            if transcription:
-                self.cache.store(audio_path, transcription)
-                self.stats['processed'] += 1
-            return transcription
-        except Exception as e:
-            self.stats['errors'] += 1
-            logging.error(f"Failed to process {audio_path}: {e}")
-            return None
-
-def transcribe_audio(audio_file_path: str, language: str = "es-ES", chunk_size: int = 60) -> Optional[str]:
-    recognizer = sr.Recognizer()
-    stats = {'duration': 0, 'segments': 0}
-    
-    try:
-        with sr.AudioFile(audio_file_path) as source:
-            transcription = []
-            offset = 0
-            stats['duration'] = source.DURATION
-            
-            while offset < source.DURATION:
-                try:
-                    audio_data = recognizer.record(source, duration=chunk_size)
-                    segment = recognizer.recognize_google(audio_data, language=language)
-                    transcription.append(segment)
-                    stats['segments'] += 1
-                except sr.UnknownValueError:
-                    transcription.append("(...)")
-                    stats['segments'] += 1
-                except sr.RequestError as e:
-                    print(f"Error al solicitar resultados; {e}")
-                    break
-                offset += chunk_size
-                
-        full_transcription = " ".join(transcription)
-        formatted_transcription = format_transcription(full_transcription)
-        
-        save_metadata(audio_file_path, stats)
-        
-        return formatted_transcription
-    except Exception as e:
-        print(f"Error al procesar el audio {audio_file_path}: {e}")
-        return None
-
-def main():
-    config = load_config()
-    processor = TranscriptionProcessor(config)
-    
-    with concurrent.futures.ThreadPoolExecutor(max_workers=config.max_workers) as executor:
-        audio_files = list(Path(config.input_directory).glob("*.[wW][aA][vV]"))
-        
-        with tqdm(total=len(audio_files), desc="Processing audio files") as pbar:
-            futures = {
-                executor.submit(processor.process_file, audio_file): audio_file
-                for audio_file in audio_files
-            }
-            
-            for future in concurrent.futures.as_completed(futures):
-                pbar.update(1)
-    
-    logging.info(f"Processing complete. Stats: {processor.stats}")
-
-if __name__ == "__main__":
-    main()
-
-
-
-def process_classroom_tasks(transcription: str) -> Dict:
-# Analyzes classroom discourse patterns focusing on question-response dynamics. This function processes a transcription of classroom interactions and extracts various metrics related to the question-response patterns, knowledge exchanges, and reasoning indicators. The metrics are returned as a dictionary.
-        """Analyzes classroom discourse patterns focusing on question-response dynamics"""
-    tasks = {
-        'teacher_questions': 0,
-        'student_responses': 0,
-        'follow_up_questions': 0,
-        'student_initiated_questions': 0,
-        'knowledge_exchanges': 0,
-        'reasoning_indicators': 0
-    }
-    
-    segments = transcription.split(" / ")
-    
-    for segment in segments:
-        # Question pattern analysis
-        if "?" in segment:
-            if "[teacher]" in segment.lower():
-                tasks['teacher_questions'] += 1
-                if any(term in segment.lower() for term in ['explain', 'why', 'how']):
-                    tasks['knowledge_exchanges'] += 1
-            elif "[student]" in segment.lower():
-                tasks['student_initiated_questions'] += 1
-        
-        # Response pattern analysis
-        if "[student]" in segment.lower() and not "?" in segment:
-            tasks['student_responses'] += 1
-            if any(term in segment.lower() for term in ['because', 'therefore', 'i think']):
-                tasks['reasoning_indicators'] += 1
-        
-        # Follow-up analysis
-        if "[teacher]" in segment.lower() and "?" in segment and tasks['student_responses'] > 0:
-            tasks['follow_up_questions'] += 1
-            
-    return tasks
-
-def generate_discourse_report(tasks: Dict) -> str:
-# Generates a comprehensive report on classroom interaction patterns based on the provided task metrics.
-    
-    Args:
-        tasks (Dict): A dictionary containing the following metrics:
-            - teacher_questions (int): The number of questions asked by the teacher.
-            - student_responses (int): The number of responses given by students.
-            - follow_up_questions (int): The number of follow-up questions asked by the teacher.
-            - student_initiated_questions (int): The number of questions initiated by students.
-            - knowledge_exchanges (int): The number of knowledge exchange instances.
-            - reasoning_indicators (int): The number of instances where students used reasoning indicators.
-    
-    Returns:
-        str: A multi-line string containing the generated report.
-        """Generates comprehensive report on classroom interaction patterns"""
-    report = [
-        "Classroom Discourse Analysis",
-        "=" * 30,
-        "\nQuestion-Response Patterns:",
-        f"- Teacher Questions: {tasks['teacher_questions']}",
-        f"- Student Responses: {tasks['student_responses']}",
-        f"- Follow-up Questions: {tasks['follow_up_questions']}",
-        f"- Student-Initiated Questions: {tasks['student_initiated_questions']}",
-        "\nKnowledge Construction:",
-        f"- Knowledge Exchanges: {tasks['knowledge_exchanges']}",
-        f"- Reasoning Indicators: {tasks['reasoning_indicators']}",
-        "\nPattern Analysis:",
-        f"- Question-Response Ratio: {tasks['teacher_questions']/max(tasks['student_responses'], 1):.2f}",
-        f"- Student Reasoning Level: {tasks['reasoning_indicators']/max(tasks['student_responses'], 1):.2f}"
-    ]
-    return "\n".join(report)
-    
-class CommunicationAnalyzer:
-    def __init__(self):
-        self.discourse_patterns = {
-            'teacher_control': {
-                'knowledge_definition': [],
-                'content_direction': [],
-                'feedback_evaluation': []
-            },
-            'student_participation': {
-                'spontaneous_contributions': [],
-                'elicited_responses': [],
-                'reasoning_markers': []
-            },
-            'interaction_structures': {
-                'irf_sequences': [],
-                'knowledge_negotiation': [],
-                'shared_understanding': []
-            }
-        }
-        
-        self.metrics = {
-            'knowledge_exchanges': 0,
-            'control_instances': 0,
-            'student_contributions': 0,
-            'shared_understanding_markers': 0,
-            'irf_sequences': 0
-        }
-
-    def analyze_discourse(self, transcription: str) -> Dict:
-        segments = transcription.split('\n')
-        current_irf = []
-        
-        for segment in segments:
-            # Teacher control patterns
-            if '[teacher]' in segment.lower():
-                if '?' in segment:
-                    self.metrics['control_instances'] += 1
-                if any(term in segment.lower() for term in ['explain', 'understand', 'mean']):
-                    self.metrics['knowledge_exchanges'] += 1
-                    self.discourse_patterns['teacher_control']['knowledge_definition'].append(segment)
-            
-            # Student participation
-            if '[student]' in segment.lower():
-                self.metrics['student_contributions'] += 1
-                if any(term in segment.lower() for term in ['i think', 'because', 'therefore']):
-                    self.metrics['shared_understanding_markers'] += 1
-                    self.discourse_patterns['student_participation']['reasoning_markers'].append(segment)
-            
-            # Track IRF sequences
-            if len(current_irf) < 3:
-                current_irf.append(segment)
-            if len(current_irf) == 3:
-                self.metrics['irf_sequences'] += 1
-                self.discourse_patterns['interaction_structures']['irf_sequences'].append(current_irf)
-                current_irf = []
-
-        return self.metrics
-
-    def generate_discourse_report(self, metrics: Dict) -> str:
-        report_sections = [
-            "Classroom Communication Analysis",
-            "=" * 35,
-            "\nInteraction Patterns:",
-            f"- Knowledge Exchange Events: {metrics['knowledge_exchanges']}",
-            f"- Control Mechanisms Used: {metrics['control_instances']}",
-            f"- IRF Sequences: {metrics['irf_sequences']}",
-            "\nStudent Engagement:",
-            f"- Total Contributions: {metrics['student_contributions']}",
-            f"- Reasoning Indicators: {metrics['shared_understanding_markers']}",
-            "\nPattern Analysis:",
-            f"- Knowledge/Control Ratio: {metrics['knowledge_exchanges']/max(metrics['control_instances'], 1):.2f}",
-            f"- Student Reasoning Level: {metrics['shared_understanding_markers']/max(metrics['student_contributions'], 1):.2f}"
-        ]
-        
-        return "\n".join(report_sections)
-
-
-This code provides an overview of the communication processes observed in classroom discourse, focusing on the teacher's control over the expression and understanding of knowledge. 
-It discusses various aspects of classroom discourse, such as spontaneous and elicited student contributions, the role of IRF (Initiation-Response-Feedback) structures, and the teacher's 
-control over the content and codification of knowledge. The code also introduces the concept of "retrospective elicitation", where the teacher invites a student to respond to a question 
-that the student has already answered.
 
 """
 Provides an analysis of classroom interaction patterns, including teacher control, student responses, and retrospective elicitations.
@@ -469,6 +173,37 @@ de control, es decir, de los modos en que la maestra mantenía una definición e
 y comprensiones conjuntas del contenido del currículum.
 """
 
+def format_transcription(text: str) -> str:
+    """Applies formatting rules to transcription text with enhanced markers.
+    
+    Formatting rules:
+        - Pauses: "  " -> " / " (short), "   " -> " // " (long) 
+        - Inaudible: "[inaudible]" -> "(...)"
+        - Emphasis: "*word*" -> "«word»"
+        - Overlapping: "[overlap]" -> "⟨overlap⟩"
+        - Actions: "{action}" -> "【action】"
+    """
+    formatting_rules = {
+        "  ": " / ",  # Short pause
+        "   ": " // ",  # Long pause
+        "[inaudible]": "(...)",
+        "*": "«»",  # Emphasis markers
+        "[overlap]": "⟨⟩",  # Overlapping speech
+        "{": "【",  # Action start
+        "}": "】"   # Action end
+    }
+    
+    formatted_text = text
+    for pattern, replacement in formatting_rules.items():
+        if len(replacement) == 2:  # Handle paired markers
+            parts = formatted_text.split(pattern)
+            formatted_text = replacement[0].join(parts[::2]) + \
+                           replacement[1].join(parts[1::2])
+        else:
+            formatted_text = formatted_text.replace(pattern, replacement)
+            
+    return formatted_text
+
 """
 Como hemos visto, el proceso problemático. Resulta que hay una serie de propiedades y limitaciónes bajo las cuales funciona el proceso
 de enseñanza, que no siempre son armónicas y que hacen que el proceso sea problemático. Entre éstas están:
@@ -485,6 +220,42 @@ actividad práctica y que se actualiza por sí mismo;
 
 5. la base, en gran medida implícita, de gran perte de la actividad y del discurso en clase.
 """
+def save_metadata(audio_file_path: str, transcription_stats: Dict) -> None:
+    """Saves comprehensive transcription metadata in JSON format.
+
+    Args:
+        audio_file_path (str): Path to the original audio file
+        transcription_stats (Dict): Statistics about the transcription process
+
+    Metadata includes:
+        - File information (name, path, format)
+        - Processing details (duration, segments, timestamp)
+        - Technical specs (sample rate, channels, bit depth)
+        - Recognition stats (confidence scores, language)
+    """
+    metadata = {
+        'file_info': {
+            'original_file': os.path.basename(audio_file_path),
+            'full_path': os.path.abspath(audio_file_path),
+            'format': os.path.splitext(audio_file_path)[1],
+            'size_bytes': os.path.getsize(audio_file_path)
+        },
+        'processing': {
+            'transcription_date': datetime.now().isoformat(),
+            'duration_seconds': transcription_stats['duration'],
+            'segments_count': transcription_stats['segments'],
+            'processing_time': transcription_stats.get('processing_time', 0)
+        },
+        'recognition': {
+            'language': 'es-ES',
+            'confidence_avg': transcription_stats.get('confidence_avg', 0),
+            'segments_success_rate': transcription_stats.get('success_rate', 0)
+        }
+    }
+    
+    metadata_path = f"{os.path.splitext(audio_file_path)[0]}_metadata.json"
+    with open(metadata_path, 'w', encoding='utf-8') as f:
+        json.dump(metadata, f, indent=2, ensure_ascii=False)
 
 """
 Las nociones de <<andamiaje>> (Bruner) y de <<zona de desarrollo próximo>>
@@ -553,6 +324,8 @@ vamos a concentrarnos aquí en el discurso en clase de tipo más abiertamente in
 
 """
 
+
+
 """
 Contribuciones espontáneas y sonsacadas
 
@@ -579,6 +352,54 @@ contribuciones al discurso en clase ofrecidas por los alumnos se veían limitada
 en toda respuesta a una pregunta: que sea relevante, apropiada, informativa, etc. (Grice, 1975).
 
 """
+class ClassroomInteraction:
+    def __init__(self):
+        self.interaction_patterns = {
+            'teacher_control': [],
+            'student_responses': [],
+            'retrospective_elicitations': [],
+            'knowledge_exchanges': [],
+            'shared_understanding': []
+        }
+        self.current_topic = None
+        self.sequence_counter = 0
+        
+    def analyze_sequence(self, transcript: str):
+        lines = transcript.split('\n')
+        current_sequence = []
+        
+        for line in lines:
+            # Track teacher control patterns with context
+            if line.startswith('M:'):
+                if '?' in line:
+                    self.sequence_counter += 1
+                    pattern = {
+                        'id': self.sequence_counter,
+                        'type': 'question',
+                        'content': line,
+                        'context': self._get_context(line),
+                        'knowledge_type': self._classify_question(line)
+                    }
+                    self.interaction_patterns['teacher_control'].append(pattern)
+                    
+    def _get_context(self, line: str) -> str:
+        """Extracts pedagogical context from teacher utterances"""
+        contexts = {
+            'explain': 'conceptual',
+            'what if': 'hypothetical',
+            'why': 'reasoning',
+            'how': 'procedural'
+        }
+        return next((v for k, v in contexts.items() if k in line.lower()), 'general')
+        
+    def _classify_question(self, line: str) -> str:
+        """Classifies the type of knowledge being elicited"""
+        if any(term in line.lower() for term in ['because', 'why', 'explain']):
+            return 'deep_knowledge'
+        if any(term in line.lower() for term in ['what', 'when', 'where']):
+            return 'factual_knowledge'
+        return 'procedural_knowledge'
+
 """
 La importancia de los IRF en el establecimiento de la comprensión conjunta radica en el modo en que se expresan la complentariedad del conocimiento
 del maestro y del alumno. Como veíamos en capítulo 4, las preguntas de los maestros son de un tipo especial, en el sentido de que no contienen el presupuesto
@@ -593,6 +414,83 @@ parq su inclusión en la lección como contribución válida o útil.
 Esto puede verse de manera especial en ejemplos de los que podríamos llamar << obtención restrospectiva >>, en la que el maestro invita al alumno
 a responder cuando éste ya lo ha hecho (SECUENCIA 7.1).
 """
+class IRFAnalyzer:
+    """Analyzes Initiation-Response-Feedback patterns in classroom discourse.
+    
+    Tracks teacher-student interactions focusing on:
+    - Teacher initiations (questions, prompts)
+    - Student responses 
+    - Teacher feedback/evaluation
+    - Retrospective elicitation patterns
+    """
+    
+    def __init__(self):
+        self.interactions = []
+        self.retrospective_patterns = []
+        self.knowledge_validation = {
+            'accepted': [],
+            'redirected': [],
+            'elaborated': []
+        }
+
+    def analyze_sequence(self, transcript: str) -> Dict[str, Any]:
+        sequences = []
+        current_irf = []
+        
+        for line in transcript.split('\n'):
+            # Track teacher initiations
+            if '[teacher]' in line.lower() and '?' in line:
+                current_irf = ['initiation', line]
+                
+            # Track student responses
+            elif '[student]' in line.lower():
+                if len(current_irf) == 2:
+                    current_irf.append(line)
+                    
+            # Track teacher feedback
+            elif '[teacher]' in line.lower() and len(current_irf) == 3:
+                current_irf.append(line)
+                sequences.append(tuple(current_irf))
+                current_irf = []
+                
+        return self._analyze_patterns(sequences)
+    
+    def _analyze_patterns(self, sequences: List[Tuple]) -> Dict[str, Any]:
+        metrics = {
+            'total_irf': len(sequences),
+            'retrospective_elicitations': 0,
+            'knowledge_validation': {
+                'accepted': 0,
+                'redirected': 0,
+                'elaborated': 0
+            }
+        }
+        
+        for seq in sequences:
+            # Identify retrospective elicitations
+            if self._is_retrospective(seq):
+                metrics['retrospective_elicitations'] += 1
+                
+            # Analyze feedback patterns
+            feedback_type = self._classify_feedback(seq[3])
+            metrics['knowledge_validation'][feedback_type] += 1
+            
+        return metrics
+    
+    def _is_retrospective(self, sequence: Tuple) -> bool:
+        """Identifies if a sequence contains retrospective elicitation."""
+        initiation, response = sequence[0], sequence[2]
+        return response.lower() in initiation.lower()
+    
+    def _classify_feedback(self, feedback: str) -> str:
+        """Classifies teacher feedback into validation categories."""
+        if any(term in feedback.lower() for term in ['yes', 'correct', 'exactly']):
+            return 'accepted'
+        elif '?' in feedback:
+            return 'redirected'
+        return 'elaborated'
+
+
 """
 Secuencia 7.1 Obtenciones retrospectivas
 """ 
@@ -787,6 +685,44 @@ la atención acerca de ello, daba claves para su repetición y las definía gene
 la cual, al variar el peso de la esfera del péndulo, << aunque fuera una tonelada >> no cambiaría nada, fue adopatada, repetida y alentada por la maestra, y luego
 recordaba como una frase-fórmula que servía de envoltura al resultado empírico esencial de los experimentos sobre la variación del peso.
 
+def analyze_discourse(self, transcription: str) -> Dict:
+    """Scans the given transcription and updates the discourse metrics.
+
+    Uses IRF-based logic (Initiation-Response-Feedback) to identify teacher vs.
+    student control and spots key language markers for knowledge exchange.
+
+    Args:
+        transcription (str): The classroom transcription under analysis.
+
+    Returns:
+        Dict: A dictionary with updated metrics on teacher control and student involvement.
+    """
+    segments = transcription.split('\n')
+    current_irf = []
+    
+    for segment in segments:
+        # Teacher control patterns
+        if '[teacher]' in segment.lower():
+            if '?' in segment:
+                self.metrics['control_instances'] += 1
+            if any(term in segment.lower() for term in ['explain', 'understand', 'mean']):
+                self.metrics['knowledge_exchanges'] += 1
+                self.discourse_patterns['teacher_control']['knowledge_definition'].append(segment)
+        
+        # Student participation
+        if '[student]' in segment.lower():
+            self.metrics['student_contributions'] += 1
+            if any(term in segment.lower() for term in ['i think', 'because', 'therefore']):
+                self.metrics['shared_understanding_markers'] += 1
+                self.discourse_patterns['student_participation']['reasoning_markers'].append(segment)
+        
+        # Track IRF sequences
+        if len(current_irf) < 3:
+            current_irf.append(segment)
+        if len(current_irf) == 3:
+            self.metrics['irf_sequences'] += 1
+            self.discourse_patterns['interaction_structures']['irf_sequences'].append(current_irf)
+            current_irf =
 
 Secuencia 7.5 La fórmula << ni siquiera con una tonelada >>
 
