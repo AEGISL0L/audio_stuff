@@ -724,6 +724,8 @@ def analyze_discourse(self, transcription: str) -> Dict:
             self.discourse_patterns['interaction_structures']['irf_sequences'].append(current_irf)
             current_irf =
 
+            """
+
 Secuencia 7.5 La fórmula << ni siquiera con una tonelada >>
 
 
@@ -790,4 +792,157 @@ Secuencia 7.7 Aceptación de veinte balanceos
 
 
 Lucy, Karen, Jonathan y David parecían en el primer caso estar preparados y dispuestos a aceptar los cinco balanceos como un buen número. A través de una serie de pausas e instancias, acertaron eventualmente con el número requerido - << veinte >> - , justificado por la maestra en base a un concepto indefinido llamado << el margen de error>>.
-Es aquí donde podemos ver claramente el carácter problemático de la obtención mediante pistas. Es difícil no tener la impresión de que los alumnos estaban esencialmente intentando leer todas las señales disponibles en un juego de adivinanzas en el que tenían que averiguar, mediante la habilidad comunicativa 164
+Es aquí donde podemos ver claramente el carácter problemático de la obtención mediante pistas. Es difícil no tener la impresión de que los alumnos estaban esencialmente intentando leer todas las señales disponibles en un juego de adivinanzas en el que tenían que averiguar, mediante la habilidad comunicativa más que por la aplicación de algún principio de medición conocido, qué era
+lo que la maestra intentaba que dijiesen. No había ninuna indicación de que los alumnos comprendieran lo que significaba el término de << margen de error >>,
+aunque la sugerencia de Antony, << Por que lo reduce más >>, parecía prometedoramente profunda. Finalmente, los alumnos se habían visto llevados a aceptar los veinte balanceos
+como un buen número, pero parecían ( por su mirada huidiza ) inseguros en cuanto a las razones. Les preguntamos en las entrevistas cuál les parecía que 
+era la razón para hacer veinte balanceos. Sólo Jonathan parecía haber captado la importancia de la precisión y de la reducción del error, aunque no utilizó
+la noción de << margen de error >> . Sharon contestó:
+
+Bueno/ por que es como no demasiado rápido/ no demasiado lento y [la maestra] dijo bueno/ no estábamos seguros de lo que quería que hiciésemos.
+Bueno dijo que probablemente lo mejor sería hacer lo que hacían los otros/ veinte balanceos/ así que hicimos todos lo mismo.
+
+La respuesta de Sharon era enteramente de procedimiento, y hablaba en términos de hacer lo que la maestra quería que hiciesen. La respuesta de David
+era también de procedimiento y carente de una comprensión de principios:
+
+Por que era uno de los mejores para dividir... Creo que la primera vez que lo hicimos era con cinco cuando estábamos en eso y entonces pensamos bueno
+hemos hecho diez y eso es casi lo mismo que cinco, así que hicimos veinte. Primero íbamos a hacer quince pero entonces decidimos hacerlo veinte veces.
+
+La reconstrucción que hace David del procesi por el cual llegaron al número veinte es toda ella en términos de lo que << nosotros >> decidimos hacer, en forma
+de una reconstrucción narrativa del curso que había tomado el diálogo en aquella ocasión. El rol de la maestra en cuanto a sus instancias no se ve representado en esta narración, i tampoco se menciona para nada el principio
+de reducción del margen de error. Lucy sí invocó el término de << margen de error >>, aunque no está claro que comprendiese su significado:
+
+Porque hay menos margen de error/ creo que era eso y tiene que ser más exacto que si sólo se hacen cinco... por que tienes más posibilidades de comparar/ algo así.
+
+De nuevo, la expresión << creo que era eso >> sugiere un esfuerzo por recordar las palabras de la maestra, aunque tampoco está claro que Lucy comprendiese el principio.
+
+Lo importante no es qué alumnos comprendían el principio y cuáles no, sino el hecho de que el discurso y la actividad de la lección no promovieran esta comprensión.
+
+El peligro de la obtención mediante pistas radica en que, hasta ser examinada de cerca , puede dar una falsa impresión (probablemente a los participantes tanto como a los observadores) de la medida en que los alumnos comprenden,
+y son en última instancia responsables, de lo que dicen y hacen. Puede ocultar, más que salvar, la brecha existente entre el maestro y el niño y que constituye la base del proceso desarrollista
+de Vygotsky, y puede llevar por tanto a los tipos de comprensión de procedimiento, << ritual >>, identificados en el capítulo 6.
+
+""" """" """" """ 
+
+Reconstrucciones, supuestos y previos y paráfrasis
+
+Bajando nuestra lista escanolada de procesos de comunicación, llegamos a continuación a una sere de mecanismos discursivos a través de los cuales la maestra
+podía mantener un estricto control sobre el contenido del conocimiento compartido. Parafraseando lo que los alumnos decían y reconstruyendo lo que ocurría en la lección al hacer una recapitulación posterior, 7
+podía volver a definir esas cosas de forma mucho más nítida, más limpia y más cercana a la intención del plan para la lección. Del mismo modo, dando ciertas cosas por
+conocidas o las interpretaciones que se diesen a la experiencia. La paráfrasis eran a menudo aparentemente pequeñas y accidentales, como cuando en la lección 2 sobre
+el péndulo, Lucy no recordaba bien uno de los tiempos cronometrados obtenidos en la lección 1, cuando ella y Jonathan habían variado el peso de la esfera del péndulo:
+
+Secuencia 7.8 Parafraseando a Lucy
+
+La maestra utilizaba también la paráfrasis de manera más directa como método de enseñanza, como en la secuencia 7.9, donde intentaba obtener lo más posible de la explicación de los alumnos y luego remodelar la explicación
+ofrecida por Antony en una forma más de su agrado ( y de hecho, más precisa):
+
+
+Secuencia 7.9 Parafraseando a Antony
+
+
+Estas paráfrasis retrospectivas demuestran otra función de la etapa feedback de las secuencias IRF; proporcionan a la maestra una oportunidad no sólo de confirmar lo que dicen los alumnos,
+sino de remodelarlo en una forma más aceptable, tal vez más explícita, o simplemente arropada en una terminología más de su agrado.
+Las reconstrucciones más amplias tuvieron lugar durante la segunda de las lecciones sobre el péndulo, en que la maestra estaba recapitulando ( a través de las estructuras IRF de tipo conocido)
+sobre eel material cubierto en la lección 1. Tanto la maestra como los alumnos estaban en el proceso de recordar uno a uno sus principales hallazgos empíricos.
+Aquí tenemos la versión de Jonathan:
+
+Secuencia 7.10 Recapitulación de los principales hallazgos empíricos            
+
+La reconstrucción más notable de la secuencia 7.10 es la declaración de Jonathan de que él y su compañera han variado sólo el peso, que han cambiaado el número de arandelas
+<< y lo hemos hecho a la misma altura [ es decir, ángulo ] todas las veces >>. Como observábamos en el capitulo 6. Jonathan y Lucy alternaron en realidad el ángulo además de la altura, hecho que la maestra
+prefirió claramente ignorar, y no pudo establecerse si habían hecho uso o no de los controles adecuados al alterar las dos variables.
+
+Cuando llegamos a la lección 2 ya se había captado la importancia de alterar las variables de una en una, y los alumnos y la maestra estaban preparados para iniciar una clara revisión
+de lo que había ocurrido en realidad. Del mismo modo, la respuesta afirmativa de Jonathan a la sugerencia a la sugerencia de que el resultado lo hubiese sorprendido estaba en directa contradicción con su declaración
+de la lección 1 (veáse secuencia 7.5), según la cual el resultado era exactamente el que él esperaba. De hecho, en la lección 2, poco después de la secuencia 7.10, articula la hipótesis reconstruida:
+<< Creía que iba a ir más rápido porque el peso es diferente.>> Sea cual fuere la verdad de la cuestión, los hallazgos experimentales han quedado comprendidos conjuntamente como resultados que desmentían una hipótesis.
+Quizá Jonathan no estuviese en un principio dispuesto a admitir lo que podía parecer entonces un error de juicio, el que hubiere hecho una predicción falsa.
+
+En todo caso, en la lección 2 opta por confirmar lo que sugiere la maestra (<< Eso te ha soprendido, ¿verdad? >>), que el resultado fuese inesperado. Desde luego, es mucho
+más aceptable que una hipótesis sea desmentida científicamente que haber cometido simplemente un error de juicio.
+
+Otra notable recapitulación reconstruciva tuvo lugar en la lección 2, cuando la maestra y los alumnos estaban recordando el experimento de variación del ángulo de balanceo:
+
+Secuencia 7.11 Reconstrucción de un principio de intervalos iguales
+
+
+La secuencia 7.11 parece indicar que SHaron y Karen han escogido ángulos con la misma distancia de separación, 15º, como procedimiento científico adecuado. De hecho, como demuestra con toda claridad la secuencia 7.12 ( de la lección 1 ),
+los cuatro ángulos fueron primero señalados sin medición en la alto del péndulo, y sólo luego, una vez terminado el experimento, se estimó, bajo indicación de la maestra, que eran equidistantes a intervalos de 15º. De hecho, Sharon y Karen habían determinado ya antes sus ángulos
+de balanceo probando y descartando, sin calibrar, limitadas por los ángulos en los que el cordel tropezaba con el montante del péndulo.
+
+Secuencia 7.12 Cómo se midieron los intervalos iguales
+
+La idea de que se utilizaran cuatro intervalos equidistantes para medir los ángulos de balanceo fue construida durante la primera lección a partir de la 
+posición casual de las señales en el péndulo y de la instancias de la maestra, y fue luego reconstruida en el discurso de la lección 2 como un principio
+científico que limitaba la conducción adecuada de los experimentos. El modo en que se llegó en realidad a los intervalos no fue articulado en ningún momento.
+Sería, evidentemente, falso dar demasiado énfasis a la importancia de lo que aprenden los alumnos a aprtir de simplemente de su propia actividad y experiencia, aun 
+trabajando en parejas o en grupos. Lo que realmente importa es la interpretación que se da a esa experiencia, las palabras. Y es principalmente la maestra quien proporciona estas palabras.
+Y es principalmente la maestra quien proporcuina estas palabras al tiempo que elimina otras del vocabulario común, y quien gobierna el proceso discursivo en que se establecen descripciones 
+y versiones particulares de acontecimientos como base de la comprensión conjunta.
+
+Uno de los medios más poderosos que poseía la maestra para imponer su definición de cómo deben interpretarse las cosas era utilizando la implicación y el supuesto previo.
+Suponiendo simplemente que determinada interpretación era correcta, no planteándola como una cuestión abierta, podía mantener una limitación estricta sobre
+el curso del pensamiento de los alumnos. Por ejemplo, Antony y David fueron los alumnos que alteraron la única variable efectiva, el largo del cordel.
+
+Contrástense las preguntas de la maestra a Sharon y Karen (<< ¿Cómo va? ¿Algún resultado?, Sharon?>>) con la pregunta a Antony y David: << Bueno, ¿es el cordel más corto el que va más rápido o el más largo?>>
+Mientras que a Sharon se le ofrecía la posibilidad de negar que hubiese encontrado algún resultado, en el caso de Antony y David había el supuesto previode que los cordeles
+van más rápido o más despacio según la longitud, y la pregunta era qué longitud porducía una mayor velocidad. La respuesta de David fue clara: << No, el corto va más rápido >>
+
+Remarcábamos en el capítulo 5 que un rasgo esencial del discurso educacional, y, de hecho, del discurso en general, es que éste siempre se basa en algún tipo de supuestos contextuales.
+En las clases escolares, estos supuestos contextuales constituyen el cuerpo del conocimiento y pensamiento compartido que se va creando según desarrollan las lecciones. Pero los 
+supuestos contextuales no tienen por qué implicar una informaci´´on o unas ideas que hayan sido previamente comunicadas de manera explícita. La información puede introducirse en una conversación a través de su rol
+como contexto implícito para lo que se declara explícitamente. La parte implícita de un mensaje puede recuperarse del contexto situacional y de lo que explícitamente se dice,
+y esto constituye también un rasgo normal del discurso cotidiano. Si alguien nos pide en la calle la dirección de la oficina de correos más próxima, tendremos motivos razonables para suponer que quiere ir allí
+, que no sabe el camino, etc. El indicar un supuesto previo de contextos de enseñanza tiene una función pedagógica por encima de su uso en muchos otros ( aunque es evidente que gran parte de la retórica persuasiva,
+la propaganda, la publicidad, etc., funciona de manera similar). Sirve para introducir ciertos puntos de conocimiento y suposición como algo que hay que aceptar sin reservas,
+algocuerdo, y, por lo tanto, en un sentido más general, está a disposición del maestro como piedra de toque o como instrumento de control sobre lo que se conoce y comprendre.
+
+Un caso particular de enseñanza implícita tuvo lugar cuando la maestra introdujo una terminología más de su agrado, palabras de la jerga científica tales como << masa >> e << impulso >>. A veces, estos términos
+se introducían a través de ki que podriamos llamar << enseñanza directa >>, en la que la maestra introducía explícitamente las palabras, las definía y alentaba a los alumnos A
+la obtención, con o sin pistas, como en el caso de los términos << impulso >> y << aceleración >> de la lección 2 (<<¿sabe alguien cuál es la palabra cuando se aumenta la velocidad/ como cuando se pisa el pedal de un coche?>>)
+. La secuencia 7.13 muestra cómo se introdujeron varios términos mediante el simple uso de los mismos por parte de la maestra en un contexto comprendido,
+como vocabulario alternativo, e implícitamente mejor.
+
+Secuencia 7.13 Adquisición de un vocabulario compartido: utilización por la maestra
+
+
+Mientras los alumnos han utilizado términos cotidianos tales como << peso >> y << colgar recto para abajo de un dedo>>, la mestra no sólo ha utilizado estos términos sino que ha introducido también jerga más técnica,
+<< masa >>, << suspendido >> y << de un punto fijo >> (veáse secuencia 7.1, en la que la maestra obtiene el término << acelerar >> en sustitución de la expresión de Antony << hace subir el cordel/ al bajar>>). Después de haber establecido los diversos atributos que componen un péndulo, la maestra los recapitula con los alumnos.
+
+Secuencia 7.14 Adquisición de un vocabulario compartido: utilización por los alumnos
+
+
+
+Los alumnos han captado rápidamente la nueva terminología introducida por la maestra y han empezado a utilizarla ellos también. No está claro que comprendieran inmediatamente y del todo su significado.
+El término de << masa >>, sugerido por David, es ambiguo por el hecho de que éste no comprende que << masa >> significa aquí algo equivalente a << peso >> y por su sensación de que la maestra simplemente prefiere ese término, lo que hace que valga la pena mencionarlo.
+A pesar de la ausencia de enseñanza directa -la maestra no ha enseñado de manera explícita estos términos ni ha pedido o alentado abiertamente a los alumnos adoptarlos-, se ha convertido en términos comunes de referencia para señalar una comprensión común. Simplemente utilizando los términos en un contexto en que podían entenderse, en este caso comom alternativa a las palabras cotidianas utilizadas por los alumnos,
+la maestra ha conseguido inducir a los alumnos a un discurso científico compartido, un marco compartido de referencia y concepción que se puede hacer del carácter de la enseñanza y aprendizaje del tipo examinado en los tres últimos capítulos.
+
+Se trata de la inducción de los niños al mundo académico de conocimiento y de discurso en que se mueve la maestra.
+Es un proceso de socialización cognitiva a través del discurso, un proceso tan afín al menos a la socialización cognitiva a través del discurso, un proceso tan afín que lemos a la socialización general ideológica y de conducta como a las nociones psicológicas cognitivas de crecimiento y desarrollo mentales.
+
+Discurso y conocimiento en clase 
+
+En las clases << tradicionales >> de Gran Bretaña, los alumnos recibían pasivamente el saber comunicado por la maestra. Se les ppedía que permanecieran práctiamente mudo hasta que se les invitaba a hablar, que hablaran sólo al maestro y que aprendieran rotativamente una larga serie de datos de cultura - desde las fechas de sucesión de los reyes y reinas de Inglaterra a deletrear correctamente las palabras, cuántos quintales tiene una tonelada y las tablas de multiplicar-.
+Bajo la influencia de la teoría y la investigación psicológicas (principalmente de Piaget), junto con los cambios de la ideología de la educacióm, la enseñanza primaria de Gran Bretaña ha sufrido una gran transformación de tipo << progresivo >>. 
+Está claro que el aprendizaje rotativo no equivale a alcanzar la comprensión, y que los niños aprenden mejor si participan activamente en la materia inmersos pasivamente en la charla del maestro.
+
+Aunque, a nuestro modo de ver, esto constituye una importante mejora con respecto a los métodos tradicionales de enseñanza, sigue dando a pie problemas propios, << algunos de los cuales hemos intentado describir en los dos últimos capítulos>>.
+
+Un resultado general que nos sorprendió fue la medida de control ejercido por la maestra, incluso en clases caracterizadas por una enseñanza de tipo más progresivo. En las lecciones sobre el péndulo, por ejemplo, los niñoas trabajaban en pequeños grupos subdivididos en parejas de alumnos con un péndulo para cada una, Y
+descubrían a través de sus propias actividades los principios que gobiernan el movimiento del péndulo. A simple vista, el rol de la maestra era esencialmente facilitador, ya que modelaba la dirección general de la lección,
+pero se apoyaba en gran medida en que los mismos alumnos planteasen hipótesis, procedimientos y criterios para hacer pruebas, realiaar ellos mismos los experimentos y también las observaciones de medición.
+
+Al hacer un examen más detenido se vio con mayor claridad la medida de control de la maestra. Como hemos demostrado en este capítulo, la libertad de los alumnos para introducir sus propias ideas
+era en gran medida ilusoria; la maestra mantenía un estricto control sobre lo que se decía y hacía, las decisiones a las que se llegaba y las interpretaciones que se daban a la experiencia.
+
+Naturalmente, nos cuidaremos de generalizar una pequeña muestra de discurso en clase y convertirla en un análisis del estado general de la enseñanza primaria británica. 
+No es éste nuestro propósito, y por eso no hemos codificado ni contado los diversos tipos de fenómenos identificados. Semejante procedimiento sse prestaría al tipo de comparaciones
+estadísticas entre clases y escuelas diferentes que no eran la finalidad de nuestra investigación. Por el contrario, hemos optado por someter pequeñas muestras de discurso y activiadad en clase a un detenido análisis cuantitativo, con la esperanza de descubrir en ese discurso claves sobre cómo se construye y comparte, en realidad, el conocimeinto entre maestro y alumno.
+
+Sin embargo, no es nuevo el descubrimiento de una abrumadora sensación de control por parte de la maestra: en la confección de la agenda, en la determinación antes de la lección de cuáles deben ser los resultados, y, en general,
+en la expresión del rol social autoritario de la maestra en cuanto al control tanto epistemológico como de conducta. Edwards y Furlong (1978), por ejemplo, basan también su análisis del discurso en clase como lo hemos hecho nosotros. Otros utilizan índices lingüísticos más específicos y cuantificados.
+
+Feldman y Werstch (1976), por ejemplo, midieron la frecuencia con que los maestros norteamericanos utilizaban una serie de verbos auxiliares que expresan difereentes grados de inseguridad. 
+Comprobaron que éstos se utilizaban más en la sala de profesores que en clase; la charla en clase se juzgaba autoritaria, segura de los hechos y << cerrada >>, en comparación con la charla más abierta

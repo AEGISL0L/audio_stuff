@@ -26,7 +26,7 @@ def transcribe_audio(audio_file_path):
         print(f"Error al procesar el audio: {e}")
         return None
 
-audio_file_path = '20240109214231.WAV'
+audio_file_path = '20241122120846.WAV'
 transcription = transcribe_audio(audio_file_path)
 if transcription:
     print(transcription)
