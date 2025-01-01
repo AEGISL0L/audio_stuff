@@ -946,3 +946,33 @@ en la expresión del rol social autoritario de la maestra en cuanto al control t
 
 Feldman y Werstch (1976), por ejemplo, midieron la frecuencia con que los maestros norteamericanos utilizaban una serie de verbos auxiliares que expresan difereentes grados de inseguridad. 
 Comprobaron que éstos se utilizaban más en la sala de profesores que en clase; la charla en clase se juzgaba autoritaria, segura de los hechos y << cerrada >>, en comparación con la charla más abierta
+, hipotética, e insegura entre los maestros.
+
+Nuestros  hallazgos segieren las siguientes conclusiones sobre los procesos educacionales observados:
+
+1. El aprendizaje basado en la experiencia y control por parte del maestro. A pesar del  ehcho de que las lecciones estaban organizadas en términos de acciones prácticas y actividad conjunta en grupos reducidos entre los
+alumnos, el tipo de aprendizaje que tenía lugar no era esencialmente una cuestión de aprendizaje basado en la experienciaa ni en la comunicación entre los alumnos.
+El rol de la maestra era en todo momento crucial, tanto en el modelado de la estructura y contenido generales de la lección como en la matizada definición de lo que se hacía, decía y comprendía.
+Los alumnos no tenían , pues, la oportunidad de crearse sus propia comprensiones e interpretaciones.
+
+2. Ritual y principios. Sin dejar de mantener un estrecho control sobre la actividad y el discurso, la maestra prefería e intentaba actuar según el principio educacional del aprendizaje basado en la experiencia y centrado en el alumno,
+así como en la importancia de la participación de los alumnos en la actividad y el descubrimiento prácticos. Esto hacía que la idea que se formaban los alumnos de ciertos conceptos importantes fuese esencialmente << ritual >>, una cuestión de qué había que hacer o decir, más que <<de principios>>,
+es decirm basada en una comprensión conceptual. Entre los tipos de particulares de discurso en clase que servían de base a la creación de este conocimiento << de procedimiento >> estaba la gran confianza en la << obtención mediante pistas >> junto
+con un abrumado interés por llevar las lecciones a base de pasar por toda la serie planificada de actividades, en lugar, por ejemplo, de asegurarse de que todos entendían una serie planificada de conceptos.
+
+La medida misma del control de la maestra sobre la actividad, el discurso y la interpretación, probablemente había contribuido al hecho de que la comprensión de las lecciones por parte de los alumnos llegara a menudo a consistir en saber lo que se hacía (o, al menos, su versión reconstruida oficial) y lo que había que decir.
+
+
+3. El lenguaje y la socialización de la cognición. Nos hemos centrado en el << contenido >> del conocimiento y el discurso, en lo que se hacía y decía, las palabras utilizadas,
+los conceptos en cuestión, las acciones realizadas. Ha habido quien ha observado atentamente la forma del discurso en clase, bien sus estructuras sociolingüíticas (por ejemplo Sinclair y Coulthard, 1975; Mehan, 1979) o su relación con propiedades formales del pensamiento tales como la capacidad de razonamiento lógico (Walkerdine, 1984).
+La conclusión que se deriva de nuestros estudios ees la de que el discurso en clase actúa estableciendo comprensiones conjuntas entre maestro y alumno, marcos compartidosde referencia y concepción, en las que el proceso básico (incluidos los aspectos problemáticos de este proceso) consiste en introducir a los alumnos en el mundo conceptual de la maestra,
+y, a través de ella, de la comunidad educativa. En la medida en que puede observarse que el proceso de eduación tiene lugar en el discurso situado de la clase se trata, esencialmente, según nuestras pruebas, de un proceso de socialización cognitiva a través del lenguaje.
+
+La relación del poder y el control con la creación de comprensiones conjuntas a la vez problemática y de gran importancia. Según Habermas (1970, pág. 143), la <<intersubjetividad pura>> se consigue sólo en condiciones de <<completa simetría en la distribución de evaluación y controversia, revelación y ocultación, prescripción y seguimiento,
+entre los participantes en la comunicación>>. Pero el interés inherente de la eduacación es el de introducir a los niños y a los adultosen una cultura preexistente de pensamiento y lenguaje. Por muy activo que sea el papel que se permite desempeñar a los alumnos en su aprendizaje, no debemos suponer que puedan simplemente reinventar esa cultura a través de su propia actividad y experiencia.
+Se trata forzosamente de un proceso social y de comunicación, de un proceso que tiene como parte inherente una asimetría de roles entre maestro y alumno. El aprendizaje cultural preescolar, y en especial el aprendizaje de la primera lengua, ha sido descrito por Lock (1979) como un proceso de << reinvención dirigida >>. En las escuelas, la asimetría del poder es más marcada. La escolarización es algo obligatorio,
+separado de la vida en el hogar, más formal y con un programa más arbritario. Muchos niños van de mala gana a la escuela. Los maestros se ven a menudo principalmente como fuentes de castigo (Hood, McDermott y Cole, 1980). 
+Si no se quiere que el proceso educacional llegue a su término comprometido por la asimetría entre maestro y alumno , debemos desarrollar una comprensión del proceso que reconozca y aliente esta asimetría de un modo que fomente el aprendizaje en vez de obstaculizarlo.
+
+Para los alumnos, parte del problema consiste en que el proceso es siempre en gran medida, un misterio para ellos. Aunque sea de una manera cordial y poco formal, se les pide a menudo que hagan cosas, aprendan cosas y comprendan cosas, sin otra razón aparente que el hecho de que esto es lo que es maestro quiere que hagan. las metas y objetivos de la lección permanecen ocultos. 
+Y de hecho, lo mismo ocurre a menudo con los conceptos que estaba destinada a << cubrir >> la lección. En el ethos del aprendizaje inductivo centrado en el alumno no es aceptable decir a éste lo que debía descubrir por sí mismo, ni siquiera una vez terminadas las diversas actividades de aprendizaje. Recuérdense de las entrevistas del capítulo 4 con los niños que habían hecho el simulacro de la << isla desierta >>;
