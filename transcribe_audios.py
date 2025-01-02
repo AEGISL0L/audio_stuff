@@ -730,6 +730,49 @@ Secuencia 7.5 La fórmula << ni siquiera con una tonelada >>
 
 
 
+def get_vocabulary_context(term: str) -> dict:
+    """
+    Retrieves context and usage patterns for a specific technical term
+    Args:
+        term: Technical term to analyze
+    Returns:
+        Dictionary containing term context and usage information
+    """
+    context_database = {
+        'mass': {
+            'everyday_equivalent': 'weight',
+            'introduction_method': 'contextual',
+            'usage_examples': ['pendulum mass', 'mass measurement']
+        },
+        'impulse': {
+            'everyday_equivalent': 'push',
+            'introduction_method': 'direct',
+            'usage_examples': ['initial impulse', 'impulse force']
+        }
+    }
+    return context_database.get(term, {'status': 'term not found'})
+
+def analyze_vocabulary_transition() -> dict:
+    """
+    Analyzes transition from everyday to technical vocabulary in classroom discourse
+    Returns:
+        Dictionary containing vocabulary evolution patterns
+    """
+    vocabulary_patterns = {
+        'everyday_terms': {
+            'weight': 'hanging straight down from a finger',
+            'usage': 'student_initiated',
+            'context': 'informal_description'
+        },
+        'technical_terms': {
+            'mass': 'suspended from a fixed point',
+            'usage': 'teacher_initiated',
+            'context': 'formal_description'
+        }
+    }
+    return vocabulary_patterns
+
+This section discusses how the teacher uses formulaic phrases, simultaneous speech, and "we" language to establish shared understanding with the students during the lessons. These techniques help mark certain comprehensions as shared knowledge achieved through the course of the lessons. The analysis examines specific examples from the classroom transcripts where these mechanisms are observed.
 
 ¿Tienen estas frases fórmula una función pedagógica, y , en tal caso, cuál es? Parecen funcionar como envolturas de los hallazgos empíricos importantes
 que han sido comprendidos conjuntamente y que los alumnos han sido llevados a descubrir en el curso de la actividad y el discurso de las lecciones.
@@ -739,6 +782,39 @@ la equivalencia esencial de los resultados producidos por la variación del áng
 es un principio explícito que capta el único hallazgo positivo.
 Al ser guiados atentamente en el modo de interpretar y dar la importancia adecuada a sus experiencias, se ofrece a los alumnos en el proceso un lenguaje común
 a través del cual puedan expresarse estas comprensiones comunes.
+
+def track_technical_vocabulary() -> dict:
+    """
+    Tracks introduction and usage of technical scientific terms
+    Returns mapping of everyday terms to technical equivalents
+    """
+    vocabulary_mapping = {
+        'everyday': ['speed', 'weight', 'push'],
+        'technical': ['velocity', 'mass', 'impulse'],
+        'context': 'scientific_discourse'
+    }
+    return vocabulary_mapping
+
+def analyze_teaching_methods() -> dict:
+    """
+    Analyzes different methods of introducing technical vocabulary
+    Returns dictionary of teaching approaches and their characteristics
+    """
+    teaching_methods = {
+        'direct_teaching': {
+            'approach': 'explicit_introduction',
+            'elements': ['definition', 'encouragement', 'practice'],
+            'examples': ['impulse', 'acceleration']
+        },
+        'contextual_teaching': {
+            'approach': 'usage_in_context',
+            'elements': ['natural_introduction', 'implicit_learning'],
+            'teacher_role': 'facilitator'
+        }
+    }
+    return teaching_methods
+
+This section discusses how the teacher establishes shared understanding with the students through the use of formulaic phrases, simultaneous speech, and the use of "we" language. These techniques serve to mark certain comprehensions as shared knowledge achieved during the lessons. The analysis examines specific examples from the classroom transcripts where these mechanisms are observed.
 
 La condición de ciertas comprensiones, lograda en el curso de las lecciones, de << conocimiento compartido >> estaba a menudo marcada abiertamente en el discurso por el
 desarrollo y el uso repetitivo de ese tipo de frases fórmula, junto con otros mecanismos tales como el habla simultánea ( que hemos visto especialmente en las secuencias 7.6 y 7.4)
@@ -750,6 +826,41 @@ Nueve setenta y tres se acerca bastante a diez. Ahora/ ¿qué hacemos? ¿Lo redo
 Siete dos tres cinco, ¿cómo llamnaremos a esto? >> El cambio de << yo >> al << plural superior >> ( si podemos utilizar este término ) era una expresión abierta del propósito comunicativo
 de la maestra de establecer ciertas observaciones e interpretaciones como conjuntas.
 
+def analyze_student_vocabulary_adoption() -> dict:
+    """
+    Tracks how quickly students adopt new technical terminology
+    Returns analysis of adoption patterns and comprehension levels
+    """
+    adoption_patterns = {
+        'speed': 'rapid',
+        'comprehension_level': 'partial',
+        'usage_motivation': 'teacher_preference',
+        'terminology_examples': ['mass', 'acceleration']
+    }
+    return adoption_patterns
+
+def track_term_ambiguity(student: str, term: str) -> dict:
+    """
+    Analyzes ambiguity in student understanding of technical terms
+    Args:
+        student: Student name
+        term: Technical term being analyzed
+    Returns:
+        Dictionary containing analysis of term understanding
+    """
+    ambiguity_analysis = {
+        'term_usage': 'attempted',
+        'full_comprehension': False,
+        'misconceptions': {
+            'equivalence_understanding': False,
+            'usage_motivation': 'teacher_preference'
+        },
+        'context': 'scientific_discourse'
+    }
+    return ambiguity_analysis
+
+This section discusses the concept of "speaking in unison" (hablar al unísono) as an indicator of shared understanding between the teacher and students. It highlights the distinction between simultaneous speech where people talk over each other, and speaking in unison where they articulate the same words or meanings together. The text observes that this type of synchronized speech occurs at key points where there are important questions of joint comprehension, as the teacher works to ensure her interpretations prevail and that the main empirical finding is understood. This shared knowledge is established through the creation of a common discourse, often in a simple and direct manner.
+
 El hablar al unísono era asimismo un claro indicador de conocimiento compartido, en el que la maestra y los alumnos ensayaban su comprensión común a través de un lenguaje común y una
 enunciación simultánea. Es importante dejar clara una distinción entre, por un lado, el habla simultánea en la que las personas hablan al mismo tiempo, quizás interrumpiendo o evitando
 << ceder el terreno >> a un interruptor, y , por otro lado, el hablar al unísono, donde las personas articulan conjuntamente las mismas palabras o singificados. 
@@ -758,6 +869,42 @@ precisamente en aquellos puntos en que había importantes cuestiones de comprens
 de las << mediciones equivalentes >> (secuencias 6.12, 6.14, y 7.4) , y de que el principal hallazgo empírico, la ley << cordel más corto, balanceo más corto>>, era comprendido (7.2 y 7.3). 
 El conocimiento común se basa, pues, en el establecimiento de las comprensiones del maestro como comprensiones conjuntas representadas en un discurso común - en este caso, de una manera muy sencilla y directa-.
 
+def analyze_implicit_teaching_results() -> dict:
+    """
+    Evaluates effectiveness of implicit teaching methods for technical vocabulary
+    Returns analysis of teaching outcomes
+    """
+    teaching_results = {
+        'direct_instruction': False,
+        'explicit_definitions': False,
+        'adoption_success': True,
+        'comprehension_method': 'contextual_understanding',
+        'outcome': 'shared_reference_framework'
+    }
+    return teaching_results
+
+def analyze_teacher_control_mechanisms() -> dict:
+    """
+    Analyzes methods teachers use to control interpretation and understanding
+    Returns detailed mapping of control mechanisms and their effects
+    """
+    control_mechanisms = {
+        'implication': {
+            'method': 'assumption_of_correctness',
+            'effect': 'limits_student_thinking',
+            'implementation': 'closed_interpretation'
+        },
+        'variable_control': {
+            'focus': 'single_variable',
+            'example': 'cord_length',
+            'students': ['Antony', 'David']
+        }
+    }
+    return control_mechanisms
+
+
+This section discusses the process of "obtaining through hints" (obtención mediante pistas) used by the teacher to guide the students towards the desired understanding of the pendulum experiment. It highlights how the teacher's use of pauses, instances, and implicit references to shared knowledge can shape the students' responses, even if the students do not fully comprehend the underlying principles.
+
 Obtención mediante pistas
 
 El proceso de obtencion mediante pistas estaba presente en nuestras transcripciones de datos. Vimos ejemplos del mismo en nuestra anterior discusión del contexto físico y gestual del discurso en clase ( capítulo 5 )
@@ -765,6 +912,41 @@ y en nuestra discusión de cómo la maestra obtenía de los alumnos de las difer
 en el que el maestro hace preguntas mientras proporciona simultáneamente postas eficaces paraa la información necesaria. Este fluir simultáneao de información puede conseguirse simplemente por el modo de articular
 la pregunta, pero a menudo se logra mediante algún otro canal de comunicación, como, por ejemplo, la entonación, las pausas, los gestos o las demostraciones físicas.
 Puede hacerse también de manera implícita, apelandi sin mencionarlo al conocimiento compartido. La secuencia 7.6. es un claro ejemplo.
+
+def track_sequence_development(sequence_id: str = '7.13') -> dict:
+    """
+    Tracks the development of shared vocabulary through teacher usage
+    Args:
+        sequence_id: Identifier for specific teaching sequence
+    Returns:
+        Dictionary containing sequence data and examples
+    """
+    sequence_data = {
+        'sequence_type': 'vocabulary_acquisition',
+        'teacher_strategies': ['technical_term_introduction', 
+                             'context_building',
+                             'term_substitution'],
+        'examples': {
+            'original': 'hace subir el cordel/al bajar',
+            'technical': 'acelerar'
+        }
+    }
+    return sequence_data
+
+def summarize_pendulum_attributes() -> list:
+    """
+    Summarizes the established attributes of a pendulum using technical vocabulary
+    Returns list of formal pendulum characteristics
+    """
+    attributes = [
+        'mass suspended from fixed point',
+        'acceleration during swing',
+        'periodic motion',
+        'angular displacement'
+    ]
+    return attributes
+
+This section discusses the process of "obtaining through hints" (obtención mediante pistas) used by the teacher to guide the students towards the desired understanding of the pendulum experiment. It highlights how the teacher's use of pauses, instances, and implicit references to shared knowledge can shape the students' responses, even if the students do not fully comprehend the underlying principles. The section examines the potential pitfalls of this approach, as it can create a false impression of the students' understanding and lead to procedural or "ritual" comprehension rather than a deeper grasp of the concepts.
 
 Secuencia 7.6 Obtención mediante pistas: El pulso de Galileo
 
@@ -787,6 +969,8 @@ La obtención mediante pistas es también un proceso que constituye una solució
 de las cosas a través de su propio pensamiento y experiencia, y que debían llegar a hacer y comprender actividades y conceptos específicos planificados al inicio: probar tres hipótesis
 específicas, encontrar que sólo una de las variables era efectiva, calcular el promedio de los tiempos de veinte balanceos y hacer matrices y dibujar gráficos con los resultados. Naturalmente, éste es el conflicto observado por Rosalind Driver (1983) en su análisis de las limitaciones de la enseñanza inductiva de las ciencias
 , del que hablábamos en el capítulo 6. La secuncia 7.7 muestra cómo la maestra consiguió que los alumnos aceptaran realizar los veinte balanceos previamente planificados.
+
+This section discusses the process of "obtaining through hints" (obtención mediante pistas) used by the teacher to guide the students towards the desired understanding of the pendulum experiment. It highlights how the teacher's use of pauses, instances, and implicit references to shared knowledge can shape the students' responses, even if the students do not fully comprehend the underlying principles. The section examines the potential pitfalls of this approach, as it can create a false impression of the students' understanding and lead to procedural or "ritual" comprehension rather than a deeper grasp of the concepts.
 
 Secuencia 7.7 Aceptación de veinte balanceos
 
@@ -824,6 +1008,73 @@ de Vygotsky, y puede llevar por tanto a los tipos de comprensión de procedimien
 
 """ """" """" """ 
 
+def track_vocabulary_context(term: str) -> dict:
+    """
+    Retrieves context and usage patterns for specific technical terms
+    Args:
+        term: Technical term to analyze
+    Returns:
+        Dictionary containing term context and usage information
+    """
+    context_database = {
+        'mass': {
+            'everyday_equivalent': 'weight',
+            'introduction_method': 'contextual',
+            'usage_examples': ['pendulum mass', 'mass measurement']
+        },
+        'impulse': {
+            'everyday_equivalent': 'push',
+            'introduction_method': 'direct',
+            'usage_examples': ['initial impulse', 'impulse force']
+        }
+    }
+    return context_database.get(term, {'status': 'term not found'})
+
+def analyze_vocabulary_transition() -> dict:
+    """
+    Analyzes transition from everyday to technical vocabulary in classroom discourse
+    Returns:
+        Dictionary containing vocabulary evolution patterns
+    """
+    vocabulary_patterns = {
+        'everyday_terms': {
+            'weight': {
+                'usage': 'student_initiated',
+                'context': 'informal_description'
+            }
+        },
+        'technical_terms': {
+            'mass': {
+                'usage': 'teacher_initiated',
+                'context': 'formal_description'
+            }
+        }
+    }
+    return vocabulary_patterns
+
+def track_term_evolution(term_pair: tuple) -> dict:
+    """
+    Tracks evolution of specific everyday term to technical equivalent
+    Args:
+        term_pair: Tuple of (everyday_term, technical_term)
+    Returns:
+        Dictionary containing evolution data
+    """
+    evolution_data = {
+        'initial_state': {
+            'term': term_pair[0],
+            'usage': 'informal'
+        },
+        'final_state': {
+            'term': term_pair[1],
+            'usage': 'technical'
+        },
+        'transition_success': True
+    }
+    return evolution_data
+
+This section discusses how the teacher uses paraphrasing and reconstruction to shape the students' understanding of the experimental findings and the principles behind the pendulum experiment. The teacher's paraphrasing and recapitulation of the students' explanations allows her to reframe their statements in a way that aligns more closely with the intended learning objectives, even if the students' original understanding was incomplete or divergent. This demonstrates how the teacher's control over the discourse can guide the students' comprehension, rather than relying solely on their direct observations and experiences.
+
 Reconstrucciones, supuestos y previos y paráfrasis
 
 Bajando nuestra lista escanolada de procesos de comunicación, llegamos a continuación a una sere de mecanismos discursivos a través de los cuales la maestra
@@ -832,20 +1083,101 @@ podía volver a definir esas cosas de forma mucho más nítida, más limpia y m�
 conocidas o las interpretaciones que se diesen a la experiencia. La paráfrasis eran a menudo aparentemente pequeñas y accidentales, como cuando en la lección 2 sobre
 el péndulo, Lucy no recordaba bien uno de los tiempos cronometrados obtenidos en la lección 1, cuando ella y Jonathan habían variado el peso de la esfera del péndulo:
 
+def track_teaching_modes() -> dict:
+    """
+    Tracks different modes of knowledge transmission in teaching
+    Returns analysis of transmission patterns and their effects
+    """
+    transmission_modes = {
+        'direct_transmission': {
+            'usage': 'minimal',
+            'effectiveness': 'limited'
+        },
+        'alternative_modes': {
+            'subtlety': 'high',
+            'authority_maintenance': 'preserved',
+            'knowledge_control': 'maintained'
+        }
+    }
+    return transmission_modes
+
+
+This section discusses how the teacher uses paraphrasing as a teaching method to reshape the students' explanations and align them more closely with the intended learning objectives. The teacher paraphrases the students' statements, reframing them in a more precise and acceptable way, even if the students' original understanding was incomplete or divergent. This demonstrates how the teacher's control over the discourse can guide the students' comprehension, rather than relying solely on their direct observations and experiences.
 Secuencia 7.8 Parafraseando a Lucy
 
 La maestra utilizaba también la paráfrasis de manera más directa como método de enseñanza, como en la secuencia 7.9, donde intentaba obtener lo más posible de la explicación de los alumnos y luego remodelar la explicación
 ofrecida por Antony en una forma más de su agrado ( y de hecho, más precisa):
 
 
-Secuencia 7.9 Parafraseando a Antony
 
+def analyze_cultural_forum_view() -> dict:
+    """
+    Analyzes implications of viewing culture as a forum in education
+    Returns mapping of educational approaches and their effects
+    """
+    forum_analysis = {
+        'education_role': {
+            'participation': 'forum_based',
+            'negotiation': 'active',
+            'meaning_creation': 'collaborative'
+        },
+        'preparation_focus': {
+            'target': 'real_life',
+            'approach': 'participatory',
+            'skills': 'negotiation_based'
+        }
+    }
+    return forum_analysis
+
+This section discusses how the teacher uses paraphrasing and reconstruction to shape the students' understanding of the experimental findings and the principles behind the pendulum experiment. The teacher's paraphrasing and recapitulation of the students' explanations allows her to reframe their statements in a way that aligns more closely with the intended learning objectives, even if the students' original understanding was incomplete or divergent. This demonstrates how the teacher's control over the discourse can guide the students' comprehension, rather than relying solely on their direct observations and experiences.
+Secuencia 7.9 Parafraseando a Antony
 
 Estas paráfrasis retrospectivas demuestran otra función de la etapa feedback de las secuencias IRF; proporcionan a la maestra una oportunidad no sólo de confirmar lo que dicen los alumnos,
 sino de remodelarlo en una forma más aceptable, tal vez más explícita, o simplemente arropada en una terminología más de su agrado.
 Las reconstrucciones más amplias tuvieron lugar durante la segunda de las lecciones sobre el péndulo, en que la maestra estaba recapitulando ( a través de las estructuras IRF de tipo conocido)
 sobre eel material cubierto en la lección 1. Tanto la maestra como los alumnos estaban en el proceso de recordar uno a uno sus principales hallazgos empíricos.
 Aquí tenemos la versión de Jonathan:
+
+
+def evaluate_pedagogical_conflicts() -> dict:
+    """
+    Evaluates conflicts between traditional pedagogy and forum approach
+    Returns analysis of competing traditions and interpretations
+    """
+    tradition_analysis = {
+        'historical_approach': {
+            'time_period': 'traditional',
+            'interpretation': 'static',
+            'authority_view': 'hierarchical'
+        },
+        'modern_conflicts': {
+            'knowledge_transfer': 'negotiated',
+            'value_transmission': 'collaborative',
+            'authority_structure': 'distributed'
+        }
+    }
+    return tradition_analysis
+
+def track_pedagogical_evolution() -> dict:
+    """
+    Tracks evolution of pedagogical approaches over time
+    Returns analysis of changes in teaching methodologies
+    """
+    evolution_patterns = {
+        'traditional_methods': {
+            'focus': 'authority_centered',
+            'knowledge_flow': 'unidirectional',
+            'student_role': 'passive'
+        },
+        'modern_methods': {
+            'focus': 'student_centered',
+            'knowledge_flow': 'bidirectional',
+            'student_role': 'active'
+        }
+    }
+    return evolution_patterns
+
+This section discusses the reconstruction of the principle of using equidistant intervals to measure the swing angles of the pendulum. It highlights how the teacher's instructions and assumptions shaped the students' (Sharon and Karen) experimental approach, even though the actual process of determining the intervals was not explicitly articulated. The section demonstrates how the teacher's control over the discourse and interpretation of events can guide the students' understanding, rather than relying solely on their own direct experience and observations.
 
 Secuencia 7.10 Recapitulación de los principales hallazgos empíricos            
 
@@ -864,14 +1196,69 @@ más aceptable que una hipótesis sea desmentida científicamente que haber come
 
 Otra notable recapitulación reconstruciva tuvo lugar en la lección 2, cuando la maestra y los alumnos estaban recordando el experimento de variación del ángulo de balanceo:
 
-Secuencia 7.11 Reconstrucción de un principio de intervalos iguales
+def analyze_experiential_learning() -> dict:
+    """
+    Analyzes the relationship between practical activities and actual learning outcomes
+    Returns detailed analysis of learning patterns
+    """
+    learning_analysis = {
+        'organization': {
+            'format': 'practical_actions',
+            'group_size': 'small',
+            'activity_type': 'collaborative'
+        },
+        'learning_type': 'teacher_guided',
+        'student_communication': 'limited',
+        'teacher_role': 'crucial'
+    }
+    return learning_analysis
 
+This section discusses the reconstruction of the principle of using equidistant intervals to measure the swing angles of the pendulum. It highlights how the teacher's instructions and assumptions shaped the students' (Sharon and Karen) experimental approach, even though the actual process of determining the intervals was not explicitly articulated. The section demonstrates how the teacher's control over the discourse and interpretation of events can guide the students' understanding, rather than relying solely on their own direct experience and observations.
+Secuencia 7.11 Reconstrucción de un principio de intervalos iguales
 
 La secuencia 7.11 parece indicar que SHaron y Karen han escogido ángulos con la misma distancia de separación, 15º, como procedimiento científico adecuado. De hecho, como demuestra con toda claridad la secuencia 7.12 ( de la lección 1 ),
 los cuatro ángulos fueron primero señalados sin medición en la alto del péndulo, y sólo luego, una vez terminado el experimento, se estimó, bajo indicación de la maestra, que eran equidistantes a intervalos de 15º. De hecho, Sharon y Karen habían determinado ya antes sus ángulos
 de balanceo probando y descartando, sin calibrar, limitadas por los ángulos en los que el cordel tropezaba con el montante del péndulo.
 
+def evaluate_teacher_influence() -> dict:
+    """
+    Evaluates the extent of teacher influence on learning process and outcomes
+    Returns mapping of influence areas and effects
+    """
+    influence_areas = {
+        'structure': 'complete_control',
+        'content': 'fully_directed',
+        'interpretation': {
+            'actions': 'teacher_defined',
+            'discourse': 'teacher_controlled',
+            'understanding': 'teacher_guided'
+        },
+        'student_autonomy': 'minimal'
+    }
+    return influence_areas
+
+def track_control_patterns() -> dict:
+    """
+    Tracks patterns of teacher control mechanisms in educational settings
+    Returns analysis of control methods and their impact
+    """
+    control_patterns = {
+        'direct_control': {
+            'method': 'explicit_guidance',
+            'impact': 'high',
+            'student_response': 'compliance'
+        },
+        'indirect_control': {
+            'method': 'subtle_direction',
+            'impact': 'moderate',
+            'student_response': 'guided_discovery'
+        }
+    }
+    return control_patterns
+
 Secuencia 7.12 Cómo se midieron los intervalos iguales
+
+This section discusses how the teacher uses implication and assumed context to impose her interpretation of how things should be understood. By simply assuming a certain interpretation is correct, rather than presenting it as an open question, the teacher is able to maintain strict control over the students' thought process. The example provided is of Antony and David, who were the students who altered the only effective variable, the length of the cord.
 
 La idea de que se utilizaran cuatro intervalos equidistantes para medir los ángulos de balanceo fue construida durante la primera lección a partir de la 
 posición casual de las señales en el péndulo y de la instancias de la maestra, y fue luego reconstruida en el discurso de la lección 2 como un principio
@@ -881,13 +1268,244 @@ trabajando en parejas o en grupos. Lo que realmente importa es la interpretació
 Y es principalmente la maestra quien proporcuina estas palabras al tiempo que elimina otras del vocabulario común, y quien gobierna el proceso discursivo en que se establecen descripciones 
 y versiones particulares de acontecimientos como base de la comprensión conjunta.
 
+def analyze_teaching_methodology(text: str) -> dict:
+    """
+    Analyzes teaching methodology patterns in the provided text.
+    Returns a dictionary with key observations about control methods.
+    """
+    teaching_patterns = {
+        'control_methods': ['implication', 'assumed context', 'interpretation'],
+        'example_students': ['Antony', 'David'],
+        'variable_modified': 'cord length'
+    }
+    return teaching_patterns
+
+def process_experiment_data(intervals: int = 4) -> dict:
+    """
+    Processes experimental setup information focusing on the pendulum measurements.
+    Args:
+        intervals: Number of equidistant intervals used (default=4)
+    Returns:
+        Dictionary containing experiment parameters and observations
+    """
+    experiment_data = {
+        'measurement_intervals': intervals,
+        'measurement_type': 'swing angles',
+        'setup_origin': 'lesson 1',
+        'formalization': 'lesson 2'
+    }
+    return experiment_data
+
+def extract_learning_insights() -> dict:
+    """
+    Extracts key insights about the learning process and teacher's role.
+    Returns dictionary of main findings about teaching influence.
+    """
+    insights = {
+        'primary_factor': 'experience interpretation',
+        'control_mechanism': 'vocabulary control',
+        'main_interpreter': 'teacher',
+        'learning_process': 'guided understanding'
+    }
+    return insights
+
+def create_vocabulary_tables():
+    """
+    Creates SQLite tables for storing vocabulary transition and patterns data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for vocabulary transition
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS vocabulary_transition (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            term_type TEXT CHECK(term_type IN ('everyday', 'technical')),
+            description TEXT,
+            usage_initiator TEXT,
+            context_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for everyday terms
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS everyday_terms (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            term TEXT,
+            description TEXT,
+            usage_pattern TEXT,
+            context TEXT,
+            transition_id INTEGER,
+            FOREIGN KEY (transition_id) REFERENCES vocabulary_transition (id)
+        )
+    ''')
+
+    # Table for technical terms
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS technical_terms (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            term TEXT,
+            description TEXT,
+            usage_pattern TEXT,
+            context TEXT,
+            transition_id INTEGER,
+            FOREIGN KEY (transition_id) REFERENCES vocabulary_transition (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section discusses how the teacher uses implication and assumed context to impose her interpretation of how things should be understood. By simply assuming a certain interpretation is correct, rather than presenting it as an open question, the teacher is able to maintain strict control over the students' thought process. The example provided is of Antony and David, who were the students who altered the only effective variable, the length of the cord.
+
 Uno de los medios más poderosos que poseía la maestra para imponer su definición de cómo deben interpretarse las cosas era utilizando la implicación y el supuesto previo.
 Suponiendo simplemente que determinada interpretación era correcta, no planteándola como una cuestión abierta, podía mantener una limitación estricta sobre
 el curso del pensamiento de los alumnos. Por ejemplo, Antony y David fueron los alumnos que alteraron la única variable efectiva, el largo del cordel.
 
+def get_teacher_control_methods() -> dict:
+    """
+    Returns the powerful methods used by the teacher to control interpretation
+    """
+    control_methods = {
+        'primary_method': 'implication',
+        'secondary_method': 'prior assumption',
+        'control_type': 'thought limitation',
+        'implementation': 'presenting interpretations as facts'
+    }
+    return control_methods
+
+def get_experiment_variables() -> dict:
+    """
+    Returns information about the experiment variables and students involved
+    """
+    experiment_data = {
+        'students': ['Antony', 'David'],
+        'effective_variable': 'cord_length',
+        'variable_type': 'single',
+        'modification_type': 'length alteration'
+    }
+    return experiment_data
+
+def analyze_teaching_strategy(method: str) -> str:
+    """
+    Analyzes specific teaching strategy and returns its impact
+    Args:
+        method: The teaching method to analyze
+    """
+    strategies = {
+        'implication': 'maintains strict control over student thinking',
+        'assumption': 'prevents open questioning',
+        'interpretation': 'directs student understanding'
+    }
+    return strategies.get(method, 'Strategy not recognized')
+
+def create_sequence_tables():
+    """
+    Creates SQLite tables for storing sequence development and pendulum data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for sequence development
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS sequence_development (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            sequence_id TEXT,
+            sequence_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for teacher strategies
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS teacher_strategies (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            strategy_name TEXT,
+            sequence_id INTEGER,
+            FOREIGN KEY (sequence_id) REFERENCES sequence_development (id)
+        )
+    ''')
+
+    # Table for sequence examples
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS sequence_examples (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            original_text TEXT,
+            technical_term TEXT,
+            sequence_id INTEGER,
+            FOREIGN KEY (sequence_id) REFERENCES sequence_development (id)
+        )
+    ''')
+
+    # Table for pendulum attributes
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS pendulum_attributes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            attribute_description TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This code snippet contrasts the teacher's questions to different student groups when investigating the relationship between pendulum cord length and swing speed. The teacher's questions to Sharon and Karen offer them the opportunity to deny finding any results, while the question to Antony and David assumes that shorter cords will swing faster, and asks which length produces the greater speed. David's response confirms the latter assumption.
+
 Contrástense las preguntas de la maestra a Sharon y Karen (<< ¿Cómo va? ¿Algún resultado?, Sharon?>>) con la pregunta a Antony y David: << Bueno, ¿es el cordel más corto el que va más rápido o el más largo?>>
 Mientras que a Sharon se le ofrecía la posibilidad de negar que hubiese encontrado algún resultado, en el caso de Antony y David había el supuesto previode que los cordeles
 van más rápido o más despacio según la longitud, y la pregunta era qué longitud porducía una mayor velocidad. La respuesta de David fue clara: << No, el corto va más rápido >>
+
+def compare_teacher_questions() -> dict:
+    """
+    Analyzes and compares different questioning approaches used by teacher with different student groups
+    Returns a dictionary containing question patterns and their implications
+    """
+    question_patterns = {
+        'sharon_karen': {
+            'question_type': 'open_ended',
+            'actual_question': '¿Cómo va? ¿Algún resultado?',
+            'implied_possibility': 'allows negative response'
+        },
+        'antony_david': {
+            'question_type': 'leading',
+            'actual_question': '¿es el cordel más corto el que va más rápido o el más largo?',
+            'implied_possibility': 'assumes relationship exists'
+        }
+    }
+    return question_patterns
+
+def analyze_student_responses() -> dict:
+    """
+    Analyzes student responses to different types of teacher questions
+    Returns a dictionary containing response analysis
+    """
+    responses = {
+        'david': {
+            'response': 'No, el corto va más rápido',
+            'response_type': 'confirmatory',
+            'matches_assumption': True
+        }
+    }
+    return responses
+
+def get_question_implications(student_group: str) -> str:
+    """
+    Returns the implied meaning behind questions asked to specific student groups
+    Args:
+        student_group: Name of the student group to analyze
+    """
+    implications = {
+        'sharon_karen': 'Allows possibility of no results',
+        'antony_david': 'Presumes relationship between cord length and speed'
+    }
+    return implications.get(student_group, 'Group not found')
+
+This section discusses how educational discourse, and discourse in general, is based on certain contextual assumptions. In the classroom, these contextual assumptions constitute the body of shared knowledge and thinking that is created as the lessons progress. However, these contextual assumptions do not necessarily imply information or ideas that have been explicitly communicated before. Information can be introduced into a conversation through its role as an implicit context for what is explicitly stated. The implicit part of a message can be recovered from the situational context and what is explicitly said, and this is also a normal feature of everyday discourse.
 
 Remarcábamos en el capítulo 5 que un rasgo esencial del discurso educacional, y, de hecho, del discurso en general, es que éste siempre se basa en algún tipo de supuestos contextuales.
 En las clases escolares, estos supuestos contextuales constituyen el cuerpo del conocimiento y pensamiento compartido que se va creando según desarrollan las lecciones. Pero los 
@@ -898,11 +1516,286 @@ y esto constituye también un rasgo normal del discurso cotidiano. Si alguien no
 la propaganda, la publicidad, etc., funciona de manera similar). Sirve para introducir ciertos puntos de conocimiento y suposición como algo que hay que aceptar sin reservas,
 algocuerdo, y, por lo tanto, en un sentido más general, está a disposición del maestro como piedra de toque o como instrumento de control sobre lo que se conoce y comprendre.
 
+def analyze_educational_discourse() -> dict:
+    """
+    Analyzes the essential features of educational discourse and its contextual assumptions
+    Returns a dictionary containing key discourse characteristics
+    """
+    discourse_features = {
+        'base_element': 'contextual_assumptions',
+        'knowledge_building': 'progressive',
+        'context_type': 'shared_knowledge',
+        'development': 'throughout_lessons'
+    }
+    return discourse_features
+
+def process_implicit_information() -> dict:
+    """
+    Processes how implicit information is introduced and recovered in educational contexts
+    Returns analysis of implicit communication patterns
+    """
+    implicit_patterns = {
+        'introduction_method': 'context_role',
+        'recovery_sources': ['situational_context', 'explicit_statements'],
+        'communication_type': 'normal_discourse_feature'
+    }
+    return implicit_patterns
+
+def get_contextual_assumptions(context_type: str = 'educational') -> dict:
+    """
+    Returns contextual assumptions based on discourse type
+    Args:
+        context_type: Type of context to analyze (default='educational')
+    """
+    assumptions = {
+        'educational': {
+            'shared_knowledge': True,
+            'progressive_building': True,
+            'explicit_communication': False,
+            'implicit_elements': ['context', 'situation', 'prior_knowledge']
+        },
+        'everyday': {
+            'shared_knowledge': True,
+            'progressive_building': False,
+            'explicit_communication': True,
+            'implicit_elements': ['social_norms', 'common_sense']
+        }
+    }
+    return assumptions.get(context_type, {})
+
+def create_vocabulary_tables():
+    """
+    Creates SQLite tables for storing technical vocabulary and teaching methods data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for vocabulary mapping
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS vocabulary_mapping (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            everyday_term TEXT,
+            technical_term TEXT,
+            context TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for teaching methods
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS teaching_methods (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            method_type TEXT CHECK(method_type IN ('direct_teaching', 'contextual_teaching')),
+            approach TEXT,
+            teacher_role TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for teaching elements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS teaching_elements (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            element_name TEXT,
+            method_id INTEGER,
+            FOREIGN KEY (method_id) REFERENCES teaching_methods (id)
+        )
+    ''')
+
+    # Table for vocabulary context
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS vocabulary_context (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            term TEXT,
+            everyday_equivalent TEXT,
+            introduction_method TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for usage examples
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS usage_examples (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            example TEXT,
+            context_id INTEGER,
+            FOREIGN KEY (context_id) REFERENCES vocabulary_context (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section describes how the teacher introduces and encourages the use of more technical vocabulary, such as "mass" and "impulse", in contrast to the more everyday terms used by the students. The teacher uses these technical terms in context, establishing them as an alternative, and implicitly better, vocabulary for discussing the attributes of a pendulum. This process of the teacher guiding the students towards the academic discourse and conceptual framework is an example of cognitive socialization through discourse.
+
 Un caso particular de enseñanza implícita tuvo lugar cuando la maestra introdujo una terminología más de su agrado, palabras de la jerga científica tales como << masa >> e << impulso >>. A veces, estos términos
 se introducían a través de ki que podriamos llamar << enseñanza directa >>, en la que la maestra introducía explícitamente las palabras, las definía y alentaba a los alumnos A
 la obtención, con o sin pistas, como en el caso de los términos << impulso >> y << aceleración >> de la lección 2 (<<¿sabe alguien cuál es la palabra cuando se aumenta la velocidad/ como cuando se pisa el pedal de un coche?>>)
 . La secuencia 7.13 muestra cómo se introdujeron varios términos mediante el simple uso de los mismos por parte de la maestra en un contexto comprendido,
 como vocabulario alternativo, e implícitamente mejor.
+
+def track_technical_vocabulary() -> dict:
+    """
+    Tracks the introduction and usage of technical scientific terms
+    Returns mapping of everyday terms to technical equivalents
+    """
+    vocabulary_mapping = {
+        'everyday': ['speed', 'weight', 'push'],
+        'technical': ['velocity', 'mass', 'impulse'],
+        'context': 'scientific_discourse'
+    }
+    return vocabulary_mapping
+
+def analyze_teaching_methods() -> dict:
+    """
+    Analyzes different methods of introducing technical vocabulary
+    Returns dictionary of teaching approaches and their characteristics
+    """
+    teaching_methods = {
+        'direct_teaching': {
+            'approach': 'explicit_introduction',
+            'elements': ['definition', 'encouragement', 'practice'],
+            'examples': ['impulse', 'acceleration']
+        },
+        'contextual_teaching': {
+            'approach': 'usage_in_context',
+            'elements': ['natural_introduction', 'implicit_learning'],
+            'teacher_role': 'facilitator'
+        }
+    }
+    return teaching_methods
+
+def get_vocabulary_context(term: str) -> dict:
+    """
+    Retrieves context and usage patterns for specific technical terms
+    Args:
+        term: Technical term to analyze
+    """
+    context_database = {
+        'mass': {
+            'everyday_equivalent': 'weight',
+            'introduction_method': 'contextual',
+            'usage_examples': ['pendulum mass', 'mass measurement']
+        },
+        'impulse': {
+            'everyday_equivalent': 'push',
+            'introduction_method': 'direct',
+            'usage_examples': ['initial impulse', 'impulse force']
+        }
+    }
+    return context_database.get(term, {'status': 'term not found'})
+
+
+def analyze_vocabulary_transition() -> dict:
+    """
+    Analyzes the transition from everyday to technical vocabulary in classroom discourse
+    Returns patterns of vocabulary evolution
+    """
+    vocabulary_patterns = {
+        'everyday_terms': {
+            'weight': 'hanging straight down from a finger',
+            'usage': 'student_initiated',
+            'context': 'informal_description'
+        },
+        'technical_terms': {
+            'mass': 'suspended from a fixed point',
+            'usage': 'teacher_initiated',
+            'context': 'formal_description'
+        }
+    }
+    return vocabulary_patterns
+
+def track_sequence_development(sequence_id: str = '7.13') -> dict:
+    """
+    Tracks the development of shared vocabulary through teacher usage
+    Args:
+        sequence_id: Identifier for specific teaching sequence
+    """
+    sequence_data = {
+        'sequence_type': 'vocabulary_acquisition',
+        'teacher_strategies': ['technical_term_introduction', 
+                             'context_building',
+                             'term_substitution'],
+        'examples': {
+            'original': 'hace subir el cordel/al bajar',
+            'technical': 'acelerar'
+        }
+    }
+    return sequence_data
+
+def summarize_pendulum_attributes() -> list:
+    """
+    Summarizes the established attributes of a pendulum using technical vocabulary
+    Returns list of formal pendulum characteristics
+    """
+    attributes = [
+        'mass suspended from fixed point',
+        'acceleration during swing',
+        'periodic motion',
+        'angular displacement'
+    ]
+    return attributes
+
+def create_vocabulary_tables():
+    """
+    Creates SQLite tables for storing vocabulary adoption and term ambiguity data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for vocabulary adoption
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS vocabulary_adoption (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            speed TEXT,
+            comprehension_level TEXT,
+            usage_motivation TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for terminology examples
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS terminology_examples (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            term TEXT,
+            adoption_id INTEGER,
+            FOREIGN KEY (adoption_id) REFERENCES vocabulary_adoption (id)
+        )
+    ''')
+
+    # Table for term ambiguity
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS term_ambiguity (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            student_name TEXT,
+            term TEXT,
+            term_usage TEXT,
+            full_comprehension BOOLEAN,
+            context TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for misconceptions
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS misconceptions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            equivalence_understanding BOOLEAN,
+            usage_motivation TEXT,
+            ambiguity_id INTEGER,
+            FOREIGN KEY (ambiguity_id) REFERENCES term_ambiguity (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section describes how the teacher introduces and encourages the use of more technical vocabulary, such as "mass", "suspended", and "from a fixed point", in contrast to the more everyday terms used by the students, such as "weight" and "hanging straight down from a finger". The teacher uses these technical terms in context, establishing them as an alternative, and implicitly better, vocabulary for discussing the attributes of a pendulum. This process of the teacher guiding the students towards the academic discourse and conceptual framework is an example of cognitive socialization through discourse.
 
 Secuencia 7.13 Adquisición de un vocabulario compartido: utilización por la maestra
 
@@ -912,7 +1805,156 @@ Mientras los alumnos han utilizado términos cotidianos tales como << peso >> y 
 
 Secuencia 7.14 Adquisición de un vocabulario compartido: utilización por los alumnos
 
+def analyze_student_vocabulary_adoption() -> dict:
+    """
+    Tracks how quickly students adopt new technical terminology
+    Returns analysis of adoption patterns and comprehension levels
+    """
+    adoption_patterns = {
+        'speed': 'rapid',
+        'comprehension_level': 'partial',
+        'usage_motivation': 'teacher_preference',
+        'terminology_examples': ['mass', 'acceleration']
+    }
+    return adoption_patterns
 
+def track_term_ambiguity(student: str, term: str) -> dict:
+    """
+    Analyzes ambiguity in student understanding of technical terms
+    Args:
+        student: Student name
+        term: Technical term being analyzed
+    """
+    ambiguity_analysis = {
+        'term_usage': 'attempted',
+        'full_comprehension': False,
+        'misconceptions': {
+            'equivalence_understanding': False,
+            'usage_motivation': 'teacher_preference'
+        },
+        'context': 'scientific_discourse'
+    }
+    return ambiguity_analysis
+
+def analyze_implicit_teaching_results() -> dict:
+    """
+    Evaluates effectiveness of implicit teaching methods for technical vocabulary
+    Returns analysis of teaching outcomes
+    """
+    teaching_results = {
+        'direct_instruction': False,
+        'explicit_definitions': False,
+        'adoption_success': True,
+        'comprehension_method': 'contextual_understanding',
+        'outcome': 'shared_reference_framework'
+    }
+    return teaching_results
+
+    def analyze_teacher_control_mechanisms() -> dict:
+    """
+    Analyzes methods teachers use to control interpretation and understanding
+    Returns detailed mapping of control mechanisms and their effects
+    """
+    control_mechanisms = {
+        'implication': {
+            'method': 'assumption_of_correctness',
+            'effect': 'limits_student_thinking',
+            'implementation': 'closed_interpretation'
+        },
+        'variable_control': {
+            'focus': 'single_variable',
+            'example': 'cord_length',
+            'students': ['Antony', 'David']
+        }
+    }
+    return control_mechanisms
+
+def track_experimental_construction() -> dict:
+    """
+    Tracks how experimental procedures are constructed and presented
+    Returns analysis of procedure development
+    """
+    experiment_development = {
+        'measurement_intervals': {
+            'number': 4,
+            'type': 'equidistant',
+            'origin': 'lesson_1_casual_marks',
+            'formalization': 'lesson_2_scientific_principle'
+        },
+        'procedure_articulation': 'implicit',
+        'student_experience': 'guided'
+    }
+    return experiment_development
+
+def analyze_learning_interpretation() -> dict:
+    """
+    Analyzes the relationship between student experience and teacher interpretation
+    Returns framework of learning construction
+    """
+    interpretation_framework = {
+        'key_factor': 'experience_interpretation',
+        'control_elements': [
+            'vocabulary_selection',
+            'discourse_management',
+            'event_description',
+            'understanding_foundation'
+        ],
+        'primary_interpreter': 'teacher',
+        'student_role': 'guided_participant'
+    }
+    return interpretation_framework
+
+def create_learning_tables():
+    """
+    Creates SQLite tables for storing experiential learning and teacher influence data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for learning analysis
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS learning_analysis (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            format TEXT,
+            group_size TEXT,
+            activity_type TEXT,
+            learning_type TEXT,
+            student_communication TEXT,
+            teacher_role TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for influence areas
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS influence_areas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            structure TEXT,
+            content TEXT,
+            student_autonomy TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for interpretation details
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS interpretation_details (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            actions TEXT,
+            discourse TEXT,
+            understanding TEXT,
+            influence_id INTEGER,
+            FOREIGN KEY (influence_id) REFERENCES influence_areas (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+This section discusses how the teacher's use of language and discourse in the classroom serves to establish shared understandings between teacher and students, creating a shared conceptual framework. The process involves introducing students to the teacher's (and by extension, the educational community's) conceptual world, which is an essential part of the cognitive socialization process through language.
+
+The relationship between power, control, and the creation of shared understandings is both problematic and important. The chapter contrasts this formal educational process with the more reciprocal learning environment of early language acquisition, where the roles gradually transfer from the parent to the child. In formal schooling, this process of cognitive socialization through discourse is a key aspect of how knowledge and understanding are constructed between teacher and students.
 
 Los alumnos han captado rápidamente la nueva terminología introducida por la maestra y han empezado a utilizarla ellos también. No está claro que comprendieran inmediatamente y del todo su significado.
 El término de << masa >>, sugerido por David, es ambiguo por el hecho de que éste no comprende que << masa >> significa aquí algo equivalente a << peso >> y por su sensación de que la maestra simplemente prefiere ese término, lo que hace que valga la pena mencionarlo.
@@ -950,11 +1992,208 @@ Comprobaron que éstos se utilizaban más en la sala de profesores que en clase;
 
 Nuestros  hallazgos segieren las siguientes conclusiones sobre los procesos educacionales observados:
 
+def analyze_experiential_learning() -> dict:
+    """
+    Analyzes the relationship between practical activities and actual learning outcomes
+    Returns detailed analysis of learning patterns
+    """
+    learning_analysis = {
+        'organization': {
+            'format': 'practical_actions',
+            'group_size': 'small',
+            'activity_type': 'collaborative'
+        },
+        'learning_type': 'teacher_guided',
+        'student_communication': 'limited',
+        'teacher_role': 'crucial'
+    }
+    return learning_analysis
+
+def evaluate_teacher_influence() -> dict:
+    """
+    Evaluates the extent of teacher influence on learning process and outcomes
+    Returns mapping of influence areas and effects
+    """
+    influence_areas = {
+        'structure': 'complete_control',
+        'content': 'fully_directed',
+        'interpretation': {
+            'actions': 'teacher_defined',
+            'discourse': 'teacher_controlled',
+            'understanding': 'teacher_guided'
+        },
+        'student_autonomy': 'minimal'
+    }
+    return influence_areas
+
+def create_discourse_tables():
+    """
+    Creates SQLite tables for storing discourse patterns and contextual data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for discourse patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS discourse_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            contextual_assumptions BOOLEAN,
+            shared_knowledge TEXT,
+            development_pattern TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for knowledge building
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS knowledge_building (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            method TEXT,
+            foundation TEXT,
+            validation TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES discourse_patterns (id)
+        )
+    ''')
+
+    # Table for contextual assumptions
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS contextual_assumptions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            required BOOLEAN,
+            frequency TEXT,
+            introduction TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for information flow
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS information_flow (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            method TEXT,
+            integration TEXT,
+            assumption_id INTEGER,
+            FOREIGN KEY (assumption_id) REFERENCES contextual_assumptions (id)
+        )
+    ''')
+
+    # Table for recovery methods
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS recovery_methods (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            method_name TEXT,
+            flow_id INTEGER,
+            FOREIGN KEY (flow_id) REFERENCES information_flow (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section discusses how the teacher's strict control over the classroom activity, discourse, and interpretation contributed to the students' understanding of the lessons often consisting of knowing what to do (or at least the official reconstructed version) and what to say, rather than a conceptual understanding of the underlying principles. Despite the lessons being organized in terms of practical actions and group activities, the type of learning that took place was not essentially a matter of experience-based learning or communication between students. The teacher's role was crucial at all times, both in shaping the overall structure and content of the lesson and in the nuanced definition of what was done, said, and understood. The students did not have the opportunity to create their own understandings and interpretations.
+
 1. El aprendizaje basado en la experiencia y control por parte del maestro. A pesar del  ehcho de que las lecciones estaban organizadas en términos de acciones prácticas y actividad conjunta en grupos reducidos entre los
 alumnos, el tipo de aprendizaje que tenía lugar no era esencialmente una cuestión de aprendizaje basado en la experienciaa ni en la comunicación entre los alumnos.
 El rol de la maestra era en todo momento crucial, tanto en el modelado de la estructura y contenido generales de la lección como en la matizada definición de lo que se hacía, decía y comprendía.
 Los alumnos no tenían , pues, la oportunidad de crearse sus propia comprensiones e interpretaciones.
 
+def analyze_discourse_patterns() -> dict:
+    """
+    Analyzes essential patterns in educational discourse and contextual assumptions
+    Returns mapping of discourse characteristics and their implications
+    """
+    discourse_elements = {
+        'base_characteristics': {
+            'contextual_assumptions': True,
+            'shared_knowledge': 'progressive',
+            'development_pattern': 'lesson_based'
+        },
+        'knowledge_building': {
+            'method': 'incremental',
+            'foundation': 'previous_lessons',
+            'validation': 'teacher_guided'
+        }
+    }
+    return discourse_elements
+
+def track_contextual_assumptions() -> dict:
+    """
+    Tracks how contextual assumptions develop and influence learning
+    Returns analysis of assumption patterns and their effects
+    """
+    assumption_tracking = {
+        'explicit_communication': {
+            'required': False,
+            'frequency': 'variable',
+            'introduction': 'implicit'
+        },
+        'information_flow': {
+            'method': 'context_based',
+            'recovery': ['situational', 'explicit_statements'],
+            'integration': 'natural_discourse'
+        }
+    }
+    return assumption_tracking
+
+def create_interaction_tables():
+    """
+    Creates SQLite tables for storing street interactions and pedagogical data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for street interactions
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS street_interactions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            interaction_type TEXT,
+            explicit_request TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for implicit assumptions
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS implicit_assumptions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            assumption_type TEXT,
+            interaction_id INTEGER,
+            FOREIGN KEY (interaction_id) REFERENCES street_interactions (id)
+        )
+    ''')
+
+    # Table for pedagogical context
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS pedagogical_context (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            primary_function TEXT,
+            secondary_function TEXT,
+            acceptance_criteria TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for control mechanisms
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS control_mechanisms (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            mechanism_type TEXT,
+            context_id INTEGER,
+            FOREIGN KEY (context_id) REFERENCES pedagogical_context (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section discusses how the teacher's strict control over the classroom activity, discourse, and interpretation contributed to the students' understanding of the lessons often consisting of knowing what to do (or at least the official reconstructed version) and what to say, rather than a conceptual understanding of the underlying principles.
+
+The teacher preferred and tried to act according to the educational principle of experience-based and student-centered learning, as well as the importance of student participation in practical activity and discovery. However, this led to the students' ideas of certain important concepts being essentially "ritual" - a matter of what had to be done or said, rather than being based on conceptual understanding.
 2. Ritual y principios. Sin dejar de mantener un estrecho control sobre la actividad y el discurso, la maestra prefería e intentaba actuar según el principio educacional del aprendizaje basado en la experiencia y centrado en el alumno,
 así como en la importancia de la participación de los alumnos en la actividad y el descubrimiento prácticos. Esto hacía que la idea que se formaban los alumnos de ciertos conceptos importantes fuese esencialmente << ritual >>, una cuestión de qué había que hacer o decir, más que <<de principios>>,
 es decirm basada en una comprensión conceptual. Entre los tipos de particulares de discurso en clase que servían de base a la creación de este conocimiento << de procedimiento >> estaba la gran confianza en la << obtención mediante pistas >> junto
@@ -962,7 +2201,120 @@ con un abrumado interés por llevar las lecciones a base de pasar por toda la se
 
 La medida misma del control de la maestra sobre la actividad, el discurso y la interpretación, probablemente había contribuido al hecho de que la comprensión de las lecciones por parte de los alumnos llegara a menudo a consistir en saber lo que se hacía (o, al menos, su versión reconstruida oficial) y lo que había que decir.
 
+def analyze_street_interactions() -> dict:
+    """
+    Analyzes patterns in street-based information requests and assumptions
+    Returns mapping of interaction patterns and implied context
+    """
+    interaction_patterns = {
+        'post_office_example': {
+            'explicit_request': 'location',
+            'implicit_assumptions': [
+                'intent_to_visit',
+                'lacks_directions',
+                'needs_assistance'
+            ]
+        }
+    }
+    return interaction_patterns
 
+def evaluate_pedagogical_context() -> dict:
+    """
+    Evaluates contextual assumptions in teaching environments
+    Returns analysis of pedagogical functions and control mechanisms
+    """
+    teaching_context = {
+        'functions': {
+            'primary': 'knowledge_introduction',
+            'secondary': 'assumption_establishment'
+        },
+        'acceptance_criteria': 'unconditional',
+        'control_mechanisms': [
+            'knowledge_validation',
+            'comprehension_monitoring',
+            'understanding_verification'
+        ]
+    }
+    return teaching_context
+
+def compare_discourse_types() -> dict:
+    """
+    Compares educational discourse with other communication types
+    Returns comparative analysis of different discourse patterns
+    """
+    discourse_comparison = {
+        'educational': {
+            'purpose': 'knowledge_transfer',
+            'control_level': 'high',
+            'assumption_role': 'foundational'
+        },
+        'persuasive': {
+            'types': ['rhetoric', 'propaganda', 'advertising'],
+            'function': 'influence_behavior',
+            'similarity': 'assumption_usage'
+        }
+    }
+    return discourse_comparison
+
+def create_perspective_tables():
+    """
+    Creates SQLite tables for storing book perspective and knowledge construction data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for book perspectives
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS book_perspectives (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            focus TEXT,
+            theoretical_foundation TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for key aspects
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS key_aspects (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            aspect_name TEXT,
+            perspective_id INTEGER,
+            FOREIGN KEY (perspective_id) REFERENCES book_perspectives (id)
+        )
+    ''')
+
+    # Table for knowledge construction
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS knowledge_construction (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            activity_type TEXT,
+            discourse_type TEXT,
+            interaction_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for construction methodology
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS construction_methodology (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            approach TEXT,
+            implementation TEXT,
+            validation TEXT,
+            construction_id INTEGER,
+            FOREIGN KEY (construction_id) REFERENCES knowledge_construction (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+This section discusses how language and discourse in the classroom serve to establish shared understandings between teacher and students, creating a shared conceptual framework. The process involves introducing students to the teacher's (and by extension, the educational community's) conceptual world, which is an essential part of the cognitive socialization process through language.
+
+The relationship between power, control, and the creation of shared understandings is both problematic and important. True intersubjectivity can only be achieved under conditions of complete symmetry in the distribution of evaluation, controversy, revelation, and prescription between participants. However, the inherent interest of education is to introduce children and adults into an existing culture of thought and language. While students may play an active role in their learning, they cannot simply reinvent this culture through their own activity and experience. It is a social and communicative process with an inherent asymmetry of roles between teacher and student.
+
+The chapter contrasts this formal educational process with the more reciprocal learning environment of early language acquisition, where the roles gradually transfer from the parent to the child. In formal schooling, this transfer of control rarely occurs, leaving many students viewing education as a mystery to be complied with rather than a resource of knowledge and skills they can freely manage.
 3. El lenguaje y la socialización de la cognición. Nos hemos centrado en el << contenido >> del conocimiento y el discurso, en lo que se hacía y decía, las palabras utilizadas,
 los conceptos en cuestión, las acciones realizadas. Ha habido quien ha observado atentamente la forma del discurso en clase, bien sus estructuras sociolingüíticas (por ejemplo Sinclair y Coulthard, 1975; Mehan, 1979) o su relación con propiedades formales del pensamiento tales como la capacidad de razonamiento lógico (Walkerdine, 1984).
 La conclusión que se deriva de nuestros estudios ees la de que el discurso en clase actúa estableciendo comprensiones conjuntas entre maestro y alumno, marcos compartidosde referencia y concepción, en las que el proceso básico (incluidos los aspectos problemáticos de este proceso) consiste en introducir a los alumnos en el mundo conceptual de la maestra,
@@ -992,6 +2344,99 @@ Un proceso educacional logrado es el que transfiere competencia al alumno. Parec
 """
 
 """
+def summarize_book_perspective() -> dict:
+    """
+    Summarizes the main perspective on human thought and understanding
+    Returns key points about communication and relationships
+    """
+    main_points = {
+        'focus': 'communication_based_understanding',
+        'key_aspects': [
+            'social_cultural_basis',
+            'shared_knowledge',
+            'joint_activity',
+            'collective_discourse'
+        ],
+        'theoretical_foundation': 'human_relationships'
+    }
+    return main_points
+
+def analyze_knowledge_construction() -> dict:
+    """
+    Analyzes how shared knowledge is built through joint activities
+    Returns patterns of knowledge construction
+    """
+    construction_patterns = {
+        'building_blocks': {
+            'activity': 'collaborative',
+            'discourse': 'structured',
+            'interaction': 'guided'
+        },
+        'methodology': {
+            'approach': 'social_cultural',
+            'implementation': 'joint_activities',
+            'validation': 'shared_understanding'
+        }
+    }
+    return construction_patterns
+
+def create_socialization_tables():
+    """
+    Creates SQLite tables for storing language socialization and discourse data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for socialization patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS socialization_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            focus_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for socialization elements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS socialization_elements (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            words_status TEXT,
+            concepts_status TEXT,
+            actions_status TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES socialization_patterns (id)
+        )
+    ''')
+
+    # Table for analysis types
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS analysis_types (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            analysis_name TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES socialization_patterns (id)
+        )
+    ''')
+
+    # Table for classroom discourse
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS classroom_discourse (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            primary_function TEXT,
+            reference_frames TEXT,
+            conceptual_world TEXT,
+            community_integration TEXT,
+            process_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section provides a summary of the key points discussed in the book up to this chapter. It outlines the perspective adopted on human thought and understanding, emphasizing its basis in communication and human relationships. The focus is on "shared knowledge" and how it is constructed through joint activity and discourse.
 
 8. CONCLUSIONES Y CONTENIDOS IMPLICITOS
 
@@ -1001,9 +2446,125 @@ Empezaremos este último capítulo haciendo un resumen de los principales puntos
 El saber y el pensamiento no tienen sólo que ver con cómo piensan los individuos, sino que son intrínsicamente sociales y culturales. Nos hemos centrado, por tanto, en
 lo que llamamos << conocimiento compartido >>, observando cómo éste se construye a través de la actividad y el discurso conjuntos.
 
+def analyze_language_socialization() -> dict:
+    """
+    Analyzes patterns of cognitive socialization through language in classroom settings
+    Returns mapping of socialization mechanisms and their effects
+    """
+    socialization_patterns = {
+        'focus': 'content_and_discourse',
+        'elements': {
+            'words_used': 'tracked',
+            'concepts_covered': 'monitored',
+            'actions_performed': 'analyzed'
+        },
+        'analysis_types': [
+            'sociolinguistic_structures',
+            'formal_properties',
+            'logical_reasoning'
+        ]
+    }
+    return socialization_patterns
+
+def track_classroom_discourse() -> dict:
+    """
+    Tracks how classroom discourse establishes shared understanding
+    Returns analysis of teacher-student interaction patterns
+    """
+    discourse_tracking = {
+        'primary_function': 'establish_joint_understanding',
+        'framework_building': {
+            'reference_frames': 'shared',
+            'conceptual_world': 'teacher_guided',
+            'community_integration': 'educational_community'
+        },
+        'process_type': 'cognitive_socialization'
+    }
+    return discourse_tracking
+
+def create_power_tables():
+    """
+    Creates SQLite tables for storing power dynamics and participation data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for power analysis
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS power_analysis (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            current_state TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for intersubjectivity requirements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS intersubjectivity_requirements (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            requirement_type TEXT,
+            analysis_id INTEGER,
+            FOREIGN KEY (analysis_id) REFERENCES power_analysis (id)
+        )
+    ''')
+
+    # Table for educational goals
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS educational_goals (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            primary_goal TEXT,
+            implementation TEXT,
+            analysis_id INTEGER,
+            FOREIGN KEY (analysis_id) REFERENCES power_analysis (id)
+        )
+    ''')
+
+    # Table for target areas
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS target_areas (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            area_name TEXT,
+            goal_id INTEGER,
+            FOREIGN KEY (goal_id) REFERENCES educational_goals (id)
+        )
+    ''')
+
+    # Table for participation patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS participation_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            activity_level TEXT,
+            process_type TEXT,
+            role_distribution TEXT,
+            teacher_student_dynamic TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for participation limitations
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS participation_limitations (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            cultural_reinvention BOOLEAN,
+            experience_constraints BOOLEAN,
+            guidance_requirements TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES participation_patterns (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section describes how through joint discourse and action, two or more people construct a common body of knowledge that becomes the contextual basis for subsequent communication. The open messages, the things they actually say, are only a small part of the overall communication. They are just the tip of the iceberg, where the large hidden mass underneath is essential for the character of what is openly visible above the water. That is why context and continuity are essential considerations in discourse analysis.
+
 2. Mediante el discurso y la acción conjunta, dos o más personas construyen un cuerpo de conocimiento común que se convierte en la base contextual para la comunicación posterior.
 Los mensajes abiertos, las cosas que realmente dicen, son sólo una pequeña parte del conjunto de la comunicación. Son sólo la punta del iceberg, en el que la gran masa oculta de debajo
 es esencial para el carácter de lo que está abiertamente visible por encima del agua. Por eso el contexto y la continuidad son consideraciones esenciales en el análisis del discurso.
+
+This section discusses the nature of context and continuity in discourse. It highlights that context is primarily a mental phenomenon, where things in the external world only become contextual when they are invoked, referenced, or implied in communication. The act of naming things or assuming shared understandings transforms their reality into a social and conceptual one rather than just a physical one. Context is the shared knowledge of the speakers that is invoked by the discourse, and it is problematic for both participants and observers to determine. Similarly, continuity is also a mental (or inter-mental) phenomenon, existing as the shared memory and intentions of the participants about what has been done and said, its significance, and the meaning and direction of the interaction.
 
 3. El << contexto >> es básicamente un fenómeno mental. Las cosas de << ahí fuera >> se hacen contextuales sólo cuando son invocadas, es decir, cuando se hace referencia a ellas, se suponen o se
 insinúan en la comunicación. El mismo acto de nombrar las cosas, o de suponer comprensiones compartidas de las mismas, convierte, para los comunicantes, su realidad en una realidad social y conceptual más que de simple
@@ -1014,9 +2575,115 @@ y,  en todo caso, los contextos mentales de la comunicación coloquial no están
 para ser más precisos, inter-mental). La continueidad es una característica del contexto, y es también contexto al desarrollarse en el curso del tiempo en el proceso de la charla y la acción conjuntas.
 Existe en tanto que memoria e intención compartidas, las concepcioness y supuestos que mantienen los participantes acerca de lo que han hecho y dicho, de su importancia, de lo que significa la interacción y a dónde va.
 
+def analyze_power_dynamics() -> dict:
+    """
+    Analyzes power and control relationships in educational discourse
+    Returns mapping of power distribution and its effects
+    """
+    power_analysis = {
+        'intersubjectivity': {
+            'requirements': ['evaluation_symmetry', 
+                           'controversy_balance',
+                           'revelation_equality',
+                           'prescription_distribution'],
+            'current_state': 'asymmetric'
+        },
+        'educational_goals': {
+            'primary': 'cultural_introduction',
+            'target_areas': ['thought_patterns', 'language_use'],
+            'implementation': 'guided_process'
+        }
+    }
+    return power_analysis
+
+def evaluate_student_participation() -> dict:
+    """
+    Evaluates the nature and limits of student participation in learning
+    Returns analysis of participation patterns
+    """
+    participation_patterns = {
+        'activity_level': 'active',
+        'limitations': {
+            'cultural_reinvention': False,
+            'experience_constraints': True,
+            'guidance_requirements': 'mandatory'
+        },
+        'process_characteristics': {
+            'type': 'social_communicative',
+            'role_distribution': 'asymmetric',
+            'teacher_student_dynamic': 'hierarchical'
+        }
+    }
+    return participation_patterns
+
+def create_environment_tables():
+    """
+    Creates SQLite tables for storing learning environment and perception data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for learning environments
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS learning_environments (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            environment_type TEXT CHECK(environment_type IN ('early_language', 'formal_schooling')),
+            control_type TEXT,
+            role_type TEXT,
+            role_change TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for environment characteristics
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS environment_characteristics (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            guidance_type TEXT,
+            control_transfer TEXT,
+            parent_role TEXT,
+            child_role TEXT,
+            environment_id INTEGER,
+            FOREIGN KEY (environment_id) REFERENCES learning_environments (id)
+        )
+    ''')
+
+    # Table for student perception
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS student_perception (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            education_view TEXT,
+            compliance_type TEXT,
+            knowledge_access TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for perception details
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS perception_details (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            skill_management TEXT,
+            autonomy_level TEXT,
+            perception_id INTEGER,
+            FOREIGN KEY (perception_id) REFERENCES student_perception (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section discusses an important function of education that can be described as cognitive socialization. The research discussed examines some aspects of this process within a particular cultural framework, that of some English teaching classes. Within a society, the education system has its own epistemological culture. This culture, and the institutional framework within which children are educated, are what distinguish teaching from other types of cultural education.
+
 4. Hay una importante función de la educación que podemos describir como socialización  cognitiva. La investigación que podemos describir como socialización cognitiva. La investigación en concreto de la que hemos hablado examina algunos
 aspectos de este proceso dentro de un marco cultural particular, el de algunas clases de enseñanza inglesas. Dentro de una sociedad, el sistema de enseñanza tiene su propia cultura epistemológica. Esta cultura, y el marco institucional dentro del cual
 se educa a los niños, son lo que se distingue a la enseñanza de otros tipos de enseñanza cultural.
+
+This section discusses the role of teachers in providing "scaffolding" to guide and introduce children into the epistemological culture of the educational system. It highlights that one of the main objectives of teaching is the development of shared knowledge between teachers and students, which is a problematic process due to the inherently ideological nature of education and the power dynamics involved.
+
+The passage also notes that a measure of the effectiveness of the educational process is the degree to which educational knowledge becomes "shared" through classroom discourse. Additionally, it identifies the problematic nature of one of the key goals of education - the eventual "transfer" of control over knowledge and learning from the teacher to the student, through which the student achieves autonomy.
 
 Los maestris tienen la misión de proporcionar << andamiaje >> a los primeros pasos del niño para dirigirlo e introducirlo en esta cultura, de supervisar su entrada en el universo del discurso educacional. Esto se hace
 creando, a través de la acción y el habla con el niño, un marco contextual para las actividades educativas. Uno de los principales objetivos de la enseñanza es, pues, el desarrollo de un conocimiento compartido. Este es un proceso problemático, 
@@ -1025,8 +2692,201 @@ Una medida de la efectividad del proceso educacional es el grado en que el conoc
 La importancia de una asimetría de poder entre maestro y niño hace que sea también problemático uno de los principales objetivos de la educación: el eventualmente
 <<traspaso>> del control sobre el conocimiento y el aprendizaje del maestro al niño, a través del cual el alumno alcanza autonomía.
 
+def compare_learning_environments() -> dict:
+    """
+    Compares early language acquisition with formal schooling environments
+    Returns detailed comparison of learning patterns
+    """
+    environment_comparison = {
+        'early_language': {
+            'type': 'guided_reinvention',
+            'control_transfer': 'gradual',
+            'parent_role': 'diminishing',
+            'child_role': 'increasing'
+        },
+        'formal_schooling': {
+            'type': 'structured_instruction',
+            'control_transfer': 'limited',
+            'teacher_role': 'constant',
+            'student_role': 'restricted'
+        }
+    }
+    return environment_comparison
+
+def analyze_student_perception() -> dict:
+    """
+    Analyzes how students view and interact with formal education
+    Returns mapping of student perspectives and responses
+    """
+    perception_analysis = {
+        'education_view': 'mystery',
+        'compliance_type': 'mandatory',
+        'knowledge_access': 'restricted',
+        'skill_management': 'limited',
+        'autonomy_level': 'low'
+    }
+    return perception_analysis
+
+def create_control_tables():
+    """
+    Creates SQLite tables for storing control patterns and student understanding data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for control patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS control_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            visibility TEXT,
+            comprehension TEXT,
+            instruction_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for lesson elements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS lesson_elements (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            goals TEXT,
+            objectives TEXT,
+            concepts TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES control_patterns (id)
+        )
+    ''')
+
+    # Table for student understanding
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS student_understanding (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            purpose TEXT,
+            application TEXT,
+            conceptual_grasp TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for learning focus
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS learning_focus (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            intended_focus TEXT,
+            perceived_focus TEXT,
+            alignment_status TEXT,
+            understanding_id INTEGER,
+            FOREIGN KEY (understanding_id) REFERENCES student_understanding (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section discusses the nature of "educated" discourse, noting that it is not detached from context but rather relies on implicit, shared contextual frameworks to be intelligible. The discourse of "educated" individuals on specialized topics like mathematics, philosophy, or literary criticism is only explicit to those who are initiated into the relevant knowledge and conventions.
+
 5. El discurso <<educado>> no es una habla <<desvinculada>> del contexto y diferente de formas menos elevadas del discurso por el hecho de ser más explícita. Por el contrario, es un habla que se apoya, para ser inteligible, en el acceso de los hablantes a marcos contextuales particulares e implícitos.
 El discurso de las personas <<educadas>> que conversan acerca de su especialidad .matemáticas, filosofía, crítica literaria o cualquier otra cosa- sólo es explícito para los iniciados.
+
+def analyze_control_patterns() -> dict:
+    """
+    Analyzes teacher control mechanisms and their impact on student learning
+    Returns mapping of control patterns and effects
+    """
+    control_analysis = {
+        'mystery_factor': {
+            'visibility': 'low',
+            'comprehension': 'partial',
+            'instruction_type': 'indirect'
+        },
+        'lesson_elements': {
+            'goals': 'hidden',
+            'objectives': 'unclear',
+            'concepts': 'implicit'
+        }
+    }
+    return control_analysis
+
+def track_student_understanding() -> dict:
+    """
+    Tracks student interpretation of lesson purposes and learning objectives
+    Returns analysis of student comprehension patterns
+    """
+    understanding_patterns = {
+        'interpretation': {
+            'purpose': 'practical_survival',
+            'application': 'real_world_scenarios',
+            'conceptual_grasp': 'limited'
+        },
+        'learning_focus': {
+            'intended': 'societal_concepts',
+            'perceived': 'practical_skills',
+            'alignment': 'mismatched'
+        }
+    }
+    return understanding_patterns
+
+def create_vygotsky_tables():
+    """
+    Creates SQLite tables for storing Vygotsky theory components and control transfer data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for Vygotsky elements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS vygotsky_elements (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            element_type TEXT CHECK(element_type IN ('asymmetry', 'knowledge_acquisition')),
+            role TEXT,
+            application TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for knowledge components
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS knowledge_components (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            vocabulary_type TEXT,
+            self_regulation TEXT,
+            knowledge_origin TEXT,
+            element_id INTEGER,
+            FOREIGN KEY (element_id) REFERENCES vygotsky_elements (id)
+        )
+    ''')
+
+    # Table for transfer patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS transfer_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            process_type TEXT,
+            direction TEXT,
+            condition TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for formal education outcomes
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS formal_education_outcomes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            completion_rate TEXT,
+            student_perception TEXT,
+            control_level TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES transfer_patterns (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section discusses the implicit and tacit nature of the educational rules and norms that govern classroom discourse. These rules have both social and cognitive functions, representing conventions for presenting knowledge in school as well as procedures for defining and solving problems. However, these rules are often problematic for both teachers and students, as they are typically implicit and part of the "hidden agenda" of schoolwork. This makes it difficult for participants to assess the appropriateness or educational value of applying specific rules or sets of rules to particular activities or problems. The maintenance of the tacit/implicit status of these rules is also identified as a principle of the dominant educational pedagogy or ideology.
 
 6. Una parte importante de la base contextual del discurso en clase ka forman un bloque de normas de que definen las actividades educativas necesarias para el éxito de la participación en el discurso educacional. Estas reglas educacionales básicas tienen funciones tanto sociales como cognitivas. Representan una serie
 de convenciones sociales para presentar el conocimiento en la escuela y también una serie (o series) de procedimientos cognitivos para definir y solucionar problemas. Estas reglas son problemáticas tanto para los maestros como para los alumnos, por razones derivadas del hecho de que son normalmente implícitas. 
@@ -1035,6 +2895,132 @@ Eso quiere decir que son tácticamente contextuales, y los participantes en la e
 Y a los maestros, o a los alumnos, les es también difícil juzgar el valor educacional de estas reglas, en un sentido general, o evaluar si es adecuado aplicar una regla concreta o una subserie de reglas a una actividad o problema en particular.
 Además ya hemos dicho que el mantenimiento del status tácito/ implícito de estas reglas es en sí un principio de la pedagogía o ideología educacional dominantes.
 
+def analyze_vygotsky_components() -> dict:
+    """
+    Analyzes key components of Vygotsky's learning theory in teacher-student processes
+    Returns mapping of theoretical elements and their implementations
+    """
+    vygotsky_elements = {
+        'asymmetry': {
+            'role': 'essential',
+            'application': 'development_zone',
+            'control_aspect': 'fundamental'
+        },
+        'knowledge_acquisition': {
+            'vocabulary': 'integrated',
+            'self_regulation': 'progressive',
+            'origin': 'social_discourse'
+        }
+    }
+    return vygotsky_elements
+
+def track_control_transfer() -> dict:
+    """
+    Tracks the gradual transfer of control from teacher to student
+    Returns analysis of transfer patterns and success rates
+    """
+    transfer_patterns = {
+        'process': {
+            'type': 'gradual',
+            'direction': 'teacher_to_student',
+            'condition': 'independent_capability'
+        },
+        'formal_education': {
+            'completion_rate': 'rare',
+            'student_perception': 'mysterious',
+            'control_level': 'external'
+        }
+    }
+    return transfer_patterns
+
+def compare_learning_contexts() -> dict:
+    """
+    Compares formal education with early language acquisition
+    Returns detailed comparison of learning environments
+    """
+    context_comparison = {
+        'formal_schooling': {
+            'instruction_type': 'teacher_directed',
+            'student_role': 'passive_receiver',
+            'interaction_pattern': 'one_way'
+        },
+        'language_acquisition': {
+            'role_transfer': 'progressive',
+            'interaction_pattern': 'reciprocal',
+            'control_shift': 'natural'
+        }
+    }
+    return context_comparison
+
+def create_discourse_tables():
+    """
+    Creates SQLite tables for storing educational discourse and context data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for discourse elements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS discourse_elements (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            context_type TEXT,
+            communication_level TEXT,
+            knowledge_building TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for contextual assumptions
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS contextual_assumptions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            assumption_type TEXT,
+            information_type TEXT,
+            context_role TEXT,
+            discourse_id INTEGER,
+            FOREIGN KEY (discourse_id) REFERENCES discourse_elements (id)
+        )
+    ''')
+
+    # Table for pedagogical functions
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS pedagogical_functions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            function_type TEXT,
+            knowledge_introduction TEXT,
+            acceptance_level TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for control mechanisms
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS control_mechanisms (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            control_type TEXT,
+            implementation TEXT,
+            effectiveness TEXT,
+            function_id INTEGER,
+            FOREIGN KEY (function_id) REFERENCES pedagogical_functions (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This section discusses the distinction between two types of educational knowledge:
+
+1. Ritual knowledge: Procedural, routine, and pragmatic knowledge.
+2. Principled knowledge: Explanatory and reflective knowledge that is not tied to specific courses of action.
+
+The passage notes that even well-intentioned joint action and discourse between teachers and students does not necessarily ensure a common understanding of both procedures and principles. 
+
+The distinction between "ritual" and "principled" knowledge is also related to issues of educational ideology and the practices it generates.
+
+The analysis in this section is influenced by the theoretical perspectives of Lev Vygotsky and Jerome Bruner, with Bruner's recent work serving as an excellent starting point for discussing some of the points raised in the study.
+
 7. Hacemos una distinción bastante sencilla, pero útil, entre los diferentes tipos de conocimiento educacional. Hay un conocimiento básicamente de procedimiento, rutinario, de conveniencia;
 lo llamamos conocimiento ritual. Hay también un conocimiento que es explicativo y reflexivo, que no está atado a cursos específicos de acción; lo llamamos conocimiento de principios.
 Un aspecto problemático de la enseñanza es que ni siquiera la acción o el discurso conjuntos y bienintencionados aseguran necesariamente el establecimiento por parte de los maestris y alumnos de una comprensión común tanto de procedimientos como de principios.
@@ -1042,7 +3028,112 @@ La distinción entre <<ritual>> y <<de princios>> es también una distinción qu
 
 Dos de las perspectivas teóricas que más influencia han tenido sobre nuestro análisis son las de Lev Vi¡ygostsky y Jerome Bruner. Los recientes trabajos de Bruner sirven de excelente punto de partida para hablar de algunos puntos que hemnos planteado en nuestro estudio.
 
+def analyze_peekaboo_learning() -> dict:
+    """
+    Analyzes the learning pattern in peekaboo game interactions
+    Returns mapping of role transitions and script development
+    """
+    learning_pattern = {
+        'initial_state': {
+            'mother_role': 'complete_script_execution',
+            'child_role': 'observer'
+        },
+        'progression': {
+            'child_participation': 'increasing',
+            'role_adoption': 'gradual',
+            'script_mastery': 'progressive'
+        },
+        'final_state': {
+            'child_role': 'complete_script_execution',
+            'mother_role': 'observer'
+        }
+    }
+    return learning_pattern
+
+def compare_learning_environments() -> dict:
+    """
+    Compares peekaboo learning with formal classroom instruction
+    Returns detailed analysis of environmental differences
+    """
+    environment_contrast = {
+        'classroom': {
+            'instruction_flow': 'unidirectional',
+            'response_type': 'non_verbal_execution',
+            'question_pattern': 'teacher_to_student',
+            'role_reversal': 'rare',
+            'permission_requests': 'common'
+        },
+        'peekaboo': {
+            'instruction_flow': 'bidirectional',
+            'role_transfer': 'complete',
+            'interaction_type': 'dynamic',
+            'control_shift': 'natural'
+        }
+    }
+    return environment_contrast
+
+def create_learning_tables():
+    """
+    Creates SQLite tables for storing learning patterns and environment comparisons
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for peekaboo learning states
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS peekaboo_states (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            state_type TEXT CHECK(state_type IN ('initial', 'progression', 'final')),
+            mother_role TEXT,
+            child_role TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for progression tracking
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS learning_progression (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            participation_level TEXT,
+            role_adoption TEXT,
+            script_mastery TEXT,
+            state_id INTEGER,
+            FOREIGN KEY (state_id) REFERENCES peekaboo_states (id)
+        )
+    ''')
+
+    # Table for learning environments
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS learning_environments (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            environment_type TEXT CHECK(environment_type IN ('classroom', 'peekaboo')),
+            instruction_flow TEXT,
+            response_type TEXT,
+            role_reversal TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for environment characteristics
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS environment_characteristics (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            interaction_type TEXT,
+            control_shift TEXT,
+            question_pattern TEXT,
+            environment_id INTEGER,
+            FOREIGN KEY (environment_id) REFERENCES learning_environments (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
 Diálogo con Jerome Bruner
+
+This passage discusses Jerome Bruner's views on the nature of education and the learning process. Bruner sees education as a "forum" where teachers and students negotiate shared meaning, rather than a one-way transmission of knowledge and values. He emphasizes the participatory and future-oriented process of culture and education, in contrast with more traditional pedagogical approaches that view education as the transmission of established knowledge and culture.
 
 Jerome Bruner (1983b, 1986) ha aprovechado recientemente una vida de trabajo notablemente fructífera sobre la naturaleza de la mente humana y su desarrollo en el niño, y también sobre el proceso de la enseñanza.
 En Actual Minas Worlds (1986) hace un planteamiento producto de su pensamiento: << Cada vez soy más consciente de que la mayor parte del aprendizaje que tiene lugar en la mayoría de los marcos es una actividad comunitaria, un compartir la cultura>> (pág. 127). Como de costumbre
@@ -1050,21 +3141,625 @@ En Actual Minas Worlds (1986) hace un planteamiento producto de su pensamiento: 
 la noción de la educación como transmisión de un bloque de hechos inmutables, del maestro al alumno pasivo, es , evidentemente, inadecuada. Bruner prefiere la noción de cultura ( y por tanto educación ) como un <<foro>> en el que el maestro y el alumno participan en una negociación  del significado
 compartido; el maestro interactúa con sus alumnos de una manera esencialmente vygostkyana, guiándolos a través de zonas sucesivas de desarrollo próximo:
 
+def analyze_educational_success() -> dict:
+    """
+    Analyzes characteristics of successful educational processes
+    Returns mapping of success indicators and competency transfers
+    """
+    success_patterns = {
+        'primary_indicator': 'competency_transfer',
+        'transfer_direction': 'teacher_to_student',
+        'success_criteria': [
+            'independent_operation',
+            'skill_mastery',
+            'knowledge_application'
+        ]
+    }
+    return success_patterns
+
+def evaluate_formal_education() -> dict:
+    """
+    Evaluates formal education outcomes and competency development
+    Returns analysis of systemic patterns and limitations
+    """
+    education_analysis = {
+        'student_majority': {
+            'competency_transfer': 'limited',
+            'intended_outcome': 'prevented',
+            'system_design': 'restrictive'
+        },
+        'process_characteristics': {
+            'transfer_success': False,
+            'autonomy_development': 'hindered',
+            'knowledge_control': 'external'
+        }
+    }
+    return education_analysis
+
+def create_education_tables():
+    """
+    Creates SQLite tables for storing educational success and formal education data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for success patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS success_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            primary_indicator TEXT,
+            transfer_direction TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for success criteria
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS success_criteria (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            criterion TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES success_patterns (id)
+        )
+    ''')
+
+    # Table for formal education analysis
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS formal_education (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            competency_transfer TEXT,
+            intended_outcome TEXT,
+            system_design TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for process characteristics
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS process_characteristics (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            transfer_success BOOLEAN,
+            autonomy_development TEXT,
+            knowledge_control TEXT,
+            education_id INTEGER,
+            FOREIGN KEY (education_id) REFERENCES formal_education (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This passage discusses Bruner's view of education as a "forum" where teachers and students negotiate shared meaning, rather than a one-way transmission of knowledge and values. It highlights the tension between this participatory, negotiated approach to education, and the more traditional pedagogical approaches that see education as the transmission of established knowledge and culture.
+
 De esta visión de la cultura como un foro se desprende que la inducción a la cultura a través de la educación debe también participar del espíritu del foro,
 de la negociación, de la recreación del significado, si quiere preparar a los jóvenes para la vida real. Pero esta conclusión choca con las tradiciones pedagógicas que proceden de otro tiempo, de otra interpretación de la cultura,
 de otra concepción de la autoridad, una concepción que veía el proceso de la eduación como una transmisión de conocimiento y de valores (1986, pág. 123) 
+
+def analyze_modern_lessons() -> dict:
+    """
+    Analyzes characteristics of modern teaching approaches
+    Returns mapping of lesson patterns and methodologies
+    """
+    modern_patterns = {
+        'teaching_style': {
+            'type': 'exploratory',
+            'features': [
+                'discovery_based',
+                'joint_activity',
+                'shared_discourse'
+            ]
+        },
+        'scaffolding': {
+            'approach': 'bruner_influenced',
+            'implementation': 'structured_support',
+            'ideology': 'student_centered'
+        }
+    }
+    return modern_patterns
+
+def evaluate_negotiation_patterns() -> dict:
+    """
+    Evaluates meaning negotiation between teachers and students
+    Returns analysis of interaction patterns
+    """
+    negotiation_analysis = {
+        'process_type': 'unilateral',
+        'teacher_role': {
+            'position': 'authority',
+            'knowledge_control': 'subtle',
+            'transmission_method': 'indirect'
+        },
+        'implementation': 'alternative_methods'
+    }
+    return negotiation_analysis
+
+def create_modern_lesson_tables():
+    """
+    Creates SQLite tables for storing modern teaching approaches and negotiation data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for teaching styles
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS teaching_styles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            style_type TEXT,
+            feature TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for scaffolding approaches
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS scaffolding_approaches (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            approach TEXT,
+            implementation TEXT,
+            ideology TEXT,
+            style_id INTEGER,
+            FOREIGN KEY (style_id) REFERENCES teaching_styles (id)
+        )
+    ''')
+
+    # Table for negotiation patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS negotiation_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            process_type TEXT,
+            position TEXT,
+            knowledge_control TEXT,
+            transmission_method TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_modern_lesson_data(lesson_data: dict):
+    """
+    Inserts modern lesson data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    # Insert teaching style features
+    for feature in lesson_data['teaching_style']['features']:
+        cursor.execute('''
+            INSERT INTO teaching_styles (
+                style_type,
+                feature
+            ) VALUES (?, ?)
+        ''', (lesson_data['teaching_style']['type'], feature))
+        
+        style_id = cursor.lastrowid
+        
+        # Insert scaffolding data
+        cursor.execute('''
+            INSERT INTO scaffolding_approaches (
+                approach,
+                implementation,
+                ideology,
+                style_id
+            ) VALUES (?, ?, ?, ?)
+        ''', (
+            lesson_data['scaffolding']['approach'],
+            lesson_data['scaffolding']['implementation'],
+            lesson_data['scaffolding']['ideology'],
+            style_id
+        ))
+    
+    conn.commit()
+    conn.close()
+
+This passage discusses the tension within educational activities between the induction of children into an established, prefabricated culture, and the development of creative and autonomous participants in a continuously evolving culture. It highlights how the approaches of Vygotsky and Bruner consider this dichotomy to be false, emphasizing the participatory and future-oriented process of culture and education. The idea of the "forum" represents Bruner's view of education as a negotiation of shared meaning between teachers and students.
 
 Gran parte de nuestra discusión acerca del habla en el aula es una investigación de la problemática de este proceso. Pero las lecciones examinadas no son de modo alguno del tipo didáctico de viejo estilo; son de corte moderno, caracterizadas por la exploración y el descubrimiento, la actividad y el habla conjuntas, la enseñanza con 
 << andamiaje >> y una ideología de la enseñanza -no bostante la influencia de Piaget- no muy alejada de la de Bruner. Hay una idea similar de la educación, a la que recurre Bruner, en tanto que una negociación de significados entre maestros y alumno, característica del trabajo de Hugh Mehan (Mehan, 1979; Griffin y Mehan, 1981). Es una descripción
 excelente, pero, como hemos observado, idealizada. Nosotros hemos descrito un proceso más comprometido donde la negociación es una cuestión más bien unilateral en la que el rol del maestro como portador autoritario del conocimiento prefabricado encuentra simplemente modos alternativos, más sutiles, de realizarse que las crudezas de la <<transmisión>> en bruto.
 
+def analyze_cultural_forum() -> dict:
+    """
+    Analyzes education as a cultural forum for negotiating meaning
+    Returns mapping of forum characteristics and processes
+    """
+    forum_characteristics = {
+        'nature': 'participatory',
+        'elements': {
+            'negotiation': 'continuous',
+            'meaning_creation': 'collaborative',
+            'cultural_evolution': 'dynamic'
+        },
+        'preparation_goals': {
+            'target': 'real_life',
+            'approach': 'negotiated_learning',
+            'skill_development': 'meaning_recreation'
+        }
+    }
+    return forum_characteristics
+
+def evaluate_pedagogical_tensions() -> dict:
+    """
+    Evaluates tensions between traditional and forum-based approaches
+    Returns analysis of conflicting elements
+    """
+    tension_analysis = {
+        'traditional_elements': {
+            'time_period': 'historical',
+            'culture_interpretation': 'static',
+            'authority_concept': 'transmission_based'
+        },
+        'modern_conflicts': {
+            'knowledge_transfer': 'negotiated',
+            'value_transmission': 'collaborative',
+            'cultural_participation': 'active'
+        }
+    }
+    return tension_analysis
+
+def create_forum_tables():
+    """
+    Creates SQLite tables for storing cultural forum and pedagogical data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for cultural forum elements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS cultural_forum (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            participation_type TEXT,
+            negotiation_type TEXT,
+            meaning_creation TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for preparation goals
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS preparation_goals (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            target_area TEXT,
+            approach_type TEXT,
+            skill_development TEXT,
+            forum_id INTEGER,
+            FOREIGN KEY (forum_id) REFERENCES cultural_forum (id)
+        )
+    ''')
+
+    # Table for pedagogical tensions
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS pedagogical_tensions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            time_period TEXT,
+            culture_interpretation TEXT,
+            authority_concept TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for modern conflicts
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS modern_conflicts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            knowledge_transfer TEXT,
+            value_transmission TEXT,
+            cultural_participation TEXT,
+            tension_id INTEGER,
+            FOREIGN KEY (tension_id) REFERENCES pedagogical_tensions (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This passage discusses the potential cultural differences between the UK and US in the analysis of the commitments of the "new pedagogy", as well as the process described by Bruner. The authors note that they are interested in both the potential problems and difficulties of this process, as well as its actual or possible achievements.
+
 Quizá ello sea en sí mismo una diferencia cultural entre Gran Bretaña y Estados Unidos, una diferencia bien de las clases analizadas o bien de los mismos investigadores; en cualquier caso, nuestro análisis de los compromisos de la nueva pedagogía refleja claramente el de otro estudio británico (Edwards y Furlong, 1978). En realidad, el proceso
 que hemos investigado es el que describe Bruner. A nosotros simplemente nos han interesado tanto los posibles problemass y dificultades de este proceso como sus logros reales o posibles.
 
+def analyze_cultural_participation() -> dict:
+    """
+    Analyzes how education prepares students for cultural participation
+    Returns mapping of preparation methods and outcomes
+    """
+    participation_framework = {
+        'forum_spirit': {
+            'elements': ['negotiation', 'recreation', 'meaning_making'],
+            'preparation': 'real_world_oriented',
+            'approach': 'participatory'
+        },
+        'outcomes': {
+            'cultural_competence': 'developed',
+            'negotiation_skills': 'enhanced',
+            'meaning_creation': 'active'
+        }
+    }
+    return participation_framework
+
+def track_pedagogical_conflicts() -> dict:
+    """
+    Tracks conflicts between traditional pedagogy and cultural forum approach
+    Returns analysis of competing interpretations
+    """
+    conflict_patterns = {
+        'traditional': {
+            'time_origin': 'historical',
+            'cultural_view': 'static',
+            'transmission_type': 'direct'
+        },
+        'forum_based': {
+            'interpretation': 'dynamic',
+            'knowledge_building': 'collaborative',
+            'cultural_evolution': 'continuous'
+        }
+    }
+    return conflict_patterns
+    def analyze_cultural_forum() -> dict:
+    """
+    Analyzes education as a cultural forum for negotiating meaning
+    Returns mapping of forum characteristics and processes
+    """
+    forum_characteristics = {
+        'nature': 'participatory',
+        'elements': {
+            'negotiation': 'continuous',
+            'meaning_creation': 'collaborative',
+            'cultural_evolution': 'dynamic'
+        },
+        'preparation_goals': {
+            'target': 'real_life',
+            'approach': 'negotiated_learning',
+            'skill_development': 'meaning_recreation'
+        }
+    }
+    return forum_characteristics
+    def evaluate_pedagogical_tensions() -> dict:
+    """
+    Evaluates tensions between traditional and forum-based approaches
+    Returns analysis of conflicting elements
+    """
+    tension_analysis = {
+        'traditional_elements': {
+            'time_period': 'historical',
+            'culture_interpretation': 'static',
+            'authority_concept': 'transmission_based'
+        },
+        'modern_conflicts': {
+            'knowledge_transfer': 'negotiated',
+            'value_transmission': 'collaborative',
+            'cultural_participation': 'active'
+        }
+    }
+    return tension_analysis
+
+def analyze_educational_dichotomy() -> dict:
+    """
+    Analyzes tension between traditional and progressive education approaches
+    Returns mapping of key differences and their implications
+    """
+    dichotomy_analysis = {
+        'traditional': {
+            'approach': 'prefabricated_culture',
+            'student_role': 'passive_recipient',
+            'cultural_view': 'static'
+        },
+        'progressive': {
+            'approach': 'evolving_culture',
+            'student_role': 'creative_participant',
+            'cultural_view': 'dynamic'
+        },
+        'resolution': {
+            'method': 'participatory_process',
+            'orientation': 'future_focused',
+            'integration': 'culture_education_blend'
+        }
+    }
+    return dichotomy_analysis
+
+def evaluate_vygotsky_bruner_approach() -> dict:
+    """
+    Evaluates Vygotsky and Bruner's perspectives on educational dichotomy
+    Returns analysis of their theoretical contributions
+    """
+    theoretical_framework = {
+        'dichotomy_view': 'false',
+        'key_elements': {
+            'process_type': 'participatory',
+            'orientation': 'future_directed',
+            'cultural_aspect': 'evolutionary',
+            'educational_aspect': 'integrated'
+        }
+    }
+    return theoretical_framework    
+
+def create_cultural_tables():
+    """
+    Creates SQLite tables for storing cultural participation and pedagogical data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for cultural participation
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS cultural_participation (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            forum_spirit TEXT,
+            negotiation_type TEXT,
+            recreation_pattern TEXT,
+            meaning_creation TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for participation outcomes
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS participation_outcomes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            cultural_competence TEXT,
+            negotiation_skills TEXT,
+            meaning_creation TEXT,
+            participation_id INTEGER,
+            FOREIGN KEY (participation_id) REFERENCES cultural_participation (id)
+        )
+    ''')
+
+    # Table for pedagogical conflicts
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS pedagogical_conflicts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            time_origin TEXT,
+            cultural_view TEXT,
+            transmission_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for forum based approaches
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS forum_approaches (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            interpretation TEXT,
+            knowledge_building TEXT,
+            cultural_evolution TEXT,
+            conflict_id INTEGER,
+            FOREIGN KEY (conflict_id) REFERENCES pedagogical_conflicts (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This passage discusses the tension within educational activities between the induction of children into an established, prefabricated culture, and the development of creative and autonomous participants in a continuously evolving culture. It highlights how the approaches of Vygotsky and Bruner consider this dichotomy to be false, emphasizing the participatory and future-oriented process of culture and education. The idea of the "forum" represents Bruner's view of education as a negotiation of shared meaning between teachers and students.
 
 Resulta una cuestión importante para investigar y teorizar acerca de la <<zona de desarrollo próximo>> de Vygotsky el hecho de que se produzca dentro de las actividades pedagógicas una tensión entre lo que exige, por un lado, la inducción de los niños hacia una cultura establecida, prefrabicada, y, por el otro, el desarrollo de participantes creativos y autónomos en una cultura
 que no es prefabricada, sino en evolución continua. El énfasis sobre uno u otro aspecto caracteriza a las conocidas dicotomías de la ideología de la enseñanza, la dicotomía entre la enseñanza <<tradicional>> o <<progresiva>>, etc. El valor de los enfoques de Vygostky y de Bruner es que consideran falsa esta dicotomía, que hacen hincapié en el proceso participativo, orientado hacia el futuro, de la cultura y la educación.
 Esto es lo que representa la idea del <<foro>>, de Bruner. Oeg Griffin y Michael Cole mezclan, del mismo modo, descripción de idealización.
+
+def analyze_community_learning() -> dict:
+    """
+    Analyzes learning as a community activity and cultural sharing process
+    Returns mapping of learning patterns and cultural integration
+    """
+    learning_patterns = {
+        'primary_characteristic': 'community_based',
+        'activity_type': 'cultural_sharing',
+        'learning_context': {
+            'environment': 'shared_space',
+            'interaction_type': 'collaborative',
+            'knowledge_flow': 'multi_directional'
+        }
+    }
+    return learning_patterns
+
+def evaluate_bruner_perspective() -> dict:
+    """
+    Evaluates Bruner's analysis of human mind development and teaching process
+    Returns detailed mapping of theoretical framework
+    """
+    bruner_analysis = {
+        'focus_areas': {
+            'mind_development': 'evolutionary',
+            'child_development': 'progressive',
+            'teaching_process': 'integrated'
+        },
+        'key_insights': {
+            'learning_type': 'communal',
+            'culture_sharing': 'fundamental',
+            'development_pattern': 'continuous'
+        }
+    }
+    return bruner_analysis
+
+def track_educational_evolution() -> dict:
+    """
+    Tracks the evolution of educational understanding and methodology
+    Returns analysis of developmental patterns
+    """
+    evolution_tracking = {
+        'descriptive_elements': {
+            'current_state': 'analyzed',
+            'potential_state': 'envisioned'
+        },
+        'methodology': {
+            'approach': 'fact_transmission_inadequate',
+            'preferred_model': 'interactive_forum',
+            'teacher_role': 'guide_facilitator'
+        }
+    }
+    return evolution_tracking
+
+def create_learning_tables():
+    """
+    Creates SQLite tables for storing community learning and theoretical analysis data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for community learning patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS learning_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            primary_characteristic TEXT,
+            activity_type TEXT,
+            environment TEXT,
+            interaction_type TEXT,
+            knowledge_flow TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for Bruner's analysis
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS bruner_analysis (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            mind_development TEXT,
+            child_development TEXT,
+            teaching_process TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for key insights
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS key_insights (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            learning_type TEXT,
+            culture_sharing TEXT,
+            development_pattern TEXT,
+            analysis_id INTEGER,
+            FOREIGN KEY (analysis_id) REFERENCES bruner_analysis (id)
+        )
+    ''')
+
+    # Table for educational evolution
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS educational_evolution (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            current_state TEXT,
+            potential_state TEXT,
+            approach TEXT,
+            preferred_model TEXT,
+            teacher_role TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+This passage discusses Bruner's view of education as a "forum" where teachers and students negotiate shared meaning, rather than a one-way transmission of facts. It highlights Bruner's emphasis on the "metacognitive turning away" from one's own conceptions, which allows for reflective awareness and understanding. This process is seen as key to the educational process, where learners are invited to participate in an "educated discourse" that transcends simple abstraction.
 
 La organización social y el desarrollo de actividades proporcionan un hueco dentro del cual el niño puede desarrollar análisis creativos noveles... un no es un diálogo entre el niño y el pasado de un adulto (Griffin y Cole, 1984, pág. 62).
 
@@ -1082,6 +3777,163 @@ La idea de un <<dar la espalda>> metacognitivo a las propias concepciones es, co
 
 para ir a esa parte del marco organizado de las respuestas pasadas que más importancia tienen para las necesidades del momento..., un organismo tiene que adquirir de algún modo la aptitud de dar la espalda a sus propios <<esquemas>> y construirlos de nuevo... Es ahí donde entra la conciencia, y es esto lo que da a la conciencia su función más preeminente. Me gustariía saber exactamente cómo se hace eso (Bartlett, 1932, pág 206).
 
+def analyze_metacognitive_process() -> dict:
+    """
+    Analyzes the relationship between memory, consciousness and cognitive development
+    Returns mapping of metacognitive patterns and their effects
+    """
+    metacognitive_patterns = {
+        'key_process': 'discursive_encounter',
+        'development_focus': {
+            'historical_approach': 'isolated_organism',
+            'modern_approach': 'cultural_integration',
+            'evolution': 'communication_centered'
+        },
+        'theoretical_basis': {
+            'vygotsky': 'teaching_central',
+            'bruner': 'process_focused'
+        }
+    }
+    return metacognitive_patterns
+
+def evaluate_knowledge_types() -> dict:
+    """
+    Evaluates different types of educational knowledge and their characteristics
+    Returns analysis of knowledge patterns and relationships
+    """
+    knowledge_analysis = {
+        'contextual_detachment': {
+            'educated_thinking': 'inherent',
+            'characteristics': [
+                'abstract',
+                'decontextualized',
+                'universalist'
+            ]
+        },
+        'knowledge_categories': {
+            'ritual': 'procedural_based',
+            'principled': 'reflection_based',
+            'integration': 'complementary'
+        }
+    }
+    return knowledge_analysis
+
+def track_understanding_evolution() -> dict:
+    """
+    Tracks the evolution of understanding and reflection in education
+    Returns mapping of developmental patterns
+    """
+    understanding_patterns = {
+        'reflection_role': {
+            'importance': 'central',
+            'function': 'transcendent',
+            'application': 'multi_context'
+        },
+        'comprehension_type': {
+            'nature': 'reflective_awareness',
+            'scope': 'metacognitive',
+            'development': 'progressive'
+        }
+    }
+    return understanding_patterns
+
+def create_metacognitive_tables():
+    """
+    Creates SQLite tables for storing metacognitive and knowledge analysis data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for metacognitive patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS metacognitive_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            key_process TEXT,
+            historical_approach TEXT,
+            modern_approach TEXT,
+            evolution_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for theoretical basis
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS theoretical_basis (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            theorist TEXT CHECK(theorist IN ('vygotsky', 'bruner')),
+            focus_area TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES metacognitive_patterns (id)
+        )
+    ''')
+
+    # Table for knowledge types
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS knowledge_types (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            thinking_type TEXT,
+            characteristic TEXT,
+            category_type TEXT CHECK(category_type IN ('ritual', 'principled', 'integration')),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for understanding evolution
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS understanding_evolution (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            reflection_importance TEXT,
+            reflection_function TEXT,
+            reflection_application TEXT,
+            comprehension_nature TEXT,
+            comprehension_scope TEXT,
+            development_pattern TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_metacognitive_data(metacognitive_data: dict):
+    """
+    Inserts metacognitive pattern data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO metacognitive_patterns (
+            key_process,
+            historical_approach,
+            modern_approach,
+            evolution_type
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        metacognitive_data['key_process'],
+        metacognitive_data['development_focus']['historical_approach'],
+        metacognitive_data['development_focus']['modern_approach'],
+        metacognitive_data['development_focus']['evolution']
+    ))
+    
+    pattern_id = cursor.lastrowid
+    
+    # Insert theoretical basis data
+    for theorist, focus in metacognitive_data['theoretical_basis'].items():
+        cursor.execute('''
+            INSERT INTO theoretical_basis (
+                theorist,
+                focus_area,
+                pattern_id
+            ) VALUES (?, ?, ?)
+        ''', (theorist, focus, pattern_id))
+    
+    conn.commit()
+    conn.close()
+
+This section discusses the relationship between memory, consciousness, and the development of principled knowledge. It highlights Bruner's idea of a "metacognitive turning away" from one's own conceptions, which allows for a reflective awareness and understanding of one's knowledge and position. This process is seen as a key part of the educational process, where learners are invited to participate in an "educated discourse" or "forum" that transcends simple decontextualized abstraction. The section draws on the work of Bartlett, Mead, and others to situate this view of principled knowledge within a broader cultural and social framework of cognition and learning.
 
 Como hemos dicho en otra parte (EDwards y Middleton, 1986), la clave del proceso es recordar puede muy bien ser el tipo de encuentro discursivo entre pensamientos del que habla Bruner. El estudio psicológico de la cognición y del desarrollo cognitivo se ha centrado durante décadas en el modo en que conocimiento y pensamiento
 son representados en la mente de un <<organismo en soledad>>, descontextualizado, el sujeto experimental individual. Ciertamente, debemos ahora buscar la esencia del pensamiento humano en su esencia cultural -su comunicabilidad-,
@@ -1100,27 +3952,1143 @@ La comprensión de principios se halla más superordenada que desarticulada. Pro
 
 Algunos conocimientos educacionales y psicológicos
 
+def analyze_cultural_perspectives() -> dict:
+    """
+    Analyzes different cultural viewpoints on education and development
+    Returns mapping of perspectives and their characteristics
+    """
+    cultural_analysis = {
+        'geographical_differences': {
+            'uk': {
+                'analysis_focus': 'class_based',
+                'research_approach': 'systematic'
+            },
+            'us': {
+                'analysis_focus': 'individual_based',
+                'research_approach': 'varied'
+            }
+        },
+        'research_patterns': {
+            'methodology': 'comparative',
+            'scope': 'cross_cultural',
+            'validation': 'empirical'
+        }
+    }
+    return cultural_analysis
+
+def track_pedagogical_commitments() -> dict:
+    """
+    Tracks commitments in new pedagogy and their analysis patterns
+    Returns detailed mapping of pedagogical approaches
+    """
+    commitment_tracking = {
+        'analysis_type': 'british_study',
+        'reflection_level': {
+            'problems': 'documented',
+            'difficulties': 'analyzed',
+            'achievements': 'evaluated'
+        },
+        'focus_areas': {
+            'process': 'bruner_aligned',
+            'outcomes': 'comprehensive'
+        }
+    }
+    return commitment_tracking
+
+def create_cultural_tables():
+    """
+    Creates SQLite tables for storing cultural perspectives and pedagogical data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for geographical differences
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS geographical_differences (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            country TEXT CHECK(country IN ('uk', 'us')),
+            analysis_focus TEXT,
+            research_approach TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for research patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS research_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            methodology TEXT,
+            scope TEXT,
+            validation TEXT,
+            geo_id INTEGER,
+            FOREIGN KEY (geo_id) REFERENCES geographical_differences (id)
+        )
+    ''')
+
+    # Table for pedagogical commitments
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS pedagogical_commitments (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            analysis_type TEXT,
+            process_focus TEXT,
+            outcome_type TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for reflection levels
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS reflection_levels (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            problems TEXT,
+            difficulties TEXT,
+            achievements TEXT,
+            commitment_id INTEGER,
+            FOREIGN KEY (commitment_id) REFERENCES pedagogical_commitments (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_cultural_data(cultural_data: dict):
+    """
+    Inserts cultural perspective data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    # Insert UK data
+    cursor.execute('''
+        INSERT INTO geographical_differences (
+            country,
+            analysis_focus,
+            research_approach
+        ) VALUES (?, ?, ?)
+    ''', (
+        'uk',
+        cultural_data['geographical_differences']['uk']['analysis_focus'],
+        cultural_data['geographical_differences']['uk']['research_approach']
+    ))
+    
+    uk_id = cursor.lastrowid
+    
+    # Insert research patterns for UK
+    cursor.execute('''
+        INSERT INTO research_patterns (
+            methodology,
+            scope,
+            validation,
+            geo_id
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        cultural_data['research_patterns']['methodology'],
+        cultural_data['research_patterns']['scope'],
+        cultural_data['research_patterns']['validation'],
+        uk_id
+    ))
+    
+    conn.commit()
+    conn.close()
+
+This section discusses two key implications of the research presented:
+
+1. The advantages of observing and analyzing the educational process as a situated discourse, applying the approach and method used to critically examine classroom communication.
+
+2. The consequences of questioning education from the perspective of an accepted psychological model of cognitive development and learning, which legitimizes dominant teaching ideologies used to justify specific educational practices.
+
 En la medida en que puede resumirse lo que la investigación representa en un sentido educacional, eso puede hacerse de otras formas. En primer lugar están las ventajas que se obitnen de la observación y análsisis del proceso educativo como discurso situado, es decir, de la aplicación del enfoque y método que hemos utilizado para hacer un examen crítico de la comunicación en clase. 
 En segundo lugar están las consecuencias de cuestionar la educación de un modelo psicológico aceptado de desarrollo y aprendizaje cognitivos, que legitima las ideologías dominantes de la enseñanza utilizados para justificar prácticas educativas en concreto. Vamos a esutdiar estas dos formas.
+
+def analyze_classroom_discussion() -> dict:
+    """
+    Analyzes patterns in classroom discussions and their investigative aspects
+    Returns mapping of discussion characteristics and outcomes
+    """
+    discussion_patterns = {
+        'investigation_type': 'process_focused',
+        'lesson_characteristics': {
+            'style': 'modern',
+            'approach': 'discovery_based',
+            'activities': [
+                'exploration',
+                'joint_discovery',
+                'shared_activity'
+            ]
+        },
+        'teaching_framework': {
+            'scaffolding': 'present',
+            'ideology': 'student_centered',
+            'influence': 'bruner_aligned'
+        }
+    }
+    return discussion_patterns
+
+def evaluate_teaching_ideology() -> dict:
+    """
+    Evaluates teaching ideology and its implementation patterns
+    Returns analysis of ideological frameworks and practices
+    """
+    ideology_analysis = {
+        'piaget_influence': {
+            'presence': 'significant',
+            'application': 'modified',
+            'integration': 'practical'
+        },
+        'bruner_alignment': {
+            'negotiation': 'emphasized',
+            'meaning_making': 'collaborative',
+            'teacher_role': 'facilitator'
+        }
+    }
+    return ideology_analysis
+
+def create_classroom_tables():
+    """
+    Creates SQLite tables for storing classroom discussion and teaching ideology data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for discussion patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS discussion_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            investigation_type TEXT,
+            style TEXT,
+            approach TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for lesson activities
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS lesson_activities (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            activity_name TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES discussion_patterns (id)
+        )
+    ''')
+
+    # Table for teaching framework
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS teaching_framework (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            scaffolding TEXT,
+            ideology TEXT,
+            influence TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES discussion_patterns (id)
+        )
+    ''')
+
+    # Table for ideology analysis
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS ideology_analysis (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            influence_type TEXT CHECK(influence_type IN ('piaget', 'bruner')),
+            presence TEXT,
+            application TEXT,
+            integration TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for bruner alignment
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS bruner_alignment (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            negotiation TEXT,
+            meaning_making TEXT,
+            teacher_role TEXT,
+            ideology_id INTEGER,
+            FOREIGN KEY (ideology_id) REFERENCES ideology_analysis (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_discussion_data(discussion_data: dict):
+    """
+    Inserts classroom discussion data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO discussion_patterns (
+            investigation_type,
+            style,
+            approach
+        ) VALUES (?, ?, ?)
+    ''', (
+        discussion_data['investigation_type'],
+        discussion_data['lesson_characteristics']['style'],
+        discussion_data['lesson_characteristics']['approach']
+    ))
+    
+    pattern_id = cursor.lastrowid
+    
+    # Insert activities
+    for activity in discussion_data['lesson_characteristics']['activities']:
+        cursor.execute('''
+            INSERT INTO lesson_activities (
+                activity_name,
+                pattern_id
+            ) VALUES (?, ?)
+        ''', (activity, pattern_id))
+    
+    # Insert framework
+    cursor.execute('''
+        INSERT INTO teaching_framework (
+            scaffolding,
+            ideology,
+            influence,
+            pattern_id
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        discussion_data['teaching_framework']['scaffolding'],
+        discussion_data['teaching_framework']['ideology'],
+        discussion_data['teaching_framework']['influence'],
+        pattern_id
+    ))
+    
+    conn.commit()
+    conn.close()
+
+This code discusses the benefits of viewing education as a situated discourse, where teachers and students work together towards a common goal. It highlights the importance of identifying the ways in which this goal is achieved or not achieved, and the development of special strategies for introducing topics, facilitating discussions, relating speech to action, consolidating shared experiences, and resolving misunderstandings. The code suggests that the best way to acquire this analytical technique is through the specialized use of audiovisual recordings of teaching practice as part of initial and active preparation, rather than relying solely on attending lessons as a listener or accessing transcripts. It also notes that the necessary audiovisual equipment is already widely used in schools and universities for similar purposes, and that the technical challenges are not insurmountable, though more work is needed to fully detail the appropriate framework for such an approach.
 
 Viendo la educación como un discurso situado, como un proceso por el cual los maestros y niños actúan y hablan juntos con un supuesto objetivo común, el investigador (que puede ser también el maestro) puede indentificar con mayor facilidad los modos y ocasiones en que este objetivo se logra o no se consigue.
 Las estrategias especiales para introducir temas, llevar discusiones, relacionar el habla con la acción, consolidar experiencias compartidas, solucionar malentendidos, etcétera, pueden desarrollarse con mayor confianza. Hemos sugerido en otra parte algunos modos en que los maestros pueden adoptar esta actitud (Mercer, 1985). Pero el mejor modo de adquirir este tipo de técnica analítica es mediante el uso especializado de grabaciones audiovisuales de la práctica de la enseñanza como parte de una preparación inicial y activa. El asistir como <<oyente>> a las lecciones de otros maestros o tener acceso sólo a las transcripcciones no es suficiente.
 Los equipos audiovisuales adecuados son ya de uso corriente en las escuelas y universidades, y se utilizan incluso en algunas instituciones con fines análogos ( por ejemplo en el análisis de <<microenseñanza>> y la formación de las aptitudes sociales ), por lo que las cuestiones técnicas no plantearían problemas insalvables. pero todsvía nos queda mucho por hacer antes de sentirnos en condicion de detalla la forma que debería tener un esquema así.
 
+def analyze_negotiation_description() -> dict:
+    """
+    Analyzes negotiation patterns between teachers and students
+    Returns mapping of negotiation characteristics and effectiveness
+    """
+    negotiation_patterns = {
+        'description_type': 'excellent',
+        'characteristics': {
+            'style': 'idealized',
+            'approach': 'mehan_influenced',
+            'implementation': 'systematic'
+        },
+        'process_analysis': {
+            'negotiation_type': 'unilateral',
+            'teacher_role': 'authoritative',
+            'knowledge_presentation': 'subtle'
+        }
+    }
+    return negotiation_patterns
+
+def track_teaching_modes() -> dict:
+    """
+    Tracks different modes of knowledge transmission in teaching
+    Returns analysis of transmission patterns and their effects
+    """
+    transmission_modes = {
+        'direct_transmission': {
+            'usage': 'minimal',
+            'effectiveness': 'limited'
+        },
+        'alternative_modes': {
+            'subtlety': 'high',
+            'authority_maintenance': 'preserved',
+            'knowledge_control': 'maintained'
+        }
+    }
+    return transmission_modes
+
+def create_negotiation_tables():
+    """
+    Creates SQLite tables for storing negotiation patterns and teaching modes
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for negotiation patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS negotiation_patterns (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            description_quality TEXT,
+            style_type TEXT,
+            approach_influence TEXT,
+            implementation_method TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for process analysis
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS process_analysis (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            negotiation_type TEXT,
+            teacher_role TEXT,
+            knowledge_presentation TEXT,
+            pattern_id INTEGER,
+            FOREIGN KEY (pattern_id) REFERENCES negotiation_patterns (id)
+        )
+    ''')
+
+    # Table for transmission modes
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS transmission_modes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            mode_type TEXT CHECK(mode_type IN ('direct', 'alternative')),
+            usage_level TEXT,
+            effectiveness TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for alternative mode details
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS alternative_modes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            subtlety_level TEXT,
+            authority_maintenance TEXT,
+            knowledge_control TEXT,
+            mode_id INTEGER,
+            FOREIGN KEY (mode_id) REFERENCES transmission_modes (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_negotiation_data(negotiation_data: dict):
+    """
+    Inserts negotiation pattern data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO negotiation_patterns (
+            description_quality,
+            style_type,
+            approach_influence,
+            implementation_method
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        'excellent',
+        negotiation_data['characteristics']['style'],
+        negotiation_data['characteristics']['approach'],
+        negotiation_data['characteristics']['implementation']
+    ))
+    
+    pattern_id = cursor.lastrowid
+    
+    cursor.execute('''
+        INSERT INTO process_analysis (
+            negotiation_type,
+            teacher_role,
+            knowledge_presentation,
+            pattern_id
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        negotiation_data['process_analysis']['negotiation_type'],
+        negotiation_data['process_analysis']['teacher_role'],
+        negotiation_data['process_analysis']['knowledge_presentation'],
+        pattern_id
+    ))
+    
+    conn.commit()
+    conn.close()
+
+This code discusses the implications of abandoning an individualistic perspective on the development of knowledge and understanding, and instead adopting a psychological view that gives primacy to culture and communication. It suggests that "learning failures" may not be attributed to specific children or teachers, but rather to failures in the referential framework within which teaching takes place. These failures could be located in specific events within the discourse dynamics of a particular classroom over a given period, or attributed to inherent, permanent aspects of the teaching and learning process, as defined tacitly by the participants who must invoke their own convictions about teaching to make sense of what they do.
+
 Es difícil resumir las implicaciones en el nivel educacional del abandono de una perspectiva individualista respecto al desarrollo de conocimiento y la comprensión y la adopción en su lugar de un punto de vista psicológico que diese primacía a la cultura y a la comunicación (una meta que persiguen, por ejemplo, Micchael Cole y sus colegas en el Laboratorio de Cognición Humana Comparativa de San Diego). Esto respresentaría, entre otras cosas, que los <<fracasos en el aprendizaje>> no se atribuían necesariamente a niños o maestros en concreto, sino a los fallos del marco referencial dentro del cual tiene lugar la enseñanza. Dicho de otro modo, se trata de fallos de contexto. 
 Estos podrían localizarse en acontecimientos concretos ocurridos dentro de la dinámica del discurso en una clase concreta y durante un período determinado de tiempo o atribuirse a aspectos inherentes, permanentes, del proceso de enseñanza y aprendizaje, según lo definen tácitamente los participantes que deben invocar sus propias convicciones respecto a la enseñanza para dar sentido a lo que hacen.
+
+def analyze_cultural_forum_view() -> dict:
+    """
+    Analyzes implications of viewing culture as a forum in education
+    Returns mapping of educational approaches and their effects
+    """
+    forum_analysis = {
+        'education_role': {
+            'participation': 'forum_based',
+            'negotiation': 'active',
+            'meaning_creation': 'collaborative'
+        },
+        'preparation_focus': {
+            'target': 'real_life',
+            'approach': 'participatory',
+            'skills': 'negotiation_based'
+        }
+    }
+    return forum_analysis
+
+def evaluate_pedagogical_conflicts() -> dict:
+    """
+    Evaluates conflicts between traditional pedagogy and forum approach
+    Returns analysis of competing traditions and interpretations
+    """
+    tradition_analysis = {
+        'historical_approach': {
+            'time_period': 'traditional',
+            'interpretation': 'static',
+            'authority_view': 'hierarchical'
+        },
+        'modern_conflicts': {
+            'knowledge_transfer': 'negotiated',
+            'value_transmission': 'collaborative',
+            'authority_structure': 'distributed'
+        }
+    }
+    return tradition_analysis
+
+def create_forum_tables():
+    """
+    Creates SQLite tables for storing cultural forum and pedagogical conflict data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for education roles in forum
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS education_roles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            participation_type TEXT,
+            negotiation_level TEXT,
+            meaning_creation TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for preparation focus
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS preparation_focus (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            target_area TEXT,
+            approach_type TEXT,
+            skills_focus TEXT,
+            role_id INTEGER,
+            FOREIGN KEY (role_id) REFERENCES education_roles (id)
+        )
+    ''')
+
+    # Table for historical approaches
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS historical_approaches (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            time_period TEXT,
+            interpretation_type TEXT,
+            authority_view TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for modern conflicts
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS modern_conflicts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            knowledge_transfer TEXT,
+            value_transmission TEXT,
+            authority_structure TEXT,
+            historical_id INTEGER,
+            FOREIGN KEY (historical_id) REFERENCES historical_approaches (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_forum_data(forum_data: dict):
+    """
+    Inserts cultural forum data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO education_roles (
+            participation_type,
+            negotiation_level,
+            meaning_creation
+        ) VALUES (?, ?, ?)
+    ''', (
+        forum_data['education_role']['participation'],
+        forum_data['education_role']['negotiation'],
+        forum_data['education_role']['meaning_creation']
+    ))
+    
+    role_id = cursor.lastrowid
+    
+    cursor.execute('''
+        INSERT INTO preparation_focus (
+            target_area,
+            approach_type,
+            skills_focus,
+            role_id
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        forum_data['preparation_focus']['target'],
+        forum_data['preparation_focus']['approach'],
+        forum_data['preparation_focus']['skills'],
+        role_id
+    ))
+    
+    conn.commit()
+    conn.close()
+
+def insert_tradition_data(tradition_data: dict):
+    """
+    Inserts pedagogical tradition data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO historical_approaches (
+            time_period,
+            interpretation_type,
+            authority_view
+        ) VALUES (?, ?, ?)
+    ''', (
+        tradition_data['historical_approach']['time_period'],
+        tradition_data['historical_approach']['interpretation'],
+        tradition_data['historical_approach']['authority_view']
+    ))
+    
+    historical_id = cursor.lastrowid
+    
+    cursor.execute('''
+        INSERT INTO modern_conflicts (
+            knowledge_transfer,
+            value_transmission,
+            authority_structure,
+            historical_id
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        tradition_data['modern_conflicts']['knowledge_transfer'],
+        tradition_data['modern_conflicts']['value_transmission'],
+        tradition_data['modern_conflicts']['authority_structure'],
+        historical_id
+    ))
+    
+    conn.commit()
+    conn.close()
+
+This code discusses the importance of a reflective and context-sensitive approach to education, where the teacher and students work together to build a shared understanding based on knowledge and action. It highlights the concept of "scaffolding" as a cognitive framework that structures learning in a more systematic way than the "sandbox" approach of pure discovery. The code emphasizes the role of teacher-student dialogue in constructing this scaffolding, and warns against teachers maintaining strict control over the agenda and content, which can limit students' ability to function independently or outside the specific context of the classroom.
 
 Una educación adecuada debe ser reflexiva, sensible a la posibilidad de diferentes tipos de comprensión. Puede buscarse, a través de una creación cuidadosa del contexto, un marco para la comprensión compartida con los alumnos basado en el conocimiento y en la acción de conjuntos y que proporcione su propia razón fundamental para la actividad presente y una base fuerte para la evolución futura.
 Este edificio contextual es el <<andamiaje>> para las exploraciones mentales de los niños, el marco cognitivo de apoyo -construido por los niños junto con su maestra vygotskyana- que estructura la actividad de manera más sistemática que el <<arenal>> para el descubrimiento que encontraremos en la clase piagetiana. La charla entre maestros y niños ayuda a la construcción de andamiaje; de no existir este marco de comunicación, la actividad, o incluso el <<descubrimiento>> de los niños, podría, en términos cognitivos, no llevar a ninguna parte.
 Y si los maestros insisten en mantener un control estricto, dominar la agenda y la discusión, determinar por anticipado qué debe ocurrir y qué debe ocurrir y qué hay que descubrir, incluso sus alumnos más brillantes quedarían atados al andamiaje, como una estructura apoyada, incapaces de funcionar independientemente o fuera del contexto y contenido precisos de lo que <<se hizo>> en la clase.
 
+def analyze_participation_framework() -> dict:
+    """
+    Analyzes framework for participation in educational discourse
+    Returns mapping of participation patterns and cultural integration
+    """
+    framework_elements = {
+        'forum_spirit': {
+            'negotiation': 'active',
+            'recreation': 'continuous',
+            'preparation': 'real_world'
+        },
+        'education_process': {
+            'type': 'participatory',
+            'young_people': 'integrated',
+            'life_preparation': 'comprehensive'
+        }
+    }
+    return framework_elements
+
+def track_cultural_integration() -> dict:
+    """
+    Tracks patterns of cultural integration in educational settings
+    Returns analysis of integration methods and effectiveness
+    """
+    integration_patterns = {
+        'methodology': {
+            'approach': 'forum_based',
+            'implementation': 'systematic',
+            'effectiveness': 'measured'
+        },
+        'outcomes': {
+            'participation': 'enhanced',
+            'cultural_awareness': 'developed',
+            'integration_level': 'progressive'
+        }
+    }
+    return integration_patterns
+
+def create_framework_tables():
+    """
+    Creates SQLite tables for storing participation framework and cultural integration data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for forum spirit elements
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS forum_spirit (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            negotiation_type TEXT,
+            recreation_pattern TEXT,
+            preparation_focus TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for education process tracking
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS education_process (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            process_type TEXT,
+            youth_integration TEXT,
+            life_preparation TEXT,
+            forum_id INTEGER,
+            FOREIGN KEY (forum_id) REFERENCES forum_spirit (id)
+        )
+    ''')
+
+    # Table for cultural integration methodology
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS integration_methodology (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            approach_type TEXT,
+            implementation_method TEXT,
+            effectiveness_measure TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for integration outcomes
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS integration_outcomes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            participation_level TEXT,
+            cultural_awareness TEXT,
+            integration_progress TEXT,
+            methodology_id INTEGER,
+            FOREIGN KEY (methodology_id) REFERENCES integration_methodology (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_framework_data(framework_data: dict):
+    """
+    Inserts participation framework data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO forum_spirit (
+            negotiation_type,
+            recreation_pattern,
+            preparation_focus
+        ) VALUES (?, ?, ?)
+    ''', (
+        framework_data['forum_spirit']['negotiation'],
+        framework_data['forum_spirit']['recreation'],
+        framework_data['forum_spirit']['preparation']
+    ))
+    
+    forum_id = cursor.lastrowid
+    
+    cursor.execute('''
+        INSERT INTO education_process (
+            process_type,
+            youth_integration,
+            life_preparation,
+            forum_id
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        framework_data['education_process']['type'],
+        framework_data['education_process']['young_people'],
+        framework_data['education_process']['life_preparation'],
+        forum_id
+    ))
+    
+    conn.commit()
+    conn.close()
+
+def insert_integration_data(integration_data: dict):
+    """
+    Inserts cultural integration data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO integration_methodology (
+            approach_type,
+            implementation_method,
+            effectiveness_measure
+        ) VALUES (?, ?, ?)
+    ''', (
+        integration_data['methodology']['approach'],
+        integration_data['methodology']['implementation'],
+        integration_data['methodology']['effectiveness']
+    ))
+    
+    methodology_id = cursor.lastrowid
+    
+    cursor.execute('''
+        INSERT INTO integration_outcomes (
+            participation_level,
+            cultural_awareness,
+            integration_progress,
+            methodology_id
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        integration_data['outcomes']['participation'],
+        integration_data['outcomes']['cultural_awareness'],
+        integration_data['outcomes']['integration_level'],
+        methodology_id
+    ))
+    
+    conn.commit()
+    conn.close()
+This code discusses the challenges and considerations involved in conducting psychological research that focuses on discourse and learning in real-world contexts, rather than relying solely on experimental methods. It highlights the importance of acknowledging the inherent ambiguities and limitations of experimental tasks, and the need to prioritize relevance over strict control when studying discourse and learning processes. The author suggests that the type of research they would most like to conduct or read would be a study of situated discourse in social contexts beyond formal education, where people are developing shared understanding towards different goals and in diverse cultural settings.
+
 Por lo que atañe a la investigación psicológica, es difícil ver cómo una investigación que intentara enfocar las cuestiones arriba expuestas podría ser realizada por un invesitigador que equiparase el análisis psicológico empírico con la experimentación.
 Como hemos visto, las raíces primarios de nuestro enfoque radican en las revelaciones acerca de las ambigüedades inherentes en las tareas experimentales y en lo que éstas representan en ccuanto a la interpretación de resultados experimentales (veáse, por jeemplo, Donaldson, 1978; Labov, 1972; Rogoff y Lave 1984; Cole y Means, 1981; Neisser, 1982). Si estamos interesados en el discurso y el aprendizaje en marcos reales, no podemos esperar grandes éxitos si quitamos ex profeso el marco o sólo sonsacamos a los sujetos una serie reducida de respuestas prefijadas. Probablemente, la investigación que estamos llevando a cabo y defendiendo no es ni más fácil ni más difícil de realizar que un trabajo de experimentación. La diferencia fundamental estriba en que da una mayor prioridad a la relevancia y menos en el control.
 En el momento en que se escribe esto, el tipo de investigación psicológica que más nos gustaría realizar o leer sería un estudio del discurso situado en otros marcos sociales que no fueran el de la eduación formal, de personas que estuviesen desarrollando la comprensión común en búsqueda de otros objetivos y en contextos culturales diferentes.
+
+def analyze_pedagogical_tension() -> dict:
+    """
+    Analyzes tension between traditional and progressive pedagogical approaches
+    Returns mapping of key differences and resolution patterns
+    """
+    tension_analysis = {
+        'traditional': {
+            'culture_view': 'prefabricated',
+            'student_role': 'recipient',
+            'approach': 'static'
+        },
+        'progressive': {
+            'culture_view': 'evolving',
+            'student_role': 'creator',
+            'approach': 'dynamic'
+        },
+        'resolution': {
+            'method': 'vygotsky_bruner',
+            'perspective': 'false_dichotomy',
+            'integration': 'participatory'
+        }
+    }
+    return tension_analysis
+
+def track_cultural_evolution() -> dict:
+    """
+    Tracks patterns of cultural evolution in educational settings
+    Returns analysis of evolutionary processes and outcomes
+    """
+    evolution_patterns = {
+        'process_type': {
+            'orientation': 'future_focused',
+            'participation': 'active',
+            'development': 'continuous'
+        },
+        'educational_impact': {
+            'culture_building': 'progressive',
+            'student_engagement': 'enhanced',
+            'knowledge_creation': 'collaborative'
+        }
+    }
+    return evolution_patterns
+
+def create_pedagogical_tables():
+    """
+    Creates SQLite tables for storing pedagogical tension and cultural evolution data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for pedagogical approaches
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS pedagogical_approaches (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            approach_type TEXT CHECK(approach_type IN ('traditional', 'progressive')),
+            culture_view TEXT,
+            student_role TEXT,
+            teaching_approach TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for resolution methods
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS resolution_methods (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            method_name TEXT,
+            perspective TEXT,
+            integration_type TEXT,
+            approach_id INTEGER,
+            FOREIGN KEY (approach_id) REFERENCES pedagogical_approaches (id)
+        )
+    ''')
+
+    # Table for cultural evolution tracking
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS cultural_evolution (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            orientation TEXT,
+            participation_type TEXT,
+            development_pattern TEXT,
+            culture_building TEXT,
+            student_engagement TEXT,
+            knowledge_creation TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_pedagogical_data(tension_data: dict):
+    """
+    Inserts pedagogical approach data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    # Insert traditional approach
+    cursor.execute('''
+        INSERT INTO pedagogical_approaches (
+            approach_type,
+            culture_view,
+            student_role,
+            teaching_approach
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        'traditional',
+        tension_data['traditional']['culture_view'],
+        tension_data['traditional']['student_role'],
+        tension_data['traditional']['approach']
+    ))
+    
+    # Insert progressive approach
+    cursor.execute('''
+        INSERT INTO pedagogical_approaches (
+            approach_type,
+            culture_view,
+            student_role,
+            teaching_approach
+        ) VALUES (?, ?, ?, ?)
+    ''', (
+        'progressive',
+        tension_data['progressive']['culture_view'],
+        tension_data['progressive']['student_role'],
+        tension_data['progressive']['approach']
+    ))
+    
+    conn.commit()
+    conn.close()
+
+def insert_evolution_data(evolution_data: dict):
+    """
+    Inserts cultural evolution data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO cultural_evolution (
+            orientation,
+            participation_type,
+            development_pattern,
+            culture_building,
+            student_engagement,
+            knowledge_creation
+        ) VALUES (?, ?, ?, ?, ?, ?)
+    ''', (
+        evolution_data['process_type']['orientation'],
+        evolution_data['process_type']['participation'],
+        evolution_data['process_type']['development'],
+        evolution_data['educational_impact']['culture_building'],
+        evolution_data['educational_impact']['student_engagement'],
+        evolution_data['educational_impact']['knowledge_creation']
+    ))
+    
+    conn.commit()
+    conn.close()
+
+This code discusses the relevance of the authors' analysis to the study of cognitive development, particularly in understanding the relationships between discourse and learning, and between knowledge and action. It emphasizes the value of examining how adults structure children's learning and how teachers and students establish (or fail to establish) a shared discourse universe. The code suggests that this approach can demonstrate the value of a general theoretical framework for cognitive development, thought, and language that incorporates a more specialized perspective on formal teaching and learning.
 
 Creemos que nuestro análisis es relevante en cuanto al estudio del desarrollo cognitivo y, en especial, para comprender las relaciones entre discurso y aprendizaje y entre conocimiento y acción. Observando el aprendizaje desde una perspectiva teórica que no pretende una abrumadora supremacía de la acción sobre el habla, o que define el aprendizaje humanos. Esta profundización en el modo en que los adultos estructuran el aprendizaje de los niños y los niños interpretan los términos, las tareas y las atividades, en el modo en que maestros y alumnos consiguen o no establecer una mutualidad, un universo compartido de discurso, es valiosa en sí misma. Pero puede servir también para demostrar el valor de un enfoque teórico general del desarrollo cognitivo, el pensamiento y el lenguaje, que incorpore era perspectiva más especial con respecto a la enseñanza y el aprendizaje formales.
 Ya hemos dicho que es más fácil hallar este enfoque en el trabajo de Vygostky y Bruner que en el de Piaget.
 
 Sin embargo, en lugar de limitarnos a remodelar el proceso de aprendizaje en clase en términos vygostkyanos o brunerianos, hemos procurado hacerlo de una manera que plantea el carácter problemático del proceso. Para que maestros y alumnos tengan éxito en la enseñanza con <<andamiaje>>, hay que examinar y hacer hincapié en aspectos clave de los procesos de aprendizaje observados. Entre ellos están los siguientes:
 
-1. Nuestros maestros se enfrentan a un dilema fundamental; el del equilibrio de los requisitos contrapuestos, por un lado de una ideología del aprendizaje centrada en el niño, y,  por otro, del rol esencialmente socializante de los maestros como agentes de transmisión 
+def analyze_cultural_participation() -> dict:
+    """
+    Analyzes patterns of cultural participation in educational settings
+    Returns mapping of participation characteristics and outcomes
+    """
+    participation_patterns = {
+        'organization': {
+            'social_space': 'pedagogical',
+            'activity_type': 'developmental',
+            'interaction': 'structured'
+        },
+        'development': {
+            'analysis_type': 'creative',
+            'novel_patterns': 'emerging',
+            'space_utilization': 'adaptive'
+        }
+    }
+    return participation_patterns
+
+def track_developmental_space() -> dict:
+    """
+    Tracks how developmental space is utilized in educational contexts
+    Returns analysis of space usage and effectiveness
+    """
+    space_analysis = {
+        'child_development': {
+            'space_type': 'guided',
+            'analysis_patterns': 'novel',
+            'creativity_level': 'enhanced'
+        },
+        'interaction_patterns': {
+            'dialogue_type': 'developmental',
+            'past_integration': 'active',
+            'future_orientation': 'structured'
+        }
+    }
+    return space_analysis
+
+def create_participation_tables():
+    """
+    Creates SQLite tables for storing cultural participation and developmental space data
+    """
+    import sqlite3
+
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+
+    # Table for cultural participation patterns
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS cultural_participation (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            social_space TEXT,
+            activity_type TEXT,
+            interaction TEXT,
+            analysis_type TEXT,
+            novel_patterns TEXT,
+            space_utilization TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for developmental space tracking
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS developmental_space (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            space_type TEXT,
+            analysis_patterns TEXT,
+            creativity_level TEXT,
+            dialogue_type TEXT,
+            past_integration TEXT,
+            future_orientation TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+
+    # Table for linking participation and space data
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS analysis_results (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            participation_id INTEGER,
+            space_id INTEGER,
+            analysis_date DATE,
+            FOREIGN KEY (participation_id) REFERENCES cultural_participation (id),
+            FOREIGN KEY (space_id) REFERENCES developmental_space (id)
+        )
+    ''')
+
+    conn.commit()
+    conn.close()
+
+def insert_participation_data(participation_data: dict):
+    """
+    Inserts cultural participation data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO cultural_participation (
+            social_space,
+            activity_type,
+            interaction,
+            analysis_type,
+            novel_patterns,
+            space_utilization
+        ) VALUES (?, ?, ?, ?, ?, ?)
+    ''', (
+        participation_data['organization']['social_space'],
+        participation_data['organization']['activity_type'],
+        participation_data['organization']['interaction'],
+        participation_data['development']['analysis_type'],
+        participation_data['development']['novel_patterns'],
+        participation_data['development']['space_utilization']
+    ))
+    
+    conn.commit()
+    conn.close()
+
+def insert_space_data(space_data: dict):
+    """
+    Inserts developmental space data into SQLite database
+    """
+    conn = sqlite3.connect('education_analysis.db')
+    cursor = conn.cursor()
+    
+    cursor.execute('''
+        INSERT INTO developmental_space (
+            space_type,
+            analysis_patterns,
+            creativity_level,
+            dialogue_type,
+            past_integration,
+            future_orientation
+        ) VALUES (?, ?, ?, ?, ?, ?)
+    ''', (
+        space_data['child_development']['space_type'],
+        space_data['child_development']['analysis_patterns'],
+        space_data['child_development']['creativity_level'],
+        space_data['interaction_patterns']['dialogue_type'],
+        space_data['interaction_patterns']['past_integration'],
+        space_data['interaction_patterns']['future_orientation']
+    ))
+    
+    conn.commit()
+    conn.close()
+
+This code discusses the fundamental dilemma that teachers face in balancing the conflicting requirements of a child-centered learning ideology and the essentially socializing role of teachers as agents of cultural transmission in the context of a compulsory education system. It explores how children must learn what is necessary while also discovering it for themselves.
+
+The resolution of this dilemma may make the teaching process more difficult than the ideal of scaffolded instruction defines as necessary. Students must guess at the unspoken, implicit basic rules of the system and learn to play the "classroom game". The child-centered ideology must be replaced with one that emphasizes the discursive basis of knowledge and learning.
+1. Nuestros maestros se enfrentan a un dilema fundamental; el del equilibrio de los requisitos contrapuestos, por un lado de una ideología del aprendizaje centrada en el niño, y,  por otro, del rol esencialmente socializante de los maestros como agentes de transmisión cultural de la sociedad en el contexto de un sistema de enseñanza obligatoria. Hemos de ver cómo los niños aprenden lo necesario, pero, al mismo tiempo, cómo lo descubren por sí mismos.
+El dilema se resuelve de un modo que tal vez haga del proceso de enseñanza un proceso más difícil de lo que define como necesario el ideal de la enseñanza un proceso más difícil de lo que define como necesario el ideal de la enseñanza con andamiaje. Los alumnos deben adivinar como puedan las reglas básicas no articuladas, implícitas en el sistema, y deben aprender a jugar al juego de la clase. La ideología centrada en el niño debe ser sustituida por otra que haga
+hincapié en la base discursiva del conocimiento y el aprendizaje.
+
+
+This code discusses the implicit rules, assumptions, and knowledge that underlie classroom education. It highlights how teachers often do not explicitly communicate the objectives and contexts of classroom activities, which is a consequence of an educational ideology that views students as individuals seeking to realize their own potential, rather than needing to be "told" things. The code suggests that this lack of explicit communication is not accidental, but rather an intrinsic feature of the construction of context and continuity in education.
+
+2. Toda la educación en clase se realiza con un fondo de reglas, supuestos y conocimientos implícitos. Estos es, en cierta medida, inevitable. Como hemos subrayado, la construcción del contexto y la continuidad es una característica intrínseca de la educación. Pero no se han dicho algunas cosas que podría  ser útil explicar. Parece ser práctica común y apreciada el que los maestros den toda una lección, o una serie de lecciones, sin que juzguen necesario decir a los alumnos por qué están realizando unas actividades en concreto o cómo encaja todo lo que han hecho y en lo que harán a continuación. Este estado de cosas no parece ser accidental.
+El evitar la comunicación explícita de los objetivos y contextos de la actividad en clase es una consecuencia de la ideología educacional de los maestros: los alumnos son esencialmente individuos que buscan la realización de su propio potencial individual, no hay que <<decirles>> cosas, deben aprenderlas por sí mismos.
+
