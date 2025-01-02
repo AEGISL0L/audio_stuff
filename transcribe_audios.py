@@ -976,3 +976,59 @@ Si no se quiere que el proceso educacional llegue a su término comprometido por
 
 Para los alumnos, parte del problema consiste en que el proceso es siempre en gran medida, un misterio para ellos. Aunque sea de una manera cordial y poco formal, se les pide a menudo que hagan cosas, aprendan cosas y comprendan cosas, sin otra razón aparente que el hecho de que esto es lo que es maestro quiere que hagan. las metas y objetivos de la lección permanecen ocultos. 
 Y de hecho, lo mismo ocurre a menudo con los conceptos que estaba destinada a << cubrir >> la lección. En el ethos del aprendizaje inductivo centrado en el alumno no es aceptable decir a éste lo que debía descubrir por sí mismo, ni siquiera una vez terminadas las diversas actividades de aprendizaje. Recuérdense de las entrevistas del capítulo 4 con los niños que habían hecho el simulacro de la << isla desierta >>;
+en aquellas entrevistas les preguntamos de qué creían que había tratado la lección y lo que creían que debían aprender de ella. Sus respuestas mostraban que, para la mayoría de ellos, se trataba de un ejercicio de supervivencia, algo que podía serles de utilidad práctica si algín día se hallaban en una situación parecida. Una lección que había sido pensada para ayudar a los alumnos a conceptualizar aspectos de la sociedad en que vivirían en una isla desierta o en Africa.
+
+Los principales componentes del proceso de aprendizaje maestro alumno que hemos presentado aparecen en la concepción que Vygotsky tiene del mismo.
+La asimetría entre maestro y alumno es esencial para la << zona de desarrollo próximo >>, como también los es la noción de control. Los niños no adquieren simplemente conocimientos y vocabulario. Adquieren al mismo tiempo la capacidad para la autorregulación. Del mismo modo que el pensamiento verbal se origina como discurso social, la conducta autoregulada empieza con la regulación de la propia conducta por parte de otras personas. El éxito del proceso implicaun traspaso gradual de control del maestro
+al alumno a medida que el alumno va siendo capaz de hacer por sí mismo lo que antes sólo podía hacer con ayuda. En la educación formal, esta parte del proceso rara vez se realiza. Para la mayoría de alumnos, la educación es un misterio que  a su control más que un recurso de conocimientos y aptitudes que pueden manejar libremente. Como han señalado Bruner (1985) y otros, hay un gran contraste entre la escolarización formal y el aprendizaje de la primera lengua.
+En el siguiente ejemplo se contrasta la educación formal con el aprendizaje del juego del peekaboo:
+
+La madre empieza representando ella misma todo el guión y el niño va tomando un rol cada vez más activo, hasta que llega a recitaar todos los papeles que primero recitaba la madre. El contraste entre estos entornos de aprendizaje es enorme. En las lecciones escolares, los maestros dan instrucciones y los niños las ejecutan de manera no verbal; los maeestros hacen preguntas y los niños las responden, a menudo sólo con una palabra o una frase.
+Y, lo que es más importante, estos roles no se invierten... Los niños nunca dan instrucciones a los maestros y son raras las preguntas que se hacen a los maestros, excepto para pedir permiso (Forman y Cazden , 1985, pág. 344).
+
+Un proceso educacional logrado es el que transfiere competencia al alumno. Parece casi como si la educación formal, para la mayorían de los alumnos, estuviese destinada a evitar que esto ocurra.
+
+
+"""
+
+"""
+
+8. CONCLUSIONES Y CONTENIDOS IMPLICITOS
+
+Empezaremos este último capítulo haciendo un resumen de los principales puntos que hemos tratado en el libro hasta ahora.
+
+1. Hemos adoptado una perspectiva sobre el pensamiento y la comprensión humanas que hace hincapié en su base en la comunicación y en las relaciones humanas.
+El saber y el pensamiento no tienen sólo que ver con cómo piensan los individuos, sino que son intrínsicamente sociales y culturales. Nos hemos centrado, por tanto, en
+lo que llamamos << conocimiento compartido >>, observando cómo éste se construye a través de la actividad y el discurso conjuntos.
+
+2. Mediante el discurso y la acción conjunta, dos o más personas construyen un cuerpo de conocimiento común que se convierte en la base contextual para la comunicación posterior.
+Los mensajes abiertos, las cosas que realmente dicen, son sólo una pequeña parte del conjunto de la comunicación. Son sólo la punta del iceberg, en el que la gran masa oculta de debajo
+es esencial para el carácter de lo que está abiertamente visible por encima del agua. Por eso el contexto y la continuidad son consideraciones esenciales en el análisis del discurso.
+
+3. El << contexto >> es básicamente un fenómeno mental. Las cosas de << ahí fuera >> se hacen contextuales sólo cuando son invocadas, es decir, cuando se hace referencia a ellas, se suponen o se
+insinúan en la comunicación. El mismo acto de nombrar las cosas, o de suponer comprensiones compartidas de las mismas, convierte, para los comunicantes, su realidad en una realidad social y conceptual más que de simple
+existencia física en el mundo de alrededor. El contexto es el conocimiento común de los hablantes invocado por el discurso. Es problemático tanto para los participantes como para cualquier observador.
+El concepto que tienen los participantes de los contextos mentales de los demás puede estar equivocado o, lo que es más probable, ser acertado sólo en parte.
+Del mismo modo, los investigadores se encuentran con el problema de determinar qué es contextual. Cualquier serie física de circuntancias podría prestarse a una infinidad de posibles concepciones y relevancias compartidas,
+y,  en todo caso, los contextos mentales de la comunicación coloquial no están en modo alguno limitados a las circunstancias físicasde los actos del habla. La <<continuidad>> es asimismo problemática porque también es mental (o, 
+para ser más precisos, inter-mental). La continueidad es una característica del contexto, y es también contexto al desarrollarse en el curso del tiempo en el proceso de la charla y la acción conjuntas.
+Existe en tanto que memoria e intención compartidas, las concepcioness y supuestos que mantienen los participantes acerca de lo que han hecho y dicho, de su importancia, de lo que significa la interacción y a dónde va.
+
+4. Hay una importante función de la educación que podemos describir como socialización  cognitiva. La investigación que podemos describir como socialización cognitiva. La investigación en concreto de la que hemos hablado examina algunos
+aspectos de este proceso dentro de un marco cultural particular, el de algunas clases de enseñanza inglesas. Dentro de una sociedad, el sistema de enseñanza tiene su propia cultura epistemológica. Esta cultura, y el marco institucional dentro del cual
+se educa a los niños, son lo que se distingue a la enseñanza de otros tipos de enseñanza cultural.
+
+Los maestris tienen la misión de proporcionar << andamiaje >> a los primeros pasos del niño para dirigirlo e introducirlo en esta cultura, de supervisar su entrada en el universo del discurso educacional. Esto se hace
+creando, a través de la acción y el habla con el niño, un marco contextual para las actividades educativas. Uno de los principales objetivos de la enseñanza es, pues, el desarrollo de un conocimiento compartido. Este es un proceso problemático, 
+no sólo por que la creación de un discurso logrado es ya en sí problemática (representa el desarrollo de un contexto y una continuidad adecuados), sino también por que la seneñanza es forzosamente ideológica y se basa en relaciones sociales en las que el poder y el control tienen una gran importancia.
+Una medida de la efectividad del proceso educacional es el grado en que el conocimiento educacional se vuelve << compartido >> a través del discurso en clase.
+La importancia de una asimetría de poder entre maestro y niño hace que sea también problemático uno de los principales objetivos de la educación: el eventualmente
+<<traspaso>> del control sobre el conocimiento y el aprendizaje del maestro al niño, a través del cual el alumno alcanza autonomía.
+
+5. El discurso <<educado>> no es una habla <<desvinculada>> del contexto y diferente de formas menos elevadas del discurso por el hecho de ser más explícita. Por el contrario, es un habla que se apoya, para ser inteligible, en el acceso de los hablantes a marcos contextuales particulares e implícitos.
+El discurso de las personas <<educadas>> que conversan acerca de su especialidad .matemáticas, filosofía, crítica literaria o cualquier otra cosa- sólo es explícito para los iniciados.
+
+6. Una parte importante de la base contextual del discurso en clase ka forman un bloque de normas de que definen las actividades educativas necesarias para el éxito de la participación en el discurso educacional. Estas reglas educacionales básicas tienen funciones tanto sociales como cognitivas. Representan una serie
+de convenciones sociales para presentar el conocimiento en la escuela y también una serie (o series) de procedimientos cognitivos para definir y solucionar problemas. Estas reglas son problemáticas tanto para los maestros como para los alumnos, por razones derivadas del hecho de que son normalmente implícitas. 
+Forman parte de la <<agenda oculta>> del trabajo escolar, que rara vez, en todo caso, puede ser discutida e investigada por maestros y alumnos juntos.
+Eso quiere decir que son tácticamente contextuales, y los
