@@ -6,12 +6,14 @@ from tokenization import split_audio_into_chunks, save_chunks_to_files
 from transcription import process_chunks
 from annotation import generate_annotated_transcriptions
 from database import create_database, save_annotated_transcriptions_to_db
+from config import TranscriptionConfig
 
 # Configuración de rutas
-AUDIO_FILE_PATH = "audio/mi_audio_importante.wav"
-BOOK_FILE_PATH = "book/mi_libro.txt"
-CHUNKS_DIR = "data/chunks/mi_audio_importante"
-DB_FILE_PATH = "database/transcriptions_db.sqlite"
+config = TranscriptionConfig()
+AUDIO_FILE_PATH = config.input_directory
+BOOK_FILE_PATH = config.book_file_path
+CHUNKS_DIR = config.chunks_directory
+DB_FILE_PATH = config.db_file_path
 
 def main():
     # Paso 1: Preprocesar el audio

@@ -2,6 +2,7 @@
 
 import sqlite3
 from datetime import datetime
+from config import TranscriptionConfig
 
 def create_database(db_path: str):
     """
@@ -88,7 +89,8 @@ def fetch_all_transcriptions(db_path: str):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    db_file = "database/transcriptions_db.sqlite"  # La ruta a tu archivo de base de datos
+    config = TranscriptionConfig()
+    db_file = config.db_file_path  # La ruta a tu archivo de base de datos
     
     # Crear la base de datos y la tabla
     create_database(db_file)

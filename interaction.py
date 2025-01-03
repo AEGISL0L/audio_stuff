@@ -1,3 +1,5 @@
+from config import TranscriptionConfig
+
 class ClassroomInteraction:
     def __init__(self):
         self.interaction_patterns = {

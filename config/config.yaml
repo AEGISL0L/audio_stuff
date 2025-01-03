@@ -1,5 +1,8 @@
 input_directory: "/run/media/juav/VOICE/RECORD"
 output_directory: "/run/media/juav/VOICE/TRANSCRIBED"
+book_file_path: "/run/media/juav/VOICE/BOOKS"
+chunks_directory: "/run/media/juav/VOICE/CHUNKS"
+db_file_path: "/run/media/juav/VOICE/DATABASE/transcriptions.db"
 language: "es-ES"
 chunk_size: 60
 max_workers: 4

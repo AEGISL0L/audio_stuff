@@ -1,6 +1,7 @@
 # preprocessing.py
 
 from pydub import AudioSegment
+from config import TranscriptionConfig
 
 def load_audio(file_path: str) -> AudioSegment:
     """
@@ -78,10 +79,11 @@ def preprocess_audio(file_path: str) -> AudioSegment:
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    audio_file_path = "audio/mi_audio_importante.wav"  # Reemplaza con la ruta a tu archivo de audio
+    config = TranscriptionConfig()
+    audio_file_path = config.input_directory + "/mi_audio_importante.wav"  # Reemplaza con la ruta a tu archivo de audio
     processed_audio = preprocess_audio(audio_file_path)
     
     if processed_audio:
         # Guarda el audio preprocesado
-        processed_audio.export("audio/mi_audio_importante_preprocessed.wav", format="wav")
-        print("Audio preprocesado guardado como 'mi_audio_importante_preprocessed.wav'")
+        processed_audio.export(config.output_directory + "/mi_audio_importante_preprocessed.wav", format="wav")
+        print(f"Audio preprocesado guardado como '{config.output_directory}/mi_audio_importante_preprocessed.wav'")

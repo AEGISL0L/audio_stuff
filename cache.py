@@ -1,3 +1,4 @@
+from pathlib import Path
 
 class TranscriptionCache:
     """Manages caching of transcriptions to avoid reprocessing.
