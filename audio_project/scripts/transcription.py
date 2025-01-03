@@ -6,6 +6,8 @@ from pydub import AudioSegment
 from config import TranscriptionConfig
 from vosk import Model, KaldiRecognizer
 import wave
+from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
+import torch
 
 def transcribe_audio_chunk(chunk_path: str) -> str:
     """
@@ -46,8 +48,20 @@ def transcribe_audio_chunk(chunk_path: str) -> str:
         except Exception as e:
             vosk_text = f"Error: {e}"
         
+        # Wav2Vec2 API
+        try:
+            processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-large-960h")
+            model = Wav2Vec2ForCTC.from_pretrained("facebook/wav2vec2-large-960h")
+            audio_input, _ = torchaudio.load(chunk_path)
+            input_values = processor(audio_input.squeeze(), return_tensors="pt", sampling_rate=16000).input_values
+            logits = model(input_values).logits
+            predicted_ids = torch.argmax(logits, dim=-1)
+            wav2vec2_text = processor.decode(predicted_ids[0])
+        except Exception as e:
+            wav2vec2_text = f"Error: {e}"
+        
         # Combine results
-        combined_text = f"Google: {google_text}\nVosk: {vosk_text}"
+        combined_text = f"Google: {google_text}\nVosk: {vosk_text}\nWav2Vec2: {wav2vec2_text}"
         return combined_text
     except sr.UnknownValueError:
         return "[inaudible]"
