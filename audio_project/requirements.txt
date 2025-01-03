@@ -1,0 +1,8 @@
+pydub
+SpeechRecognition
+PyYAML
+vosk
+transformers
+torch
+nltk
+spacy

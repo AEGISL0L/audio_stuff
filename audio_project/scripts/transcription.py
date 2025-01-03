@@ -4,10 +4,12 @@ import speech_recognition as sr
 import os
 from pydub import AudioSegment
 from config import TranscriptionConfig
+from vosk import Model, KaldiRecognizer
+import wave
 
 def transcribe_audio_chunk(chunk_path: str) -> str:
     """
-    Transcribe un segmento de audio usando SpeechRecognition.
+    Transcribe un segmento de audio usando múltiples motores de reconocimiento de voz.
     
     Args:
         chunk_path (str): La ruta al archivo del segmento de audio.
@@ -19,8 +21,34 @@ def transcribe_audio_chunk(chunk_path: str) -> str:
     try:
         with sr.AudioFile(chunk_path) as source:
             audio_data = recognizer.record(source)
-        text = recognizer.recognize_google(audio_data, language="es-ES")
-        return text
+        
+        # Google API
+        try:
+            google_text = recognizer.recognize_google(audio_data, language="es-ES")
+        except sr.UnknownValueError:
+            google_text = "[inaudible]"
+        except sr.RequestError as e:
+            google_text = f"Error: {e}"
+        
+        # Vosk API
+        try:
+            wf = wave.open(chunk_path, "rb")
+            model = Model("model")
+            vosk_recognizer = KaldiRecognizer(model, wf.getframerate())
+            vosk_text = ""
+            while True:
+                data = wf.readframes(4000)
+                if len(data) == 0:
+                    break
+                if vosk_recognizer.AcceptWaveform(data):
+                    vosk_text += vosk_recognizer.Result()
+            wf.close()
+        except Exception as e:
+            vosk_text = f"Error: {e}"
+        
+        # Combine results
+        combined_text = f"Google: {google_text}\nVosk: {vosk_text}"
+        return combined_text
     except sr.UnknownValueError:
         return "[inaudible]"
     except sr.RequestError as e:
