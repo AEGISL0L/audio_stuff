@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Optional, Dict
 import logging
-from config import TranscriptionConfig
+from config.class_TranscriptionConfig import TranscriptionConfig
 from cache import TranscriptionCache
 from utils import format_transcription, transcribe_audio
 

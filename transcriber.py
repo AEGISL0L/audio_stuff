@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from typing import Optional
 from utils import format_transcription, save_metadata
+from config import TranscriptionConfig
 
 def transcribe_audio(audio_file_path: str, language: str = "es-ES", chunk_size: int = 60) -> Optional[str]:
     """Transcribes audio using the SpeechRecognition library (Google API by default).

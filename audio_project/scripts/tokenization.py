@@ -3,6 +3,7 @@
 from pydub import AudioSegment
 from pydub.utils import make_chunks
 import os
+from config import TranscriptionConfig
 
 def split_audio_into_chunks(audio: AudioSegment, chunk_length_ms=30000):
     """
@@ -59,7 +60,8 @@ def process_audio_file(input_audio_path, chunk_length_ms=30000):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    input_audio_path = "audio/mi_audio_importante.wav"  # Reemplaza con la ruta a tu archivo de audio
+    config = TranscriptionConfig()
+    input_audio_path = config.input_directory + "/mi_audio_importante.wav"  # Reemplaza con la ruta a tu archivo de audio
     chunk_length_ms = 30000  # Longitud de cada segmento en milisegundos (por defecto 30 segundos)
     
     # Procesar el archivo de audio

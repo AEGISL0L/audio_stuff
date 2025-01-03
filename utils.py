@@ -1,6 +1,8 @@
 import os
+import json
 from datetime import datetime
 from typing import Dict
+from config import TranscriptionConfig
 
 def format_transcription(text: str) -> str:
     """Applies basic formatting rules to a raw transcription.
@@ -30,6 +32,7 @@ def format_transcription(text: str) -> str:
     for pattern, replacement in formatting_rules.items():
         formatted_text = formatted_text.replace(pattern, replacement)
     return formatted_text
+
 def save_metadata(audio_file_path: str, transcription_stats: Dict) -> None:
     metadata = {
         'original_file': os.path.basename(audio_file_path),

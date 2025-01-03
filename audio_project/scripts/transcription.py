@@ -3,6 +3,7 @@
 import speech_recognition as sr
 import os
 from pydub import AudioSegment
+from config import TranscriptionConfig
 
 def transcribe_audio_chunk(chunk_path: str) -> str:
     """
@@ -99,7 +100,8 @@ def process_chunks(chunk_directory: str):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    chunk_dir = "data/chunks/mi_audio_importante"  # Reemplaza con el directorio de tus archivos de segmentos
+    config = TranscriptionConfig()
+    chunk_dir = config.chunks_directory  # Reemplaza con el directorio de tus archivos de segmentos
     
     transcriptions = process_chunks(chunk_dir)
     for index, transcription in sorted(transcriptions.items()):

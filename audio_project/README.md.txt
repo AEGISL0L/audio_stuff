@@ -5,10 +5,10 @@ scripts/:
 preprocessing.py: Script for loading and preprocessing audio files.
 tokenization.py: Script for splitting audio into manageable chunks.
 transcription.py: Script for transcribing audio chunks into text.
-formatting.py: Script for formatting the transcribed text according to specified rules.
 annotation.py: Script for annotating transcriptions with comments from the book's logic.
 database.py: Script for handling database operations (creating tables, inserting data).
 main.py: Main script to execute the complete workflow from audio processing to annotation and storage.
+transcriber.py: Script for reading audio files, transcribing them, and saving metadata.
 data/:
 chunks/: Stores the audio chunks generated during tokenization.
 transcriptions/: Stores the transcriptions of the audio chunks.
